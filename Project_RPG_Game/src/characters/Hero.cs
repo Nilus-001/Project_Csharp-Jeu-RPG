@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using Project_RPG_Game.classes;
+using Project_RPG_Game.missions;
 
 
 namespace Project_RPG_Game;
@@ -15,11 +17,12 @@ namespace Project_RPG_Game;
 public class Hero : Character {
     public int Hp;
     public int Food;
+    public int Salary;
     public int Level;
     public int Xp;
     public int XpMax;
-    public List<Status> StatusList;
-    public List<Equipment> EquipmentList;
+    public List<Status> StatusList = [];
+    public List<Equipment> EquipmentList = [];
     public int EquipmentSlot;
 
 
@@ -28,9 +31,10 @@ public class Hero : Character {
     
     
     public Hero(string name, int hpMax, int foodMax ,Rarity rarity, Race race, GameClass gameclass, int salary) : 
-        base(name, hpMax,foodMax, rarity, race, gameclass, salary) {
+        base(name, hpMax,foodMax, rarity, race, gameclass) {
         Hp = hpMax;
         Food = foodMax;
+        Salary = salary;
         Level = 0;
         Xp = 0;
         XpMax = 100;
@@ -39,13 +43,15 @@ public class Hero : Character {
     
     //--------------------------------------- XP ---------------------------------------
 
-    public void GainXp(int xp) {
+    public void ModifyXp(int xp) {
         if (Level < 5) {
             Xp += xp;
             if (Xp >= XpMax) {
                 Xp -= XpMax ;
                 LevelUp();
                 
+            }if (Xp <= 0) {
+                Xp = 0;
             }
         }
     }
@@ -65,37 +71,25 @@ public class Hero : Character {
     }
     //--------------------------------------- HP ---------------------------------------
 
-    public void GainHp(int hp) {
+    public void ModifyHp(int hp) {
         Hp += hp;
         if (Hp > HpMax) {
             Hp = HpMax;
-        }
-    }
-
-    public void LoseHp(int hp) {
-        Hp -= hp;
-        if (Hp <= 0) {
+        }else if (Hp <= 0) {
             //! mort 
         }
     }
     
     //--------------------------------------- Food ---------------------------------------
-
-    public void GainFood(int food) {
+    
+    public void ModifyFood(int food) {
+        
         Food += food;
         if (Food > FoodMax) {
             Food = FoodMax;
-        }
-    }
-    
-    public void LoseFood(int food) {
-        
-        Food -= food;
-        if (Food <= 0)  {
+        }else if (Food <= 0)  {
             Food = 0;
-            if (!StatusIsActive(typeof(ExtremelyHungry))) {
-                StatusList.Add(new ExtremelyHungry(100));
-            }
+            StatusList.Add(new Starving(100));
         }
     }
     //--------------------------------------- Equipment ---------------------------------------
@@ -104,8 +98,9 @@ public class Hero : Character {
         EquipmentList.Add(equiment);
     }
 
-    public void Unequip(Equipment equiment) {
+    public Equipment Unequip(Equipment equiment) {
         EquipmentList.Remove(equiment);
+        return equiment;
     }
     
     //--------------------------------------- Status ---------------------------------------
@@ -117,25 +112,40 @@ public class Hero : Character {
         
     }
     
+    //--------------------------------------- Race / Class Effect ---------------------------------------
 
-   
-
-
-
-
-
-    
-    
-    
-    
-    private bool StatusIsActive(Type status) {
-        foreach (var stat in StatusList) {
-            return stat.GetType() == status;
-        }
-        return false;
-
-        
+    public int GetPercentageModifier(Mission mission) {
+        return Race.GetPercetageModifier(mission);
     }
+
+    //--------------------------------------- Status ---------------------------------------
+
+    public void AddStatus(Status status,int modifier=1) {
+        
+        Status SameEffect = StatusIsActive(this, GetType());
+        if (SameEffect != null) {
+            status.Modifier += modifier ;
+            StatusList.Remove(SameEffect);
+        }
+        StatusList.Add(status);
+    }
+
+
+
+    private Status StatusIsActive(Hero hero,Type status) {
+        foreach (var stat in hero.StatusList) {
+            if (stat.GetType() == status) {
+                return stat;
+            }
+        }
+
+        return null;
+    }
+    
+    
+    
+    
+    
 
 
 

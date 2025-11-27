@@ -1,8 +1,8 @@
 ﻿namespace Project_RPG_Game;
 
-public class ExtremelyHungry : Status {
+public class Starving : Status,INegativeStatus {
     
-    public ExtremelyHungry(int expirationIn) : base(expirationIn) {
+    public Starving(int expirationIn) : base(expirationIn) {
     }
 
     public override void AppliedEffect(Hero hero) {

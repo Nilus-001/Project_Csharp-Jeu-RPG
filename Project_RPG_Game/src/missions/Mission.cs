@@ -1,17 +1,67 @@
-﻿using System.Collections.Generic;
-using Project_RPG_Game.missions.Lose;
-using Project_RPG_Game.missions.Success;
+﻿using System;
+using System.Collections.Generic;
+using Project_RPG_Game.missions.Result;
+
 
 namespace Project_RPG_Game.missions;
 
-public abstract class Mission {
+
+public class Mission {
+    private static int _idIncrement = 0;
+    public int Id;
     public string Name;
     public string Description;
     public Difficulty Difficulty;
     public int NbHero;
-    public List<MissionType> Types;   //! setup required in info_enumerated
+    public MissionType Type;
+    public TerrainType TerrainType;
     public List<Hero> ActiveHeroes;
-    public SuccessResult SuccessResult; //! setup class SuccessResult
-    public LoseResult LoseResult;   //! setup class LoseResult
+    public Result.Result SuccessResult; //! setup class SuccessResult
+    public string SuccessDescritpion;
+    public Result.Result LoseResult;   //! setup class LoseResult
+    public string LoseDescritpion;
+
+    public Mission(string name, string description, Difficulty difficulty, int nbHero, MissionType type, TerrainType terrainType, Result.Result successResult, string successDescritpion, Result.Result loseResult, string loseDescritpion) {
+        Name = name;
+        Description = description;
+        Difficulty = difficulty;
+        NbHero = nbHero;
+        Type = type;
+        TerrainType = terrainType;
+        SuccessResult = successResult;
+        SuccessDescritpion = successDescritpion;
+        LoseResult = loseResult;
+        LoseDescritpion = loseDescritpion;
+        
+        _idIncrement++;
+        Id = _idIncrement;
+    }
+
+    public void SetActiveHero(Hero[] heroes) {
+        foreach (var hero in heroes) {
+            ActiveHeroes.Add(hero);
+        }
+    }
+    
+    
+    
+
+    public Result.Result ReturnResult() {
+        int heroPercentageModifier = 0;
+        foreach (var hero in ActiveHeroes) {
+            heroPercentageModifier += hero.GetPercentageModifier(this);
+        }
+        
+        bool success = Global.DiceRoll((int)Difficulty + heroPercentageModifier);
+        if (success) {
+            //! to do print Success Description
+            return SuccessResult;
+        }
+        
+        //! to do print Lose Description
+        return LoseResult;
+        
+    }
 
 }
+

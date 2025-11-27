@@ -1,4 +1,6 @@
-﻿namespace Project_RPG_Game;
+﻿using Project_RPG_Game.classes;
+
+namespace Project_RPG_Game;
 
 
 
@@ -13,16 +15,15 @@ public class Character {
     public Race Race;
     public GameClass GameClass; 
     public Rarity Rarity;
-    public int Salary;
+    
 
-
-    public Character(string name, int hpMax, int foodMax,Rarity rarity, Race race, GameClass gameClass, int salary) {
+    public Character(string name, int hpMax, int foodMax,Rarity rarity, Race race, GameClass gameClass) {
         Name = name;
         HpMax = hpMax;
         FoodMax = foodMax;
         Race = race;
         GameClass = gameClass;
-        Salary = salary;
+        
         Rarity = rarity;
         
         _idIncrement++;

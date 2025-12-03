@@ -1,0 +1,174 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="20" Background="Orange">
+            <StackPanel>
+                <Border Classes="NbPrint RightPart">
+                    <Grid ColumnDefinitions="* 30">
+                        <TextBlock Text="1000" ></TextBlock>
+                        <Image Grid.Column="1" Source="avares://Project_RPG_Game/assets/IconCoins.png"></Image>
+                            
+                    </Grid>
+                </Border>
+                <Border Classes="NbPrint">
+                    <Grid ColumnDefinitions="* 30">
+                        <TextBlock Text="1000" ></TextBlock>
+                        <Image Grid.Column="1" Source="avares://Project_RPG_Game/assets/IconFood.png"></Image>
+                            
+                    </Grid>
+                </Border>
+                <Border>
+                    <Button >
+                        <Label Content="test"></Label>
+                    </Button>
+                </Border>
+                
+                <Label Content="test" Classes="H1"></Label>
+                <Label Content="test" Classes="H2"></Label>
+                <Label Content="test" Classes="H3"></Label>
+                
+                
+            </StackPanel>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    <Style Selector="Window">
+        <Setter Property="FontFamily" Value="{DynamicResource JumpWinter}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}" />
+    </Style>
+    
+    
+    
+    
+    
+    
+    <Style Selector="Border.NbPrint">
+        <Setter Property="Padding" Value="0"></Setter>
+        <Setter Property="Margin" Value="5"></Setter>
+        <Setter Property="BorderBrush" Value="DarkSlateGray"></Setter>
+        <Setter Property="Height" Value="25"></Setter>
+
+        <Setter Property="BorderThickness" Value="10 0 0  0"></Setter>
+
+        
+    </Style>
+    <Style Selector="Border.NbPrint Grid">
+        <Setter Property="Background" Value="{StaticResource BackgroundColor}"></Setter>
+    </Style>
+    <Style Selector="Border.NbPrint TextBlock">
+        <Setter Property="Margin" Value="5 0 0 0 "></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource TextColor}"></Setter>
+        <Setter Property="FontSize" Value="18"></Setter>
+        
+    </Style>
+    <Style Selector="Border.NbPrint Image">
+        <Setter Property="Height" Value="20"></Setter>
+        <Setter Property="Margin" Value="0 -1 5 0 "></Setter>
+    </Style>
+    <!-- /_______________________________________/Titre et Text/_______________________________________/ -->
+    <Style Selector="Label.H1">
+        <Setter Property="FontSize" Value="28"></Setter>
+    </Style>
+    <Style Selector="Label.H2">
+        <Setter Property="FontSize" Value="24"></Setter>
+    </Style>
+    <Style Selector="Label.H3">
+        <Setter Property="FontSize" Value="20"></Setter>
+    </Style>
+    
+    
+    
+    <!-- /_______________________________________/Button/_______________________________________/ -->
+    <Style Selector="Button /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}"></Setter>
+        
+    </Style>
+    <Style Selector="Button:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BackgroundHoverColor}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource TextHoverColor}"></Setter>
+        
+    </Style>
+    <Style Selector="Button:pointerover Label">
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2"></TransformOperationsTransition>
+            </Transitions>
+        </Setter>
+        <Setter Property="RenderTransform" Value="scale(1.05)"></Setter>
+        
+    </Style>
+    <Style Selector="Button:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BackgroundClickColor}"></Setter>
+    </Style>
+    
+    <Style Selector="Button.ButtNoBackground /template/ ContentPresenter">
+        <Setter Property="Background" Value="Transparent"></Setter>
+    </Style>
+    <!-- /_______________________________________/CenterPart/_______________________________________/ -->
+    <Style Selector=".AllCalender"/>
+    <Style Selector=".AllCalender Label">
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}"></Setter>
+    </Style>
+    <Style Selector=".AllCalender TextBlock">
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}"></Setter>
+    </Style>
+    
+    
+    <Style Selector=".TopCalender"/>
+    <Style Selector=".TopCalender Label">
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        
+    </Style>
+    <!-- /_______________________________________/RightPart/_______________________________________/ -->
+    <Style Selector="Border.RightPart">
+        
+        <Setter Property="Padding" Value=" 60 20 20 20 "></Setter>
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush Source="avares://Project_RPG_Game/assets/gui/CharacterFontGui.png"
+                            Stretch="UniformToFill"
+                            AlignmentX="Left"
+                            />
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style Selector="Border.RightPart Grid">
+        <Setter Property="RowSpacing" Value="25"></Setter>
+        <Setter Property="ColumnSpacing" Value="15"></Setter>
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="Width" Value="220"></Setter>
+        
+    </Style>
+    
+    <Style Selector="Border.CharacterContainer">
+        <Setter Property="Background" Value="rgba(145, 91, 29, 0.8)"></Setter>
+        <Setter Property="BorderBrush" Value="rgba(171, 97, 0, 0.8)"></Setter>
+        <Setter Property="BorderThickness" Value="10 10 10 10"></Setter>
+        <Setter Property="Padding" Value="10"></Setter>
+    </Style>
+    <Style Selector="Border.CharacterPart">
+        <Setter Property="Background" Value="rgba(146, 83, 0, 1)"></Setter>
+    </Style>
+    
+    <Style Selector="Border.CharacterPart StackPanel.CharacterCard">
+        <Setter Property="Background" Value="rgba(103, 58, 0, 1)"></Setter>
+    </Style>
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+</Styles>

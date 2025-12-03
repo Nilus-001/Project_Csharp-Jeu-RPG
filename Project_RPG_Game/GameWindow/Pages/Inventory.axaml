@@ -1,0 +1,36 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="700"
+             Height="700" Width="1300"
+             x:Class="Project_RPG_Game.GameWindow.Pages.Inventory">
+    <UserControl.Styles>
+        <StyleInclude Source="avares://Project_RPG_Game/styles/GameStyle.axaml"/>
+        <StyleInclude Source="avares://Project_RPG_Game/styles/InventoryStyle.axaml"/>
+    </UserControl.Styles>
+    
+    
+    <Grid ColumnDefinitions="* * 275" RowDefinitions="75 *" ShowGridLines="False">
+        <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Classes="InventoryBack"></Border>
+        <Border Grid.Column="0" Grid.Row="0" Classes="InventoryTitlePart">
+            <TextBlock Text="Inventory"></TextBlock>
+        </Border>
+        <Border Grid.Column="0" Grid.Row="1" Classes="InventoryGrid">
+            <Grid ColumnDefinitions="70 70 70 70" RowDefinitions="70 70 70">
+               
+                
+                
+            </Grid>
+        </Border>
+        
+    
+    
+    
+    
+    
+    
+    </Grid>
+    
+    
+</UserControl>

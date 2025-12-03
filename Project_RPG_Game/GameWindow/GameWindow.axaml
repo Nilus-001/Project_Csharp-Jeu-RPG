@@ -1,0 +1,40 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="700"
+        Height="700" Width="1300"
+        MinHeight="700" MinWidth="1300"
+        
+        Icon="avares://Project_RPG_Game/assets/IconGame.png"
+        
+        x:Class="Project_RPG_Game.GameWindow.GameWindow"
+        Title="Game">
+        <Grid>
+                
+                <ContentControl Name="MainContent"  />
+                <Grid Name= "OverlayContainer" IsVisible="False">
+                    <Border Name="BlurredBackground" >
+                        <Border.Background>
+                            <VisualBrush Visual="{Binding #MainContent}"/>
+                        </Border.Background>
+                        <Border.Effect>
+                            <BlurEffect Radius="15"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Background="rgba(0,0,0,0.8)"></Border>
+                    
+                    
+                    <ContentControl Name="Overlay"
+                                    
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                    />
+                </Grid>
+                
+                
+                
+        </Grid>
+        
+        
+</Window>

@@ -6,5 +6,21 @@
 
     <Application.Styles>
         <FluentTheme />
+        <StyleInclude Source="styles/Styles.axaml"></StyleInclude>
     </Application.Styles>
+             
+     <Application.Resources>
+         <SolidColorBrush x:Key="TextColor">#CFCFCF</SolidColorBrush>
+         <SolidColorBrush x:Key="TextHoverColor">#FFFFFF</SolidColorBrush>
+         <SolidColorBrush x:Key="BackgroundColor">rgba(80, 80, 80, 0.3)</SolidColorBrush>
+         <SolidColorBrush x:Key="BackgroundHoverColor">rgba(80, 80, 80, 0.5)</SolidColorBrush>
+         <SolidColorBrush x:Key="BackgroundClickColor">rgba(70, 90, 70, 0.5)</SolidColorBrush>
+         <LinearGradientBrush x:Key="FontGradient-GrayToBack" StartPoint="0%, 0%" EndPoint="100%, 0%"> 
+             <GradientStop Offset="0" Color="#353c47"></GradientStop>
+             <GradientStop Offset="1" Color="#111111"></GradientStop>
+         </LinearGradientBrush>
+         <FontFamily x:Key="JumpWinter">/assets/fonts/Jumps Winter.ttf#Jumps Winter</FontFamily>
+         
+         
+     </Application.Resources>
 </Application>

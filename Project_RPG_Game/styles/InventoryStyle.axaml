@@ -1,0 +1,69 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Width="1000">
+            <Grid ColumnDefinitions="* * 150" RowDefinitions="100 *" ShowGridLines="True" Background="Purple">
+                <Border Grid.Column="0" Grid.Row="0" Classes="InventoryTitlePart" >
+                    <TextBlock Text="Inventory"></TextBlock>
+                    
+                </Border>
+                <Border Grid.Column="0" Grid.Row="1" Classes="InventoryGrid">
+                    <Grid ColumnDefinitions="50 50 50 50 50" RowDefinitions="50 50 50 50 50 50 " ShowGridLines="True" ColumnSpacing="15" RowSpacing="15" >
+                        <Border Grid.Column="4" Grid.Row="0" Grid.RowSpan="5" Background="red"></Border>
+                        <!-- Add item here -->
+                    </Grid>
+                </Border>
+        
+        
+        
+        
+        
+            </Grid>
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Add Styles Here -->
+    
+    
+    <Style Selector="Border.InventoryTitlePart">
+        
+        <Setter Property="Background" Value="Transparent"></Setter>
+         
+    </Style>
+    <Style Selector="Border.InventoryTitlePart TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}"></Setter>
+        <Setter Property="FontSize" Value="40"></Setter>
+        
+         
+    </Style>
+    <Style Selector="Border.InventoryGrid">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Padding" Value="60 48 60 293 "></Setter>
+        
+    </Style>
+    <Style Selector="Border.InventoryGrid Grid">
+        
+       <Setter Property="ColumnSpacing" Value="36"></Setter>
+       <Setter Property="RowSpacing" Value="36"></Setter>
+        
+    </Style>
+    
+    
+    <Style Selector="Border.InventoryBack">
+        <Setter Property="Background">
+            <Setter.Value>
+            <ImageBrush Source="avares://Project_RPG_Game/assets/gui/GuiInventory.png"
+                        Stretch="Uniform"
+                        AlignmentX="Left"
+                        AlignmentY="Top"
+                        
+            />
+            </Setter.Value>
+        </Setter>
+        
+    </Style>
+    
+    
+</Styles>

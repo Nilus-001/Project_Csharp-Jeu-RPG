@@ -1,0 +1,183 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1500" d:DesignHeight="850"
+             
+             x:Class="Project_RPG_Game.GameWindow.Pages.Game"
+             >
+             
+             
+             
+             
+        <UserControl.Styles>
+                <StyleInclude Source="avares://Project_RPG_Game/styles/GameStyle.axaml"/>
+        </UserControl.Styles>
+        <UserControl.Background>
+                <ImageBrush Source="avares://Project_RPG_Game/assets/background/BackgroundDay.png" Stretch="UniformToFill"/>
+        </UserControl.Background>
+        
+<!-- ________________________________________________________________________________________________________________________ -->
+        
+        
+        
+         
+        <Grid ColumnDefinitions="100 * 320" RowDefinitions="100 *" Name="MainGrid" >
+                
+
+                
+                
+                
+                <Border Grid.Column="1" Grid.Row="1" Padding="30 30 30 50 " Classes="AllCalender">
+                        <Grid ShowGridLines="True" ColumnDefinitions="175 800 *" RowDefinitions="100 *">
+                                <Border Grid.Row="0" Grid.Column="1" Background="red" Margin="0 20 0 0" Classes="TopCalender">
+                                        <Grid ColumnDefinitions="* * * * * *  " RowDefinitions="*" ShowGridLines="True">
+                                                <Border Grid.Column="0" Background="purple">
+                                                        <Label Classes="H2">Day 1</Label>
+                                                </Border>
+                                        </Grid>
+                                        
+                                </Border>
+                                <Border Grid.Row="1" Grid.Column="1" Background="orange">
+                                        <TextBlock>Main content interaction</TextBlock>
+                                </Border>
+                                <Border Grid.Row="1" Grid.Column="0" Background="Yellow">
+                                        <TextBlock>deroulement day</TextBlock>
+                                </Border>
+                                
+                                
+                        </Grid>
+                        
+                </Border>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Name="CharacterFastInfo" Classes="RightPart" >
+                        
+                                
+                                
+                        <Border Classes="CharacterContainer">
+                                <Grid  RowDefinitions="* * * *" ColumnDefinitions="* *">
+                        
+                        
+                                        <!-- Exemple of a character -->
+                                        <Border Classes="CharacterPart">
+                                                <StackPanel Name="CharacterMiniInfo1" Spacing="5" Classes="CharacterCard">
+                                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0 ">
+                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
+                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
+                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
+                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
+                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
+                                                        </StackPanel>
+                                                        <Image Source="avares://Project_RPG_Game/assets/characters/CharacterDeer.PNG" Height="90"></Image>
+                                                        <Border Background="DarkGray" Height="5" Width="75" >
+                                                                <Border Background="red" Height="5" Width="75" HorizontalAlignment="Left" Name="Health1"></Border>
+                                                        </Border>
+                                                        <Border Background="DarkGray" Height="5" Width="75">
+                                                                <Border Background="orange" Height="5" Width="42" HorizontalAlignment="Left" Name="Food1"></Border>
+                                                        </Border>
+                                                        <Border Background="DarkGray" Height="5" Width="75">
+                                                                <Border Background="#9fdb1d" Height="5" Width="60" HorizontalAlignment="Left" Name="Xp1"></Border>
+                                                        </Border>
+                                                        
+                                                </StackPanel>
+                                        </Border>
+                                                        <!-- Exemple of a character -->
+                                        <Border Grid.Row="0" Grid.Column="1" Classes="CharacterPart">
+                                               
+                                        </Border>
+                                                                                                          <!-- Exemple of a character -->
+                                        <Border Grid.Row="1" Grid.Column="0" Classes="CharacterPart">
+                                                
+                                        </Border>
+                                                                                                          <!-- Exemple of a character -->
+                                        <Border Grid.Row="1" Grid.Column="1" Classes="CharacterPart">
+                                               
+                                        </Border>
+                                                                                                          <!-- Exemple of a character -->
+                                        <Border Grid.Row="2" Grid.Column="0" Classes="CharacterPart">
+                                                
+                                        </Border>
+                                                                                                          <!-- Exemple of a character -->
+                                        <Border Grid.Row="2" Grid.Column="1" Classes="CharacterPart">
+                                               
+                                        </Border>
+                                                                                                          <!-- Exemple of a character -->
+                                        <Border Grid.Row="3" Grid.Column="0" Classes="CharacterPart">
+                                                
+                                        </Border>
+                                        
+                                        <Border Grid.Row="3" Grid.Column="1" Classes="CharacterPart">
+                                               
+                                        </Border>
+                                        
+                                        
+                                </Grid>
+                        </Border>
+                                
+                                
+                      
+                </Border>
+                
+                
+                
+                        
+                        
+                        
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Padding="10" >
+                        <Grid ColumnDefinitions="* 75">
+                                <StackPanel Name="GuildInfo" Orientation="Horizontal" Spacing="10">
+                                        <Border Classes="NbPrint" >
+                                                <Grid ColumnDefinitions="* 30">
+                                                        <TextBlock Text="100"  ></TextBlock>
+                                                        <Image Grid.Column="1" Source="avares://Project_RPG_Game/assets/IconCoins.png"></Image>
+                
+                                                </Grid>
+                                        </Border>
+                                        <Border Classes="NbPrint">
+                                                <Grid ColumnDefinitions="* 30"  >
+                                                        <TextBlock  Text="860"/> 
+                                                        <Image Grid.Column="1" Source="avares://Project_RPG_Game/assets/IconFood.png"></Image>
+                
+                                                </Grid>
+                                        </Border>
+                
+                                </StackPanel>
+                        </Grid>
+                 </Border>
+                
+                
+                
+                <Grid Row="1" Column="0" ColumnDefinitions="100 *" >
+                        <Border  Padding="10">
+                                <StackPanel Grid.Column="0" Name="GuildTool" Orientation="Horizontal">
+                                        <Button Height="65" Width="65" VerticalAlignment="Bottom" Name="OpenInventory" Click="OpenInventory_OnClick" Classes="ButtNoBackground">
+                                                <Image Source="avares://Project_RPG_Game/assets/icon/IconInventory.png" Stretch="UniformToFill"></Image>
+        
+                                        </Button>
+                                </StackPanel>
+                        </Border>
+                </Grid>
+                        
+                
+        </Grid>
+        
+                
+                
+                
+       
+</UserControl>

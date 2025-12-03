@@ -1,0 +1,85 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <StackPanel Width="1000">
+            <Border Padding="20" Background="{DynamicResource FontGradient-GrayToBack}">
+                <Button Classes="ClassicButton">
+                    <Label Content="Hello World!"></Label>
+                </Button>
+            </Border>
+            <Border Padding="20" Background="{DynamicResource FontGradient-GrayToBack}">
+                <Button Classes="ClassicButton RedButton">
+                    <Label Content="Hello World!"></Label>
+                </Button>
+            </Border>
+        </StackPanel>
+    </Design.PreviewWith>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <Style Selector="Window">
+        <Setter Property="FontFamily" Value="{DynamicResource JumpWinter}"></Setter>
+    </Style>
+    <!-- Add Styles Here -->
+    <Style Selector="Button.ClassicButton /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="{DynamicResource TextColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource BackgroundColor}"></Setter>
+        
+        
+    </Style>
+   
+    
+    <Style Selector="Button.ClassicButton:pointerover /template/ ContentPresenter">
+        
+        <Setter Property="Foreground" Value="{DynamicResource TextHoverColor}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource BackgroundHoverColor}"></Setter>
+        <Setter Property="BorderBrush" Value="rgba(48, 164, 57, 1)"></Setter>
+       <Setter Property="RenderTransform" ></Setter>
+    </Style>
+    <Style Selector="Button.RedButton:pointerover /template/ ContentPresenter">
+        <Setter Property="Foreground" Value="rgba(241, 67, 67, 1)"></Setter>
+        <Setter Property="Background" Value="rgba(65, 27, 27, 0.45)"></Setter>
+        <Setter Property="BorderBrush" Value="red"></Setter>
+       
+    </Style>
+    
+    <Style Selector="Button.ClassicButton:pointerover Label">
+        <Setter Property="Transitions">
+            <Transitions>
+                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.2"></TransformOperationsTransition>
+            </Transitions>
+        </Setter>
+        <Setter Property="RenderTransform" Value="scale(1.05)"></Setter>
+        
+    </Style>
+    
+    <Style Selector="Button.ClassicButton:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="{DynamicResource BackgroundClickColor}"></Setter>
+        
+    </Style>
+    <Style Selector="Button.RedButton:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="rgba(65, 27, 27, 0.45)"></Setter>
+        
+    </Style>
+    
+    <Style Selector="Border.Blur">
+        <Setter Property="Background" Value="#40FFFFFF"/>
+        <Setter Property="BorderBrush" Value="#60FFFFFF"/>
+        
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="Black" 
+                                  BlurRadius="30" 
+                                  Opacity="0.2"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+   
+</Styles>

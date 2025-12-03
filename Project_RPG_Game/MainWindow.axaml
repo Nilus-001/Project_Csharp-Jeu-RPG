@@ -2,8 +2,72 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="300"
+        Width="500" Height="300"
+        MaxWidth="500" MaxHeight="300"
+        MinWidth="500" MinHeight="300"
         x:Class="Project_RPG_Game.MainWindow"
-        Title="Project_RPG_Game">
-    Welcome to Avalonia!
+        Title="Launcher"
+        Background="{DynamicResource FontGradient-GrayToBack}"
+        Icon="avares://Project_RPG_Game/assets/IconLauncher.png"
+        Opened="Launcher_OnOpened"
+        
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="0"
+        WindowStartupLocation="CenterScreen"
+        >
+    <Grid>
+        
+        
+        
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15">
+            
+            <TextPresenter HorizontalAlignment="Center" FontSize="20" Foreground="{StaticResource TextColor}">Game</TextPresenter>
+            
+            <Button Name="BStart" Click="BStart_OnClick" Classes="ClassicButton" HorizontalAlignment="Center">
+                <Label Content="Start"></Label>
+            </Button>
+            <Button Name="BLeave" Click="BLeave_OnClick" Classes="ClassicButton RedButton" HorizontalAlignment="Center">
+                <Label Content="leave" FontSize="10"></Label>
+            </Button>
+            
+        </StackPanel>
+    </Grid>
+        
+        
+        
+    
+    
+    
+    
+    
+    
 </Window>
+<!-- <Border Background="Yellow" Padding="2" > -->
+<!--     <StackPanel Spacing="2"> -->
+<!--         <TextBlock Background="red" TextAlignment="Center"> -->
+<!--             Nom Save  -->
+<!--         </TextBlock> -->
+<!--         <TextBlock Padding="5"  Height="100" TextWrapping="Wrap" Background="Red"> -->
+<!--             Content.... -->
+<!--         </TextBlock> -->
+<!--         <StackPanel Orientation="Horizontal"> -->
+<!--             <Button Background="red" >Start</Button> -->
+<!--         </StackPanel> -->
+<!--     </StackPanel> -->
+<!-- </Border> -->
+        
+<!-- <Border Padding="5" Background="Yellow"> -->
+<!--     <StackPanel Orientation="Horizontal" Spacing="5" > -->
+<!--         <Border Background="Aquamarine" Padding="2">  Couleur vert si select--> 
+<!--             <TextBlock Background="Red" Padding="5">Save 1</TextBlock> -->
+<!--         </Border> -->
+<!--         <Border Grid.Column="1"  Background="Aquamarine" Padding="2"> -->
+<!--             <TextBlock Background="Red" Padding="5">Save 2</TextBlock> -->
+<!--         </Border> -->
+<!--         <Border Grid.Column="2" Background="Aquamarine" Padding="2"> -->
+<!--             <TextBlock Background="Red" Padding="5">Save 3</TextBlock> -->
+<!--         </Border> -->
+<!--     </StackPanel> -->
+<!-- </Border> -->

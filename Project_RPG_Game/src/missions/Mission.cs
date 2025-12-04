@@ -16,9 +16,9 @@ public class Mission {
     public MissionType Type;
     public TerrainType TerrainType;
     public List<Hero> ActiveHeroes;
-    public Result.Result SuccessResult; //! setup class SuccessResult
+    public Result.Result SuccessResult; //! setup class Result
     public string SuccessDescritpion;
-    public Result.Result LoseResult;   //! setup class LoseResult
+    public Result.Result LoseResult;   
     public string LoseDescritpion;
 
     public Mission(string name, string description, Difficulty difficulty, int nbHero, MissionType type, TerrainType terrainType, Result.Result successResult, string successDescritpion, Result.Result loseResult, string loseDescritpion) {
@@ -37,10 +37,12 @@ public class Mission {
         Id = _idIncrement;
     }
 
-    public void SetActiveHero(Hero[] heroes) {
-        foreach (var hero in heroes) {
+    public bool SetActiveHero(Hero hero) {
+        if (ActiveHeroes.Count < NbHero && !ActiveHeroes.Contains(hero)) {
             ActiveHeroes.Add(hero);
+            return true;
         }
+        return false;   
     }
     
     

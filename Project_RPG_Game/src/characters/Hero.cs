@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using Project_RPG_Game.classes;
@@ -43,10 +44,10 @@ public class Hero : Character {
     
     //--------------------------------------- XP ---------------------------------------
 
-    public void ModifyXp(int xp) {
+    public Dictionary<string,int> ModifyXp(int xp) {
         if (Level < 5) {
             Xp += xp;
-            if (Xp >= XpMax) {
+            if (Xp >= XpMax && Level < 5) {
                 Xp -= XpMax ;
                 LevelUp();
                 
@@ -54,6 +55,8 @@ public class Hero : Character {
                 Xp = 0;
             }
         }
+
+        return new Dictionary<string, int> { { "Level", Level }, { "Xp", Xp } };
     }
     public void LevelUp() {
         if (Level < 5) {
@@ -65,24 +68,31 @@ public class Hero : Character {
             EquipmentSlot++;
             Salary = (int) (Salary*1.1);
             StatusList.Clear();
-            
-
         }
     }
     //--------------------------------------- HP ---------------------------------------
 
-    public void ModifyHp(int hp) {
+    public int ModifyHp(int hp) {
         Hp += hp;
         if (Hp > HpMax) {
             Hp = HpMax;
         }else if (Hp <= 0) {
-            //! mort 
+            
         }
+        return Hp;
+    }
+
+    public bool KillThis(Guild guild) {
+        if (guild.GuildHeroes.Contains(this)) {
+            guild.KillHero(this);
+            return true;
+        }
+        return false;
     }
     
     //--------------------------------------- Food ---------------------------------------
     
-    public void ModifyFood(int food) {
+    public int ModifyFood(int food) {
         
         Food += food;
         if (Food > FoodMax) {
@@ -91,16 +101,27 @@ public class Hero : Character {
             Food = 0;
             StatusList.Add(new Starving(100));
         }
+
+        return Food;
     }
     //--------------------------------------- Equipment ---------------------------------------
 
-    public void Equip(Equipment equiment) {
-        EquipmentList.Add(equiment);
+    public bool Equip(Equipment equiment) {
+        if (EquipmentList.Count < EquipmentSlot) {
+            EquipmentList.Add(equiment);
+            return true;
+        }
+        return false;
     }
 
     public Equipment Unequip(Equipment equiment) {
-        EquipmentList.Remove(equiment);
-        return equiment;
+        if (EquipmentList.Contains(equiment)) {
+            EquipmentList.Remove(equiment);
+            return equiment;
+        }
+        return null;
+        
+        
     }
     
     //--------------------------------------- Status ---------------------------------------

@@ -1,8 +1,11 @@
-﻿namespace Project_RPG_Game;
+﻿using Project_RPG_Game.characters;
+
+namespace Project_RPG_Game.status.custom;
 
 public class Starving : Status,INegativeStatus {
     
     public Starving(int expirationIn) : base(expirationIn) {
+        Name =  $"Starving lvl {Modifier}";
     }
 
     public override void AppliedEffect(Hero hero) {
@@ -13,5 +16,8 @@ public class Starving : Status,INegativeStatus {
         else {
             hero.Hp /= 2;
         }
+        
     }
+
+   
 }

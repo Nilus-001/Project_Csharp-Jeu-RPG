@@ -1,6 +1,6 @@
 ﻿using Project_RPG_Game.classes;
 
-namespace Project_RPG_Game;
+namespace Project_RPG_Game.characters;
 
 
 
@@ -13,7 +13,7 @@ public class Character {
     public int HpMax;
     public int FoodMax;
     public Race Race;
-    public GameClass GameClass; 
+    public GameClass GameClass;
     public Rarity Rarity;
     
 

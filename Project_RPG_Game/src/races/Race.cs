@@ -17,7 +17,7 @@ public class Race {
         Id = _idincrement;
     }
 
-    public int GetPercetageModifier(Mission mission) {
+    public int GetBonusMissionsLuck(Mission mission) {
         int percentageBonus = 0;
         foreach (var terrain in TerrainModifier) {
             if (terrain.Key == mission.TerrainType) {

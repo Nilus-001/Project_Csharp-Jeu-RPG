@@ -22,7 +22,7 @@ public abstract class GameClass {
     
 
 
-    public abstract void BonusResult(Mission mission);
+    public abstract string BonusResult(Mission mission);
 
 
 }

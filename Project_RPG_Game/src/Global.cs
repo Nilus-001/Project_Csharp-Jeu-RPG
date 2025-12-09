@@ -13,6 +13,15 @@ public enum Rarity {
     Mythic
 }
 
+public enum Selector {
+    None,
+    One,
+    Two,
+    Three,
+    Half,
+    All
+}
+
 public enum Difficulty { 
     //? Base Percentages of winning :
     Win = 100,
@@ -71,6 +80,12 @@ public enum TerrainType {
 }
 
 public static class RaceTypes {
+    public static Race Null = new Race(new Dictionary<TerrainType, int>
+    {
+        { TerrainType.HumanCity , 0}
+    });
+    
+    
     public static Race SantaClaus = new Race(new Dictionary<TerrainType, int>
     {
         { TerrainType.HumanCity, 30 },
@@ -267,6 +282,35 @@ public static class Global {
         int dice = new Random().Next(0, 100);
         return percentage > dice;
     }
-    
+
+    public static int SelectorIntReturn<T>(Selector selector,List<T> list) {
+        switch (selector) {
+            case Selector.One:
+                if (list.Count != 0) {
+                    return 1;
+                }
+                break;
+            case Selector.Two:
+                if (list.Count >= 2) {
+                    return 2;
+                }
+                break;
+            case Selector.Three:
+                if (list.Count >= 3) {
+                    return 3;
+                }
+                break;
+            case Selector.Half:
+                return (int)(list.Count / 2);
+            case Selector.All:
+                return list.Count;
+        }
+        return 0;
+        
+    }
+
+
+
+
 }
 

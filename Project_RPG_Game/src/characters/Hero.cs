@@ -100,7 +100,7 @@ public class Hero : Character {
             Food = FoodMax;
         }else if (Food <= 0)  {
             Food = 0;
-            StatusList.Add(new Starving(100));
+            AddStatus(new Starving(100));
         }
         
     }

@@ -6,8 +6,8 @@ namespace Project_RPG_Game.items.custom_equip;
 
 public class Amplificateur : Equipment ,IBonusItem , IResultBonus {
     public int AmplificationValue;
-    public Amplificateur(string name, Rarity rarity) : base(name,$"Multiply by {(int)rarity} the strength of Status acquired During Missions " , rarity,"Project_RPG_Game/assets/item/ItemCrystalAmplificator.png") {
-        AmplificationValue = (int)rarity;
+    public Amplificateur(string name, Rarity rarity) : base(name,$"Multiply by {(int)rarity/10} the strength of Status acquired During Missions " , rarity,"Project_RPG_Game/assets/item/ItemCrystalAmplificator.png") {
+        AmplificationValue = (int)rarity/10;
 
     }
 

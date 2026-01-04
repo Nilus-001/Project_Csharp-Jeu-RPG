@@ -354,7 +354,6 @@ private void SelectMission(Mission mission, Border card) {
     statsPanel.Children.Add(CreateStatRow("Food", hero.FoodMax.ToString(), Brushes.Orange));
     statsPanel.Children.Add(CreateStatRow("Sal.", hero.Salary + " G", Brushes.Gold));
 
-    // Prix
     int price = CalculatePrice(hero);
     Border priceContainer = new Border {
         Background = new SolidColorBrush(Color.FromArgb(220, 255, 215, 0)),
@@ -374,7 +373,7 @@ private void SelectMission(Mission mission, Border card) {
     priceContainer.Child = priceText;
 
     Button buyButton = new Button {
-        Content = "Recruter", // Texte raccourci pour la largeur
+        Content = "Recruter",
         HorizontalAlignment = HorizontalAlignment.Stretch,
         HorizontalContentAlignment = HorizontalAlignment.Center,
         Background = new SolidColorBrush(Color.FromRgb(0,150, 113)),
@@ -470,11 +469,11 @@ private void SelectMission(Mission mission, Border card) {
 
     private int CalculatePrice(Hero hero) {
         int basePrice = hero.Rarity switch {
-            Rarity.Common => Global.Random(5,12),
-            Rarity.Rare => Global.Random(10,17),
-            Rarity.Epic => Global.Random(15,22),
-            Rarity.Legendary => Global.Random(20,27),
-            Rarity.Mythic => Global.Random(25,32),
+            Rarity.Common => Global.Random(5,15),
+            Rarity.Rare => Global.Random(10,25),
+            Rarity.Epic => Global.Random(20,40),
+            Rarity.Legendary => Global.Random(30,60),
+            Rarity.Mythic => Global.Random(50,80),
             _ => 1
         };
         return basePrice;
@@ -661,12 +660,12 @@ private void SelectMission(Mission mission, Border card) {
 
 private int CalculateItemPrice(Item item) {
     int basePrice = item.Rarity switch {
-        Rarity.Common => Global.Random(3, 8),
-        Rarity.Rare => Global.Random(8, 15),
-        Rarity.Epic => Global.Random(15, 20),
-        Rarity.Legendary => Global.Random(20, 30),
-        Rarity.Mythic => Global.Random(25,40),
-        _ => 5
+        Rarity.Common => Global.Random(5,15),
+        Rarity.Rare => Global.Random(10,25),
+        Rarity.Epic => Global.Random(20,40),
+        Rarity.Legendary => Global.Random(30,60),
+        Rarity.Mythic => Global.Random(50,80),
+        _ => 1
     };
     return basePrice;
 }

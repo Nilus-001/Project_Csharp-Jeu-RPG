@@ -173,6 +173,7 @@ public partial class Inventory : UserControl {
         Console.WriteLine($"Consommable cliqué : {item.Name}");
         
         // UpdateInventoryInfo();
+        // UpdateCharacterInfo();
     }
 
 
@@ -186,7 +187,6 @@ public partial class Inventory : UserControl {
             Margin = new Thickness(5)
         };
         
-        // Partie gauche : Image du personnage
         var imageBorder = new Border {
             Width = 80,
             Height = 120,
@@ -201,14 +201,12 @@ public partial class Inventory : UserControl {
         imageBorder.Child = image;
         panel.Children.Add(imageBorder);
         
-        // Partie droite : Informations
         var infoPanel = new StackPanel {
             Orientation = Orientation.Vertical,
             Spacing = 4,
             Width = 200
         };
         
-        // Nom
         var nameText = new TextBlock {
             Text = hero.Name,
             FontSize = 16,
@@ -235,7 +233,7 @@ public partial class Inventory : UserControl {
             FontSize = 11,
             Foreground = new SolidColorBrush(0xFFffd700)
         };
-        levelXpText.Inlines.Add(new Run("Niveau "));
+        levelXpText.Inlines.Add(new Run("LVL "));
         levelXpText.Inlines.Add(new Run(hero.Level.ToString()) { FontWeight = FontWeight.Bold });
         levelXpText.Inlines.Add(new Run(" - XP: "));
         levelXpText.Inlines.Add(new Run($"{hero.Xp}/{hero.XpMax}"));
@@ -245,16 +243,16 @@ public partial class Inventory : UserControl {
         var hpPanel = CreateStatBar("PV", hero.Hp, hero.HpMax, 0xFFff6b6b);
         infoPanel.Children.Add(hpPanel);
         
-        var foodPanel = CreateStatBar("Nourriture", hero.Food, hero.FoodMax, 0xFFffa500);
+        var foodPanel = CreateStatBar("Food", hero.Food, hero.FoodMax, 0xFFffa500);
         infoPanel.Children.Add(foodPanel);
         
         var salaryText = new TextBlock {
             FontSize = 11,
             Foreground = new SolidColorBrush(0xFFffeb3b)
         };
-        salaryText.Inlines.Add(new Run("💰 Salaire: "));
+        salaryText.Inlines.Add(new Run("💰 Salary: "));
         salaryText.Inlines.Add(new Run(hero.Salary.ToString()) { FontWeight = FontWeight.Bold });
-        salaryText.Inlines.Add(new Run(" gold/jour"));
+        salaryText.Inlines.Add(new Run(" gold/day"));
         infoPanel.Children.Add(salaryText);
         
         // Status
@@ -295,6 +293,37 @@ public partial class Inventory : UserControl {
         
         
         panel.Children.Add(infoPanel);
+        var deleteButton = new Button {
+            Width = 30,
+            Height = 30,
+            CornerRadius = new CornerRadius(15),
+            Background = new SolidColorBrush(0xFFdc3545),
+            Foreground = Brushes.White,
+            Content = "x",
+            FontSize = 18,
+            FontWeight = FontWeight.Bold,   
+            VerticalAlignment = VerticalAlignment.Center,
+            Margin = new Thickness(10, 0, 5, 0),
+            Cursor = new Cursor(StandardCursorType.Hand)
+        };
+
+        deleteButton.Click += (sender, e) => {
+            Guild.GuildHeroes.Remove(hero);
+            UpdateCharacterInfo();
+        };
+        deleteButton.PointerEntered += (sender, e) => {
+            deleteButton.Background = new SolidColorBrush(0xFFff4444);
+        };
+        
+        deleteButton.PointerExited += (sender, e) => {
+            deleteButton.Background = new SolidColorBrush(0xFFdc3545);
+        };
+        panel.Children.Add(deleteButton);
+
+        string contentTip = $"";
+        
+        
+        ToolTip.SetTip(infoPanel,contentTip);
         return panel;
     }
 

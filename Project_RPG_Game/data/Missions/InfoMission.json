@@ -1,0 +1,776 @@
+﻿{
+  "Exploration": {
+    "name": ["Exploration"],
+    "description": [
+      "The Guildmaster noticed a suspiciously blank spot on the map shaped exactly like a spilled coffee stain. The heroes must traverse the biting winds to determine if this area is a hidden valley of riches or just a place where the cartographer had a beverage accident.",
+      "Rumors are circulating about a 'Crystal Cave' that glows in the dark, potentially saving us a fortune on candles. The heroes need to locate this glowing wonder, map its interior, and hopefully not disturb whatever glowing monstrosities live inside it.",
+      "A merchant claimed he saw a shortcut through the frozen pass that could cut travel time in half. The heroes are sent to scout this alleged path to see if it's actually viable or if the merchant was just hallucinating from hypothermia.",
+      "The northern winds have shifted, revealing an entrance to an old ice mine that was previously buried. We need a team to explore the entrance, check structural integrity, and ensure it isn't inhabited by squatting goblins demanding rent.",
+      "We need to update our maps of the southern pine forest because the trees keep moving. The heroes must venture out to redraw the cartography, investigate why the flora is so restless, and try not to get slapped by a pine branch.",
+      "A strange thermal pocket has been reported in the middle of the frozen lake. The heroes must investigate this anomaly to see if it's a natural hot spring we can monetize or a sleeping dragon's nostril we should definitely avoid.",
+      "Old legends speak of a 'Library of Snow' hidden somewhere in the white expanse. The heroes are tasked with scouting the area for ancient texts, or at least some interesting picture books to keep the guild entertained during the long nights.",
+      "The fog in the valley has finally lifted for the first time in a decade. The heroes must seize this opportunity to explore the valley floor, document any lost civilizations, and claim any shiny objects before the fog rolls back in.",
+      "We found a weird key in the guild's sofa cushions. The heroes must explore the nearby ruins to find a door that fits this key, hoping it leads to a treasure vault and not the bathroom of an angry ice giant.",
+      "The stars have aligned in a way that suggests a hidden path opens only tonight. The heroes must rush out to explore this celestial road, armed with lanterns and a healthy skepticism about following navigation advice from astrology."
+    ],
+    "success": [
+      "The blank spot was indeed a hidden grove protected from the wind! The heroes mapped the area and found a stash of frozen berries. The cartographer apologizes for the coffee stain, but we are keeping the berries for the guild's winter feast.",
+      "The cave does glow! It turns out it's filled with bioluminescent fungi. The heroes collected samples without inhaling too many spores, and now the guild hall saves 20% on lighting costs, though everything smells slightly like mushrooms.",
+      "The shortcut is real and surprisingly dangerous! The heroes navigated the treacherous ledges and marked a safe route. We can now deploy missions faster, provided our heroes don't mind a little vertigo and the risk of falling into an abyss.",
+      "The mine entrance is stable! The heroes cleared out a few confused bats and found a vein of coal near the surface. They returned covered in soot but triumphant; the guild will be warm tonight, and we didn't have to pay the goblins a cent.",
+      "The trees were moving because of a migration of heavy beetles shaking the roots. The heroes mapped the forest, avoided the beetles, and brought back excellent lumber samples. The map is updated, and the trees seem to have calmed down.",
+      "It was a hot spring! The heroes enjoyed a quick soak before realizing the water was magical. They bottled some up and returned feeling rejuvenated. The guild can now sell 'Magic Bath Water' or just keep it for a very relaxing weekend.",
+      "They found the ruins! It wasn't a library, but an old archive of cooking recipes. The heroes returned with a book titled '101 Ways to Cook Ice'. It’s useless, but the historical value is immense, and we found some gold bookmarks.",
+      "The valley was full of preserved ruins. The heroes acted fast, looting several ancient statues and a very nice rug before the fog returned. The guild's decor has improved significantly, and the loot sold for a tidy sum of gold.",
+      "The key opened a small chest hidden in a snowbank near the ruins. Inside was a stash of vintage wine and a pouch of gold. The heroes returned in high spirits, having 'tested' the wine to ensure it hadn't gone bad in the cold.",
+      "The celestial path led to a hidden shrine full of offerings. The heroes respectfully 'borrowed' the gold coins left on the altar, reasoning that the stars wanted us to pay our heating bill. A very profitable and spiritual journey."
+    ],
+    "loses": [
+      "It was just a coffee stain. The heroes walked for three days into a blizzard only to find absolutely nothing but snow and sadness. They returned with frostbite and a burning hatred for the cartographer, wasting valuable food rations.",
+      "The cave was glowing because of radioactive rocks. The heroes realized this too late and had to run back. They returned empty-handed and now glow faintly in the dark, which is funny but medically concerning. We lost money on medical supplies.",
+      "The merchant was definitely hallucinating. The 'shortcut' led straight off a cliff. The heroes spent days climbing back up, wasting supplies and damaging their equipment. Next time, we are not taking directions from someone drinking antifreeze.",
+      "The mine collapsed as soon as they sneezed. The heroes spent the entire mission digging themselves out of a snowdrift. They returned with broken shovels, no coal, and a very bad mood. We had to pay for new equipment.",
+      "The trees fought back. The heroes got tangled in aggressive vines and pelted with pinecones. They fled the forest without the map data, losing a bag of gold in the chaos. The forest remains a mystery, and we are out of pocket.",
+      "It was a dragon's nostril. The dragon sneezed, blasting the heroes with scalding steam. They retreated immediately, smelling like boiled cabbage and failure. We have to pay for burn ointment and new tunics for everyone.",
+      "They found a building, but it was just an abandoned tax office. The only thing they found were forms for auditing ice blocks. The heroes returned bored and depressed, having wasted food on a trip to the most boring place on earth.",
+      "The fog didn't lift; it got thicker. The heroes walked in circles for hours, arguing about who had the compass. They returned to the guild entrance thinking they had found a new city. Embarrassing and a total waste of resources.",
+      "The key broke in the lock of a rusted gate. The heroes tried to kick the door down and twisted an ankle. They limped back home with nothing but a broken key and a medical bill. The mystery of the sofa key remains unsolved.",
+      "The clouds covered the stars five minutes after departure. The heroes wandered blindly in the dark, tripped over a log, and dropped their lantern. They returned with bruises and no celestial wisdom, just a bill for a new lantern."
+    ],
+    "place": [
+      "FrostPeak",
+      "SnowValley",
+      "PineForest",
+      "FrozenLake",
+      "SouthPole",
+      "CrystalCavern",
+      "Sea",
+      "WinterSanctum"
+    ]
+  },
+  "Tracking": {
+    "name": ["Tracking"],
+    "description": [
+      "A massive creature, affectionately named 'Snowball' by the locals, has been stealing livestock. The heroes must track the beast's massive footprints through the powder to its lair and convince it to switch to a vegan diet or turn it into a rug.",
+      "One of our heroes got drunk and lost the guild's lucky golden spoon in the woods. We need a team to backtrack his erratic, stumbling footprints from last night to retrieve the spoon before the cook refuses to serve soup ever again.",
+      "A rare 'Ice Fox' has been spotted. Its fur is worth a fortune, but it can turn invisible. The heroes need to track it by smell and sound, hoping they don't look ridiculous sniffing trees in the middle of a frozen forest.",
+      "A courier carrying our payment was chased off the road by wolves. The heroes must track the scatter of coins and torn letters to find where the courier dropped the moneybag, hopefully before the wolves spend it on bones.",
+      "Strange mechanical noises are coming from the valley. The heroes must track the source of the noise, following the trail of oil and gears, to see if a rival guild is building a giant robot or if it's just a broken heater.",
+      "A group of bandits stole our winter supply of chocolate. This is a priority alpha mission. The heroes must track the cocoa crumbs left in the snow to the bandit hideout and recover the essential morale supplies at all costs.",
+      "A magical anomaly is moving across the region, leaving a trail of blue fire. The heroes must track the anomaly to harvest its residual energy, ensuring they don't get turned into popsicles or toads in the process.",
+      "We received a ransom note for a kidnapped snowman (don't ask). The heroes must track the kidnappers' sleigh tracks to the hideout. It’s a matter of principle, and the client is paying in actual gold, strangely enough.",
+      "The local wildlife is fleeing the eastern ridge. Something big is scaring them. The heroes must track the reverse migration to find the apex predator and assess if it's a threat to our guild's real estate value.",
+      "An ancient automaton wandered out of the workshop. It's leaking parts everywhere. The heroes must follow the trail of nuts and bolts to retrieve the robot before it walks into the ocean and rusts forever."
+    ],
+    "success": [
+      "They tracked 'Snowball' to a cave. It turns out it was just a very fluffy bear. They managed to scare it off and recovered the stolen livestock (mostly unharmed). The grateful farmers paid us well, and we got some bear fur tufts.",
+      "Against all odds, they found the spoon stuck in a frozen tree branch. The hero who lost it has been reprimanded, but the cook is happy. Harmony is restored to the kitchen, and the guild's luck is secure for another week.",
+      "They caught the fox! Well, they didn't kill it, but they managed to brush it while it was sleeping. They returned with a bag of magical fur that sheds diamond dust. We sold the dust for a high price and the fox is still free.",
+      "The heroes followed the trail of fear and found the moneybag untouched in a snowdrift. The wolves were busy chewing on the courier's boots (he wasn't in them). We recovered the full gold amount and the courier owes us a favor.",
+      "They tracked the noise to an old dwarven steam engine. The heroes fixed the leak and claimed the machine. We scraped it for parts and valuable metal. It wasn't a giant robot, but the scrap metal is worth its weight in gold.",
+      "Justice is sweet! The heroes ambushed the bandits while they were eating the chocolate. We recovered 90% of the stash and looted the bandits' own gold. Morale is at an all-time high, and the chocolate tastes like victory.",
+      "The anomaly was a wandering wisp. The heroes trapped its essence in a lantern. We now have a magical heater that never runs out of fuel. This will save us thousands in firewood costs over the winter.",
+      "They found the snowman. It had melted a bit, but the kidnappers were real. The heroes beat them up, took their loot, and 'saved' the puddle of water. The client was ecstatic and paid the full amount. Weirdest job ever.",
+      "The predator was a lost walrus that looked very scary in the dark. The heroes guided it back to the sea. The grateful village paid us for removing the 'monster', and we didn't even have to fight. Easy money.",
+      "They found the automaton stuck in a snowbank, beeping sadly. The heroes hauled it back to the guild. The workshop paid a handsome reward for the return of their prototype, and we kept the loose bolts for repairs."
+    ],
+    "loses": [
+      "They tracked 'Snowball', but Snowball tracked them back. The beast ambushed them, ate their lunch, and ripped their trousers. The heroes returned shivering, humiliated, and hungry. The farmers are not impressed.",
+      "The trail ended at a cliff edge. It seems the spoon is gone forever, likely hurled into the abyss during a drunken rage. The cook is furious and is now serving 'Disappointment Stew' (boiling water) for dinner.",
+      "They sniffed trees for four hours until their noses froze. They never saw the fox, but they did attract a pack of hungry wolves. The heroes had to flee, dropping some supplies to distract the pack. A complete financial failure.",
+      "The wind blew the snow over the tracks. The heroes wandered aimlessly and couldn't find the moneybag. It's buried out there somewhere, likely to be found by a lucky squirrel in spring. We lost the payment and the time.",
+      "They followed the trail into a trap. It was a decoy set by goblins. The heroes were netted and shaken upside down until their loose change fell out. They returned with no metal, less gold, and a fear of clicking noises.",
+      "The bandits ate it all. Every last piece. The heroes arrived just in time to see the wrappers floating in the wind. A fight broke out, but we gained nothing but bruises. The guild is chocolate-less and very grumpy.",
+      "The anomaly moved too fast. The heroes chased it until they were exhausted, then it exploded. They weren't hurt, but the explosion singed off their eyebrows and destroyed their map. We lost resources and dignity.",
+      "The trail led to a dead end. The kidnappers were smarter than they looked. The heroes returned empty-handed, and the client refused to pay, claiming we 'didn't care enough about the snowman'. A PR disaster.",
+      "The predator was actually a very angry Ice Drake. It chased the heroes for miles. They had to discard their armor to run faster. We lost expensive gear and the monster is still out there, probably laughing at us.",
+      "They followed the trail of parts until it stopped at the water's edge. The robot had already walked into the sea. The heroes watched it sink. The workshop is furious and demanded we pay for the lost prototype. A costly mistake."
+    ],
+    "place": [
+      "PineForest",
+      "SnowValley",
+      "FrozenLake",
+      "IceMine",
+      "CrystalCavern",
+      "FrostPeak",
+      "SouthPole"
+    ]
+  },
+  "Deliver": {
+    "name": ["Deliver"],
+    "description": [
+      "A wealthy eccentric wants to send a crate of 'Premium Ice Cubes' to his cousin in the... frozen north. Yes, it's redundant. No, we don't judge. The heroes must transport this heavy crate without letting it melt or getting laughed at.",
+      "The apothecary needs a fragile vial of nitroglycerin delivered to the mines. The heroes must walk extremely smoothly, avoid sneezing, and definitely not trip, or the mission will end with a very loud bang and a crater.",
+      "We need to deliver a peace offering to the Goblin King: a giant fruitcake. It’s heavy, sticky, and smells like old socks. The heroes must haul this culinary disaster to the goblin camp and ensure they accept it as a gift, not a declaration of war.",
+      "A local wizard forgot his wand at the tavern. The heroes must deliver it to his tower. The wand is leaking sparks and occasionally turns nearby objects into ducks. Transport it safely without transforming the team.",
+      "The orphanage needs their supply of wool blankets before the storm hits. It’s a charity mission, but the PR is good. The heroes must carry the bulky bundles through the blizzard and ensure no blankets are lost to the wind.",
+      "A suspicious client wants us to deliver a crate marked 'DO NOT SHAKE' to the docks. It’s vibrating and humming. The heroes need to get this thing out of our guild hall and to the destination ASAP before whatever is inside hatches.",
+      "We have to transport a barrel of high-explosive dwarven ale to the festival. It is volatile and delicious. The heroes must defend the barrel from thirsty bandits and ensure they don't drink the profits themselves.",
+      "A rich lady wants her pet poodle delivered to her winter chalet. The poodle is wearing a diamond collar and refuses to walk on snow. The heroes must carry the dog like royalty and defend it from eagles looking for a snack.",
+      "The Mayor needs these tax documents delivered to the capital. It's boring, heavy paper. However, bandits love stealing official papers to hold for ransom. The heroes must protect the bureaucracy at the cost of their lives.",
+      "Deliver a handwritten apology letter from our Guildmaster to the Witch of the Woods (he ate her prize pumpkin). The heroes must deliver the letter, look sincere, and try not to get cursed into newts."
+    ],
+    "success": [
+      "The ice cubes were delivered! The cousin was delighted to have 'imported' ice. He paid a premium fee for the absurdity. The heroes returned confused but with a heavy purse of gold. Rich people are weird.",
+      "They walked like ballerinas. The nitroglycerin arrived safely at the mine. The miners used it to blast open a gold vein and gave us a share of the profits. We are rich, and nobody exploded today!",
+      "The Goblin King loved the fruitcake! He said it tasted like 'rotting victory'. He gave the heroes a sack of stolen jewelry in return. We have established a diplomatic alliance based on terrible baked goods.",
+      "The wand was delivered. It only turned one hero's hat into a mallard. The wizard was grateful and tipped us with a scroll of fireball. A successful delivery with only minor poultry-related incidents.",
+      "The blankets arrived just as the snow started falling. The orphans were warm, and the town loves us now. We received donations from grateful citizens, and the heroes feel a warm fuzzy glow in their hearts (and pockets).",
+      "They dropped the crate at the docks and ran. The recipient paid via a drop-box. We don't know what was in it, and we don't want to know. The payment was substantial, and the guild is still standing. Success.",
+      "The ale arrived safely! The festival organizer paid a bonus for the pristine condition of the barrel. The heroes were treated to free drinks (non-explosive ones) and returned stumbling but happy with the gold.",
+      "The poodle was delivered without a single paw touching the snow. The lady was thrilled and tipped the heroes with a diamond ring. The heroes are tired of carrying a dog, but the pay was worth the humiliation.",
+      "The taxes were delivered. The capital bureaucrats were surprisingly efficient and paid the delivery fee immediately. We avoided legal trouble for another year and made some easy money hauling paper.",
+      "The Witch accepted the apology. She didn't curse anyone! She even gave the heroes a jar of 'Eye of Newt' (it's actually just pickled onions) as a thank you. We avoided a magical feud and got snacks."
+    ],
+    "loses": [
+      "The heroes got lost and the ice melted. They delivered a crate of water. The cousin was furious and refused to pay. The heroes had to run away while being pelted with the soggy crate wood. A complete waste of time.",
+      "Someone sneezed. The vial didn't explode, but they dropped it in a snowbank and couldn't find it. They had to flee before anyone stepped on it. The miners are angry, and we have legally disavowed knowledge of the lost explosive.",
+      "The Goblins were insulted. They thought the fruitcake was a brick meant for throwing. A fight broke out. The heroes had to eat the fruitcake to prove it was food, got sick, and fled without payment.",
+      "The wand acted up and turned the map into a goose. The goose flew away with the map. The heroes got lost, the wizard is angry his wand is missing, and we have to pay for the lost magical item. Disaster.",
+      "A gust of wind blew half the blankets down a ravine. The heroes arrived with only a few bundles. The orphanage was disappointed, and the town thinks we are incompetent grinches. Our reputation has taken a hit.",
+      "The crate hatched halfway there. It was a swarm of mechanical bees. The heroes dropped it and ran for their lives. The client is suing us for the loss, and we have to pay for bee-sting ointment.",
+      "The heroes got thirsty and 'sampled' the ale. They arrived with an empty barrel and a terrible hangover. The festival organizer kicked them out. We lost the potential profit and had to pay for the consumed product.",
+      "The poodle bit a hero and ran into the woods. The heroes spent hours chasing it but only found the diamond collar. The lady is suing us for the dog, though we did keep the collar to pay for the legal fees.",
+      "Bandits ambushed them. Not for the papers, but they burned the papers to stay warm. The heroes arrived with ashes. The Mayor is furious and has audited the guild in retaliation. We lost money to taxes.",
+      "The Witch didn't believe the apology. She turned the team leader into a talking frog for three days. The mission failed, we got no reward, and we have to keep the leader in a bucket of water until the spell wears off."
+    ],
+    "place": [
+      "ElfVillage",
+      "HumanCity",
+      "Depot",
+      "ToyFactory",
+      "PackagingHall",
+      "Workshop",
+      "SnowValley",
+      "PineForest"
+    ]
+  },
+  "Rescue": {
+    "name": ["Rescue"],
+    "description": [
+      "A novice adventurer got his tongue stuck to a frozen flagpole on the top of the North Ridge. Don't ask how. The heroes must go up there, fight off the giggling wind spirits, and detach the poor fool before he freezes.",
+      "A supply wagon fell through the ice on the frozen lake. The driver is safe, but the horses are stranded on an ice floe. The heroes must rescue the horses (and the cargo) before the ice breaks up completely.",
+      "The town's Santa impersonator has been kidnapped by elves who take their job way too seriously. They are holding him in the toy factory. Rescue him before they force him to work a real shift on the assembly line.",
+      "A famous bard went to serenade a sleeping bear and, surprisingly, it didn't go well. He is now up a tree, surrounded by angry wildlife. Rescue the bard so he can write a song about how brave we are.",
+      "A group of miners is trapped behind a cave-in. They have plenty of air but are running out of playing cards. The heroes must dig them out quickly before they start betting their clothes and freeze to death.",
+      "Our guild's mascot (a very fat cat) wandered into the sewers. We need a team to go down there, fight the rats, and rescue the cat. It’s a smelly, thankless job, but the Guildmaster loves that cat more than us.",
+      "A wealthy noble was skiing and went off-piste directly into a Goblin camp. He is currently being held for ransom. We need to extract him. If he’s annoying, you can take your time, but we need him alive for the payment.",
+      "A scientist studying 'Ice Worms' hasn't reported back. He's likely being digested or lectured by the worms. Rescue him and his research notes. The science is valuable; the scientist is replaceable, but try to save both.",
+      "A rival guild's team is stuck in a blizzard. We hate them, but if we save them, we can claim the moral high ground and charge them a 'rescue fee'. Go pull them out of the snow and make sure they know who saved them.",
+      "An old lady's prize-winning pig ran onto the thin ice. The pig is heavy and panicking. The heroes must rescue the bacon—I mean, the pig—without falling in themselves. The reward is a lifetime supply of sausages."
+    ],
+    "success": [
+      "They used warm water and patience. The adventurer is free! He lost a bit of dignity but kept his tongue. He paid us in loose change and promised to tell everyone how great we are (with a lisp).",
+      "The horses were coaxed onto a raft and brought to shore. The cargo was saved too! The merchant was so happy he gave us a crate of apples. The horses are safe, and the guild has snacks.",
+      "They stormed the factory! The elves surrendered after we threatened to cancel Christmas. The Santa impersonator is safe and gave us free tickets to his show. We also looted some unfinished wooden ducks.",
+      "The bard was rescued! He was shivering and crying, but alive. He wrote a ballad called 'The Heroes of the Pine', which is catchy. Our reputation has increased, and he paid us with a bag of gold tips.",
+      "They cleared the rocks in record time. The miners were saved just as they were betting their boots. They were incredibly grateful and gave us a share of the ore they had mined while trapped. Good work.",
+      "The cat was found ruling over a kingdom of rats. The heroes grabbed the cat and ran. The Guildmaster is weeping with joy and gave the team a bonus. The cat, however, seems displeased to be back.",
+      "The noble was saved! He was indeed annoying, complaining about the 'accommodations'. But his father paid the ransom plus a tip for our patience. We have gold, and the noble is someone else's problem now.",
+      "The scientist was found hiding in a crevice. The worms were huge! The heroes distracted them and pulled the scientist to safety. He paid us with rare alchemical ingredients. Science advances, and we get paid.",
+      "We saved the rival team. They looked humiliated as we dragged them to safety. They paid the fee through gritted teeth. We have gold and the satisfaction of being superior. Best mission ever.",
+      "The pig was slid to safety on a shield. It weighed a ton. The old lady was delighted and true to her word, gave us sausages. The guild feasts tonight, and the pig lives to oink another day."
+    ],
+    "loses": [
+      "They pulled too hard. The adventurer is free, but he... is not happy about his tongue situation. He ran away screaming. We got no payment, and now there are rumors that we torture clients. Bad for business.",
+      "The ice broke. The horses swam to shore (they are fine), but the cargo sank to the bottom. The merchant shouted at us for losing his goods. We returned wet, cold, and unpaid. The horses looked at us judgmentally.",
+      "The elves were too organized. They pelted the heroes with hard wooden blocks until they retreated. The Santa impersonator is now part of the workforce. We failed the mission and Christmas is awkward this year.",
+      "The bear climbed the tree. The heroes arrived just in time to see the bard fleeing into the woods, leaving his lute behind. We recovered the lute, but the bard is gone. No payment, just a broken instrument.",
+      "The heroes dug the wrong way and caused a secondary collapse. The miners found another exit on their own and walked back to town, angry. They are suing us for 'emotional distress' and incompetence.",
+      "The cat refused to leave. It scratched the heroes and commanded its rat army to attack. The team fled the sewers covered in filth. The cat returned on its own two days later. We gained nothing but infections.",
+      "The goblins demanded a higher price than the noble was worth. We tried to negotiate, and the goblins kept the noble. The family refused to pay us since we didn't bring him back. A waste of negotiation time.",
+      "The worms were too big. The heroes watched from a distance as the worm swallowed the research station. The scientist might be inside. We decided to mark him as 'Missing in Action' and retreated. No science today.",
+      "The rival team refused our help out of pride. They threw snowballs at us until we left. They eventually got out on their own. We wasted time and energy, and they are still making fun of us.",
+      "The ice cracked. The pig fell in. The heroes tried to grab it but it was too slippery. The pig swam away (surprisingly good swimmer) and the old lady chased after it. We stood there wet and sausage-less."
+    ],
+    "place": [
+      "FrostPeak",
+      "IceMine",
+      "Sea",
+      "Lake",
+      "CrystalCavern",
+      "SouthPole",
+      "FrozenLake",
+      "PineForest"
+    ]
+  },
+  "Mining": {
+    "name": ["Mining"],
+    "description": [
+      "We found a vein of 'Spicy Ore' near the volcano edge. It glows red and smells like chili peppers. The heroes must mine it carefully. If they strike it too hard, it might explode or just give everyone terrible heartburn.",
+      "The Guildmaster needs more coal for the fireplace. There is an old, abandoned mine nearby that is rumored to be haunted by the ghosts of lazy miners. The heroes must ignore the spooky noises and dig up enough fuel to keep us warm.",
+      "A rumor suggests there are diamonds inside the stomachs of the Rock Golems in the quarry. The heroes must 'mine' the Golems. This involves hitting moving rocks with pickaxes while trying not to get stomped on. Good luck.",
+      "We need salt. Not for food, but to keep the front steps ice-free so the insurance company doesn't sue us. The heroes must travel to the Salt Flats and mine the purest crystals, avoiding the giant slugs that live there.",
+      "Deep in the ice caves, there is a rare metal called 'Ever-Cold Iron'. It never melts. We need it to make a refrigerator for the guild's beer. The heroes must mine the deposit without freezing their fingers off.",
+      "A meteorite crashed in the forest last night! It's smoking and green. The heroes need to go mine the 'Star Metal' before the local goblins turn it into crude weaponry. Caution: Space radiation may cause hair loss.",
+      "We found a deposit of 'Fools' Gold'. It's worthless, but it looks nice. The heroes need to mine it so we can decorate the guild hall and pretend we are richer than we actually are. Morale is important, even if it's fake.",
+      "The Ancient Dwarves left a sealed vault behind a wall of solid granite. The heroes must tunnel through the rock to reach the vault. It’s hard labor, but the potential loot is worth the back pain and blisters.",
+      "There is a rumor of fossilized dragon bones in the cliff face. Grinding them up makes a potent potion. The heroes must repel down the cliff and excavate the bones, hoping the dragon's mom isn't around to object.",
+      "A deposit of crystalized honey was found in a giant beehive frozen in a glacier. The heroes must mine the sweet, rock-hard treat. They need to be quiet, though; prehistoric bees might just be sleeping, not dead."
+    ],
+    "success": [
+      "They mined the Spicy Ore! It really does heat up the room. We put a chunk in the furnace and the guild is toasty warm. The heroes smell like barbecue, but the blacksmith is thrilled with the new material.",
+      "The mine wasn't haunted; it was just the wind whistling through the shafts. The heroes filled their carts with high-quality coal. We have enough fuel for the whole winter, and nobody saw a single ghost.",
+      "They managed to crack open a Golem! Inside was a fist-sized diamond. The Golem was actually relieved to have the indigestion removed. We sold the diamond for a massive profit and the heroes only have minor bruising.",
+      "The salt was harvested successfully. The heroes returned with sacks of white crystals. We salted the steps, and now the delivery man won't slip and drop our packages. A triumph for safety and logistics.",
+      "They got the Ever-Cold Iron. It was so cold it froze the pickaxes. The blacksmith made a cooling box, and now our ale is perfectly chilled. The heroes are thawing out by the fire, but the beer is delicious.",
+      "The meteorite yielded excellent metal. The heroes returned with glowing green rocks. The blacksmith forged a sword that hums when you swing it. We sold it to a hero with more money than sense. Great profit.",
+      "We have tons of shiny yellow rocks now! The guild hall looks like a palace. The heroes are covered in glitter dust that won't wash off, but the visitors are impressed by our 'wealth'. Fake it 'til you make it.",
+      "They broke through the granite! Inside wasn't gold, but a library of ancient dwarven joke books. We sold the books to a collector for a tidy sum. The heroes are exhausted, but the guild is richer.",
+      "The bones were harvested. They were huge! The apothecary paid us a fortune for the dragon dust. The heroes feel a bit guilty about disturbing the dead, but the gold coins helped soothe their conscience.",
+      "Sweet success! The crystal honey is delicious and never spoils. We have a winter's supply of sweetener. The heroes didn't wake the bees, although one hero is now stuck to his own beard from the sticky dust."
+    ],
+    "loses": [
+      "The ore was too unstable. One hero sneezed and the vein exploded. They came back with singed eyebrows and no ore. We have to pay for burn salve and the blacksmith is disappointed. A hot mess.",
+      "It was definitely haunted. The ghosts threw rocks at the heroes until they fled. They returned empty-handed and terrified, refusing to go back. We have no coal and the guild is freezing. We are burning old chairs now.",
+      "The Golems fought back. It turns out hitting rocks with sticks is a bad idea. The heroes were chased out of the quarry. We got no diamonds, just a bill for broken pickaxes and medical attention for crushed toes.",
+      "The giant slugs were hungry. They ate the salt sacks and tried to eat the heroes. The team fled, sliding around on the slime. We have no salt, and the front steps remain a treacherous death trap.",
+      "It was too cold. The heroes' pickaxes shattered on impact. They tried to bite the ore (bad idea). They returned with chipped teeth and no metal. The beer remains lukewarm, which is a tragedy for everyone.",
+      "The meteorite was radioactive. The heroes started feeling sick and had to retreat. They returned glowing green, which is festive but unhealthy. We got no metal and have to quarantine the team in the basement.",
+      "It wasn't even Fool's Gold; it was just yellow mud. The heroes spent all day digging up dirt. The guild hall looks dirty, not rich. We wasted time and energy on a decoration project that failed miserably.",
+      "The wall was too thick. After ten hours of hitting it, the ceiling collapsed. The heroes barely escaped. The vault remains sealed, and we lost several good shovels in the rubble. A complete waste of sweat.",
+      "The dragon wasn't fully fossilized. It was a skeleton lich! It screamed at the heroes, and they ran away. They dropped their tools down the cliff. We lost equipment and gained a terrifying undead enemy.",
+      "The bees woke up. They were the size of cats. The heroes dropped the honey and ran for their lives. We got no honey, but we did get a lot of stings. The guild smells like fear and venom today."
+    ],
+    "place": [
+      "IceMine",
+      "CrystalCavern",
+      "FrostPeak",
+      "SnowValley",
+      "SouthPole",
+      "FrozenLake"
+    ]
+  },
+  "Collect": {
+    "name": ["Collect"],
+    "description": [
+      "The Alchemist needs 'Frost-Moss' that only grows on the north side of trees in the spooky forest. The heroes must go collect a basketful. It sounds easy, but the trees in that forest like to slap people who touch them.",
+      "It is tax season! The local goblin village hasn't paid their protection money (which protects them from us). The heroes must go 'collect' the gold. Expect resistance, excuses, and payment in weird currencies like buttons or teeth.",
+      "We are out of pillows. There is a flock of cloud-sheep on the mountain. Their wool is incredibly soft. The heroes must chase the sheep and shear them. Warning: Cloud-sheep can fly, which makes shearing difficult.",
+      "The cook needs the eggs of the Sapphire Eagle for a special omelet. The nests are on the highest peaks. The heroes must climb up, distract the angry mother bird, and steal the eggs without becoming bird food.",
+      "A eccentric wizard lost his collection of animated spoons in the town square. They are running loose. The heroes must catch the spoons before they dig their way to freedom. It’s humiliating but pays well.",
+      "We need to collect firewood, but not just any wood. We need 'Iron-Bark' from the Petrified Forest. It burns for days. The heroes need to bring axes and saws, and hopefully not dull them on the metal-like trees.",
+      "The guild needs more recruits. The heroes are sent to the local taverns to 'collect' potential heroes. Basically, buy them drinks until they sign the contract. Quantity over quality is the goal here.",
+      "A caravan dropped a shipment of spices when it was attacked. The snow is now flavored like cinnamon and nutmeg. The heroes must go out and scrape up the expensive spice-snow before the wind blows it away.",
+      "We need water. The well is frozen. The heroes must go to the pristine glacial stream and collect barrels of pure water. It involves heavy lifting and walking on ice. Don't slip, or we'll be drinking mud.",
+      "The Healer needs spider silk for bandages. The heroes must enter the cave of the Frost Spiders and collect the webs. The spiders are size of dogs, but they are usually friendly if you don't poke them. Usually."
+    ],
+    "success": [
+      "They returned with the moss! It glows faintly. The Alchemist is delighted and made a potion that makes you see in the dark (and slightly hallucinate). A good haul, despite the heroes getting slapped by branches.",
+      "The goblins paid up! They tried to pay in rocks, but the heroes insisted on gold. We got a heavy sack of coins and a few 'bonus' chickens the goblins threw in. The guild's treasury is replenished.",
+      "They caught the sheep! It involved a lot of jumping and tackling in mid-air. The wool is soft as a dream. We have new pillows, and everyone in the guild is sleeping better, leading to improved morale.",
+      "The omelet was legendary! The heroes managed to snag three eggs while the eagle was looking the other way. The cook is happy, and the heroes got to eat the leftovers. A delicious victory for the guild.",
+      "All spoons accounted for! The heroes looked ridiculous chasing silverware, but they did it. The wizard paid us in magical cleaning supplies. The guild is cleaner, and the spoons are back in their drawer.",
+      "The Iron-Bark was harvested. It broke two axes, but we have a wagon full of wood. The fire is roaring and won't go out for a week. The guild is the warmest place in the city right now.",
+      "We got five new recruits! They are a bit hungover and confused about why they are here, but a contract is a contract. We have fresh meat for the next dangerous mission. The recruitment drive was a success.",
+      "The spice-snow was recovered! We melted it down and now have a very concentrated, spicy water. The cook can use this for months. It saved us a fortune on imported spices.",
+      "The water was delivered without a spill. It is crisp, cold, and delicious. The heroes have sore backs from carrying the barrels, but hydration is key to survival. Good job.",
+      "Silk secured! The spiders were actually asleep. The heroes cut down the webs quietly and left. We have enough high-quality bandages to wrap a mummy. The Healer is very pleased."
+    ],
+    "loses": [
+      "The trees fought back. The heroes spent hours dodging branches and got no moss. They returned covered in sap and bruises. The Alchemist yelled at them, and we have to buy the moss from a rival guild.",
+      "The goblins claimed poverty and threw mud at the heroes. The team didn't want to massacre a village for a few coins, so they left. We got no gold, and the heroes smell terrible. A diplomatic failure.",
+      "The sheep flew too high. The heroes ran around the mountain waving shears like maniacs, but caught nothing. One hero fell off a cliff (he's okay). We have no wool and we are sleeping on hard bunks.",
+      "The eagle was home. It pecked the heroes relentlessly. They dropped the eggs while fleeing. The eggs broke, the heroes are bleeding, and the cook is furious. We are eating oatmeal again.",
+      "The spoons were too fast. They escaped into the sewers. The wizard is demanding we pay for his antique collection. We lost money on a mission involving cutlery. This is a new low for us.",
+      "The wood was too hard. The saws broke. The axes chipped. The heroes gave up and brought back regular pine twigs. The fire burned out in an hour, and we have to pay for new tools. A waste of time.",
+      "They bought the drinks, but forgot the contracts. The potential recruits drank our tab dry and walked away. We lost a lot of gold on ale and gained zero new members. The heroes are also drunk. Disaster.",
+      "The wind was faster. By the time they arrived, the spices were gone. They brought back a bucket of yellow snow, but nobody wants to eat that. We lost the potential loot and the trip was pointless.",
+      "They slipped. All of them. The barrels rolled down the hill and smashed. The heroes slid down after them. They returned wet, freezing, and without water. We are melting snow in a pot like savages.",
+      "The spiders were awake and hungry. The heroes got wrapped in webs and had to cut themselves free, destroying the silk in the process. They fled the cave screaming. We have no bandages and more injuries."
+    ],
+    "place": [
+      "PineForest",
+      "FrozenLake",
+      "SnowValley",
+      "Sea",
+      "Lake",
+      "CrystalCavern",
+      "IceMine"
+    ]
+  },
+  "Research": {
+    "name": ["Research"],
+    "description": [
+      "The Guildmaster thinks he saw a Yeti wearing a top hat. The heroes must go to the snowy peaks, set up a blind, and observe the local fauna to prove or disprove the existence of the 'Gentleman Yeti'.",
+      "We found a glowing blue mushroom. Is it food? Is it poison? Is it a battery? The heroes must conduct field tests (poking it, feeding it to a rat, etc.) to determine its properties before we put it in the stew.",
+      "Strange geometric patterns appeared in the cornfield (well, the snow-field). Aliens? Pranksters? The heroes must measure the angles and take samples to understand this phenomenon before the tabloids show up.",
+      "The Mage Guild wants data on the 'Aurora Borealis'. The heroes need to sit on a freezing mountain all night with complex instruments and record the magical fluctuations. Try not to fall asleep and freeze.",
+      "We need to test a new prototype: 'Heated Armor'. The heroes must wear this experimental gear and stand in a blizzard for six hours. They are basically guinea pigs. If they catch on fire, roll in the snow.",
+      "A mysterious monolith appeared overnight. It hums in B-flat. The heroes must study it, tap it with hammers, and see if it does anything cool. It’s pure science, or vandalism, depending on your view.",
+      "The ecosystem is changing. The snow-bunnies have grown fangs. The heroes need to capture a specimen and study why the cute animals are becoming carnivorous nightmares. Nature is scary.",
+      "We found an ancient spellbook, but the ink is faded. The heroes must bring it to a place of power (a magic circle) and try to reconstruct the spells by casting them randomly. What could go wrong?",
+      "Researching the durability of Goblin fortifications. The heroes must observe a goblin camp, poke their walls, and take notes on their architectural weaknesses. Do not engage, just critique their building skills.",
+      "A strange disease called 'Disco Fever' is affecting the villagers. They can't stop dancing. The heroes must study the victims, find "
+    ],
+    "success": [
+      "They saw the Yeti! He was indeed wearing a hat. The heroes sketched him and returned with the proof. The scientific community is baffled, but we are famous. The 'Gentleman Yeti' is the discovery of the century!",
+      "It's a battery! The mushroom gives off a mild electric shock. We can use it to power the guild's doorbell. The rat survived, mostly. A great discovery that will save us money on... whatever powers doorbells.",
+      "It was pranksters. Local teenagers with snowshoes. The heroes caught them and made them shovel our driveway. The mystery is solved, and we got free labor. Science is about finding the truth, even if it's boring.",
+      "The data was collected. The Aurora is actually caused by sky-whales burping magic. Who knew? The Mage Guild paid us handsomely for the papers. The heroes are cold but educated.",
+      "The armor worked! It got a bit hot in the crotch area, but nobody froze. The prototype is a success. We can sell the patent to the army for a fortune. The heroes are sweaty but alive.",
+      "The monolith opened! It was a vending machine from the future. The heroes got a can of soda that tastes like 'Galactic Berry'. We don't understand the science, but the soda is refreshing.",
+      "The bunnies were eating magical berries. The heroes identified the food source. We destroyed the bushes, and the bunnies are cute again. Crisis averted through biology! The heroes kept one as a pet.",
+      "They reconstructed a spell! It summons a plate of cheese. Not exactly earth-shattering power, but very useful for parties. The book is now readable and we added it to our library.",
+      "The report is in: Goblins use mud and spit. Their walls are terrible. The heroes returned with detailed blueprints of how to knock the camp over with a stiff breeze. Strategic knowledge secured.",
+      "They found the source: a cursed jukebox buried in the snow. They smashed it, and the dancing stopped. The villagers are exhausted but grateful. We cured the plague with violence and research."
+    ],
+    "loses": [
+      "No Yeti. Just a rock with some snow on it that looked like a hat. The heroes froze for three days staring at a rock. They returned grumpy and with a cold. The Guildmaster needs new glasses.",
+      "The hero ate the mushroom. He turned blue and glowed for a week. He spent the mission vomiting sparks. We learned it is NOT food, but the method of discovery was... suboptimal. Medical bay is busy.",
+      "The heroes got confused by the math. They measured the wrong angles and concluded it was 'Magic'. It wasn't. It was just wind patterns. The report was rejected, and we look like idiots.",
+      "The instruments froze. The ink froze. The heroes' eyelids froze. They came back with a blank piece of paper and hypothermia. The Mage Guild refused to pay for a blank page. A total freeze-out.",
+      "The armor malfunctioned. It cooked the heroes like lobsters. They had to strip naked in the snow to stop the burning. They returned wrapped in blankets, humiliated and smelling like bacon. lawsuit pending.",
+      "The monolith zapped them. Every time they touched it, they got shocked. They learned nothing except that electricity hurts. They returned with frizzy hair and no answers. Science is painful.",
+      "The bunnies attacked. A swarm of fanged fluff-balls chased the heroes up a tree. They dropped their notebooks and fled. We learned nothing except to fear rabbits. A humiliating day for science.",
+      "The spell backfired. It summoned a rain of frogs inside the library. The books are slimy, the heroes are covered in amphibians, and we didn't learn anything useful. The janitor is going to quit.",
+      "The Goblins saw them taking notes. They were offended by the criticism and attacked. The heroes had to run, losing their notes in the chaos. We know nothing about the walls, but we know goblins hate critics.",
+      "The heroes caught the fever. Now they are dancing in the guild hall and can't stop. We have to tie them to chairs until it wears off. The village is still dancing. The mission failed and the music is annoying."
+    ],
+    "place": [
+      "Library",
+      "WinterSanctum",
+      "Workshop",
+      "SouthPole",
+      "CrystalCavern",
+      "FrostPeak",
+      "IceMine"
+    ]
+  },
+  "Decoding": {
+    "name": ["Decoding"],
+    "description": [
+      "We found a treasure map, but it was drawn by a pirate who was notoriously bad at drawing. It looks like a plate of spaghetti. The heroes must decipher the squiggles to find the location of the buried rum.",
+      "An ancient door was found in the basement. It has a riddle carved on it in a dead language. The heroes must translate the riddle and solve it to open the door. Hopefully, it doesn't release a demon.",
+      "We intercepted a coded message from a rival guild. It uses a substitution cipher based on vegetable names. The heroes must crack the code to find out what their evil plan is (probably just a grocery list).",
+      "A traveler sold us a 'Magic Orb' that screams numbers at random intervals. The heroes need to write down the numbers and figure out if it's a coordinate, a lottery ticket, or just a broken alarm clock.",
+      "The Guildmaster's toddler drew a picture. He says it's a map to his 'secret stash'. We suspect he stole the guild seal. The heroes must decode the toddler-art to find the missing stamp.",
+      "We found a stone tablet with instructions on how to turn lead into gold. But half the tablet is missing. The heroes must use logic and context clues to fill in the blanks without accidentally blowing up the lab.",
+      "A ghost is haunting the library, tapping on the shelves. It's using Morse code! Or maybe it's just clumsy. The heroes must listen to the taps and decode the message from the beyond.",
+      "A locked chest has a combination lock with symbols of animals. The heroes must research the mythological order of these beasts to crack the code. No smashing allowed; the chest is fragile.",
+      "The local witch sent us a letter written in invisible ink. The heroes must figure out the revealing agent (lemon juice? fire? dragon blood?) and read the message before the paper disintegrates.",
+      "A bard left a musical score that is supposedly a map to a hidden valley. The heroes must 'play' the map to understand the directions. Musical talent is required, or at least the ability to hit a drum."
+    ],
+    "success": [
+      "It wasn't spaghetti; it was the river delta! The heroes figured it out and found the chest. It was full of vintage rum. We are having a party tonight! The pirate was a genius after all.",
+      "The riddle was: 'What has four legs but cannot walk?' Answer: A table. The door opened to reveal... an old storage room full of antique tables. Not exciting, but we sold the furniture for good gold.",
+      "Code broken! It translated to 'Attack the East Gate at dawn'. We were ready and ambushed them with water balloons. The rival guild was humiliated. Information is power!",
+      "The numbers were coordinates! They led to a supply drop left by a forgotten expedition. We found preserved meat and blankets. The orb stopped screaming. A quiet and profitable outcome.",
+      "The scribbles meant 'Under the rug'. The heroes lifted the rug and found the guild seal (and a half-eaten cookie). The Guildmaster is relieved, and the toddler is a prodigy. Crisis averted.",
+      "They filled in the blanks correctly! They didn't make gold, but they made a very shiny silver alloy. It's valuable and stable. The alchemy lab is still standing. Good work on the linguistic reconstruction.",
+      "The ghost was saying: 'Return my book'. We found the overdue book and put it back. The ghost faded away, leaving behind a spectral gold coin as a tip. The library is quiet again.",
+      "The code was 'Lion, Snake, Badger'. The chest clicked open. Inside were deeds to a plot of land. We now own a small farm! The heroes felt very smart solving the puzzle.",
+      "It was onion juice! The message appeared when heated. It was a coupon for 50% off potions. We stocked up on healing draughts. Not a life-changing secret, but a great bargain.",
+      "The melody revealed the path! The notes corresponded to landmarks. The heroes followed the song and found a hidden grove with rare herbs. A poetic and profitable journey."
+    ],
+    "loses": [
+      "They thought the squiggle was a mountain. They climbed the mountain and found nothing but snow. The pirate really was just bad at drawing. We wasted a week chasing a doodle.",
+      "They guessed wrong. The door didn't open; it fired a dart into the hero's leg. Then it locked permanently. We will never know what is in that room. Probably just more tables, but still annoying.",
+      "They translated it as 'Buy carrots'. We bought carrots. The rival guild attacked the West Gate while we were shopping for vegetables. We were unprepared and looked foolish. The code was a decoy.",
+      "They wrote down the numbers for days. It turns out the orb was just counting seconds until it exploded. It blew a hole in the table. It was a bomb, not a puzzle. We are deaf and have no table.",
+      "They interpreted the drawing as 'The Dog'. They chased the dog for hours. The dog didn't have the seal. The toddler laughed at them. The seal is still missing. Humiliated by a baby.",
+      "They guessed 'Sulfur' instead of 'Salt'. The mixture exploded. The heroes are covered in black soot and the lab smells like rotten eggs. The tablet is destroyed. No gold, just a cleaning bill.",
+      "They thought the ghost was tapping a rhythm. They started dancing. The ghost got annoyed and threw a book at them. It wasn't Morse code; it was just a bored poltergeist. Mission failed.",
+      "They couldn't figure it out and tried to pick the lock. The lock melted (magic trap). The chest is sealed forever. Whatever was inside is lost to history. The heroes feel very stupid.",
+      "They used fire to reveal the ink. They burned the letter. The message is gone. The witch is offended that we ignored her letter and turned the messenger into a newt. A total communication breakdown.",
+      "The hero played the lute so badly the map didn't make sense. They walked into a swamp because he played a flat note. They returned wet and muddy. The bard's song remains a mystery."
+    ],
+    "place": [
+      "Library",
+      "Workshop",
+      "WinterSanctum",
+      "CrystalCavern",
+      "ElfVillage",
+      "HumanCity"
+    ]
+  },
+  "Repair": {
+    "name": ["Repair"],
+    "description": [
+      "The guild's central heating furnace has decided to quit. It’s making ominous clanking noises and spitting soot. The heroes must crawl inside the blackened vents and fix the mechanism before we all freeze into statues.",
+      "The bridge to the supply town has snapped under the weight of a very fat troll. We need a team of heroes with hammers and nails (and no fear of heights) to patch the structure so our food wagons can cross.",
+      "The local tavern's beer taps have frozen solid. This is a level 5 emergency. The heroes must repair the plumbing immediately. A riot is brewing among the thirsty patrons, and they are looking at us with angry eyes.",
+      "Our outer wall has a hole in it. A bear walked right in and ate our garbage. The heroes need to mix mortar, stack bricks, and repair the breach before the bear brings his friends for a second course.",
+      "The old clock tower is stuck on 'midnight'. It keeps ringing the bell every minute. The town is going insane from the noise. The heroes must climb the gears and fix the spring without getting crushed by the pendulum.",
+      "Santa's sleigh (or a very convincing replica) crashed in the forest. The runners are bent. The heroes must use their blacksmithing skills to hammer it back into shape so the gifts can be delivered on time.",
+      "The magical barrier that keeps the snow out of the greenhouse is flickering. The heroes need to recharge the runes and patch the magical weave. If they fail, our tomatoes will die, and the cook will cry.",
+      "A hero broke the training dummy. Actually, he pulverized it. We need a team to rebuild 'Woody' using stronger lumber and metal reinforcements so the next hero doesn't turn him into toothpicks in five seconds.",
+      "The roof of the guild hall is leaking. Ice melt is dripping onto the Guildmaster's desk. The heroes must go up on the slippery roof during a storm and patch the tiles. Try not to slide off and land in a snowbank.",
+      "An automaton that cleans the floors has gone rogue and is spinning in circles, digging a hole in the carpet. The heroes must catch the robot, open its panel, and rewire its brain to 'Clean' instead of 'Dig'."
+    ],
+    "success": [
+      "The furnace roared back to life! A blast of hot soot covered the heroes, but the heat is returning. We are warm again! The heroes look like chimney sweeps, but they were given extra soap rations.",
+      "The bridge is fixed! It looks a bit wonky, but it holds weight. The food wagon crossed safely. The troll watched from under the bridge and gave a thumbs up. Connectivity is restored.",
+      "Crisis averted! The beer flows again. The tavern owner was so relieved he gave the heroes a round on the house. The riot dispersed, and peace (and intoxication) returned to the village.",
+      "The wall is solid. The bear came back, sniffed the fresh brickwork, looked disappointed, and left. The garbage is safe, and the guild is secure. Good masonry work, team.",
+      "Silence at last! The clock is ticking normally. The townspeople stopped screaming. The mayor paid us a bonus for 'saving the sanity of the city'. The heroes are deaf from the bells, but rich.",
+      "The sleigh is air-worthy again! The driver (who looked suspiciously like a regular guy in a fake beard) thanked us and flew off. We got a bag of 'reject toys' as payment. The wooden ducks are nice.",
+      "The barrier is stable. The greenhouse is a tropical paradise again. We saved the tomatoes! The cook made a celebratory salad. The heroes feel a strong connection to agriculture now.",
+      "Woody 2.0 is built. He is a tank. The next hero who hit him broke their sword. The training dummy is now invincible. We might have overdone the repairs, but at least we don't have to build another one.",
+      "The leak is plugged. The Guildmaster is dry. The heroes slid around a lot but managed to stay on the roof. We saved the paperwork from water damage, which is boring but essential for administration.",
+      "The robot is cleaning again! It beeped an apology and went back to sweeping. The hole in the carpet is covered by a rug. The guild is clean, and the robot is no longer a drilling hazard."
+    ],
+    "loses": [
+      "They hit the wrong pipe. The furnace exploded. We are now covered in soot AND freezing. The guild hall is filled with black smoke. We have to evacuate and pay for a professional repairman.",
+      "The repairs failed. The wagon tried to cross, and the bridge collapsed again. The wagon is in the ravine. We lost the food, the bridge, and our dignity. The troll is laughing at us.",
+      "They broke the pipe completely. Beer flooded the basement. It was a tragedy. The patrons are rioting. We had to flee the tavern through the back door. The guild is banned from the pub for a month.",
+      "They used the wrong mortar. It didn't dry in the cold. The bear pushed the wall over and ate the garbage again. He also ate the heroes' lunch. We have a hole in the wall and a very full bear.",
+      "They made it worse. Now the clock is ringing backwards and faster. It rings every 30 seconds. The town is throwing rocks at the tower. We had to flee before the mob caught us.",
+      "They hammered it too hard and broke the chassis. The sleigh is scrap metal. The driver cried and walked away carrying a sack of toys. We ruined the holidays for someone. No payment.",
+      "The barrier collapsed. The snow rushed in. The tomatoes are frozen solid. The cook is weeping over the icy vegetables. We have no fresh salad for the winter. A culinary disaster.",
+      "They rebuilt it, but it fell apart when a breeze hit it. The carpenter hero lied on his resume. 'Woody' is a pile of splinters again. We wasted good nails on this failure.",
+      "They fell off the roof. They are okay (landed in snow), but the hole is bigger now because they fell through it. There is a hole in the ceiling and snow on the desk. The Guildmaster is not amused.",
+      "The robot went berserk. It chased the heroes out of the room with a broom. It is now the master of the hallway. We have locked the door and surrendered that part of the guild to the machine."
+    ],
+    "place":[
+      "Workshop",
+      "ToyFactory",
+      "PackagingHall",
+      "Depot",
+      "IceMine",
+      "WinterSanctum",
+      "HumanCity"
+    ]
+  },
+  "Distribute": {
+    "name": ["Distribute"],
+    "description": [
+      "The harvest was good, and we have too many turnips. The heroes must stand in the town square and distribute free turnips to the villagers. Try to make turnips seem exciting so people actually take them.",
+      "We printed 500 flyers for our 'Grand Guild Open Day'. The heroes must distribute them to every door in the city. Watch out for dogs, angry homeowners, and mail slots that bite back.",
+      "It's the winter festival! The guild is donating coal... for heating, not as a punishment. The heroes must haul sacks of coal to the elderly residents of the valley. It’s dirty work, but the PR is gold.",
+      "The Alchemist made a batch of 'Warmth Potions' that taste like spicy socks. He wants us to distribute free samples to prove they work. The heroes must convince people to drink the foul liquid.",
+      "We need to distribute weapons to the militia before the wolf pack attacks. The heroes must hand out spears and shields quickly. Make sure you don't give the sharp swords to the clumsy looking ones.",
+      "A wealthy donor sent us a crate of ugly sweaters. We can't wear them. The heroes must distribute them to the town's statues to 'keep them warm'. It’s a weird art project, but we get paid for it.",
+      "The baker gave us his day-old bread. It's rock hard. The heroes must distribute it to the ducks at the frozen lake. Break it into small pieces so we don't accidentally knock the ducks unconscious.",
+      "We are distributing 'Do Not Feed the Trolls' signs to the forest paths. The heroes need to nail these to trees in high-risk areas. Hopefully, they don't meet the trolls while putting up the warnings.",
+      "The Guildmaster wrote a memoir. Nobody bought it. The heroes must distribute copies to the local libraries and waiting rooms. Just leave them there when nobody is looking. We need to clear the inventory.",
+      "A magical plague of 'Blue Hiccups' is spreading. We have the cure (blueberries). The heroes must distribute berries to the sick villagers. It’s a simple medical mission, but the patients are very bouncy."
+    ],
+    "success": [
+      "The turnips are gone! The heroes marketed them as 'Power Roots'. The villagers took them all. We cleared the storage, and the town is eating healthy stew tonight. Marketing genius at work.",
+      "Flyers distributed! We blanketed the city. Paper cuts were sustained, but the word is out. The Open Day will be packed, and hopefully, we can recruit some new members who can read.",
+      "The elderly are warm! They were very grateful and pinched the heroes' cheeks. We received cookies in return. The guild is seen as a pillar of the community, and we got rid of the cheap coal.",
+      "People drank it! They gagged, but then they took off their coats. The potion works! The Alchemist is vindicated, and we sold a few crates of the stuff. The heroes' taste buds will recover eventually.",
+      "The militia is armed! Just in time. The wolves saw the pointy sticks and decided to run away. The town is safe, and we got all the weapons back (mostly) undamaged. Good logistics.",
+      "The statues look festive! The town thinks it's a charming holiday decoration. The donor is happy his sweaters are being 'used'. The heroes feel silly, but the gold is real.",
+      "The ducks are fed! They seemed to enjoy the bread once it softened in the water. The heroes had a nice relaxing time by the lake. A peaceful mission for once.",
+      "Signs are up! Hikers are reading them and turning back. We have prevented countless troll-related lawsuits. The forest is safer, and we didn't get eaten. A solid day's work.",
+      "The books are distributed! The libraries were confused but accepted them. The Guildmaster thinks he is a bestseller author now. Let's not tell him the truth. Morale is high.",
+      "The hiccups have stopped! The village is quiet again. The heroes are covered in berry juice, but they saved the day. The villagers paid us in pies. A sweet victory."
+    ],
+    "loses": [
+      "Nobody wanted the turnips. The villagers threw them back. A turnip fight broke out. The heroes had to flee under a barrage of root vegetables. We still have all the turnips and a lot of bruises.",
+      "The wind blew the flyers away. They are now littering the King's garden. We were fined for littering. The Open Day is ruined, and we spent the flyer budget on the fine.",
+      "The bag broke. Coal spilled everywhere in the clean snow. The heroes looked like chimney sweeps and scared the old ladies. We spent hours cleaning up the mess and delivered nothing.",
+      "The villagers refused to drink the sock-juice. One guy tried it and vomited. The crowd turned angry. The heroes had to drink the samples themselves to escape. They are now sweating profusely in the snow.",
+      "They handed out the weapons too slowly. The wolves arrived while the militia was still signing the paperwork. Chaos ensued. We fought them off, but it was messy. Bureaucracy almost killed us.",
+      "The town guard arrested the heroes for 'vandalizing public monuments'. We had to pay a fine to get them out of jail. The sweaters were confiscated. A fashion crime and a financial loss.",
+      "The bread was too hard. A hero threw a piece and knocked a duck out cold. The other ducks attacked. The heroes were chased away by angry waterfowl. We are now enemies of the bird kingdom.",
+      "They put the signs up in the wrong forest. The trolls are in the West Woods, not the East. Hikers are now walking confidently into the danger zone. We are going to have legal trouble soon.",
+      "The librarians caught them. They refused the donation and threw the books back. The heroes returned with all the copies. The Guildmaster is sad, and we still have no space in the storage room.",
+      "The heroes ate the berries. They were hungry. When they arrived, they had no cure left. The villagers are still hiccuping, and the heroes have blue tongues and guilty faces. Professional malpractice."
+    ],
+    "place": [
+      "HumanCity",
+      "ElfVillage",
+      "PackagingHall",
+      "Depot",
+      "ToyFactory",
+      "SnowValley",
+      "PineForest"
+    ]
+  },
+  "Transport": {
+    "name": ["Transport"],
+    "description": [
+      "We need to transport a giant block of ice to the summer festival (don't ask why). It’s on a sled. The heroes must pull it and protect it from melting or being licked by thirsty deer.",
+      "A captive Snow Yeti needs to be transported to the royal zoo. He is in a cage, but he is grumpy and shakes the wagon. The heroes must keep him calm, perhaps by singing lullabies or feeding him fish.",
+      "We are moving the Guild's gold reserves to a more secure vault. The heroes are the convoy guards. This is a high-value target for bandits. Look scary and don't let anyone touch the cart.",
+      "Transport a delicate glass sculpture of a swan to the Mayor's house. The road is icy and full of potholes. The heroes must drive the wagon at 1 mph and cushion every bump with their own bodies.",
+      "A wizard is moving house. We have to transport his library. The books are magical and tend to fly away or bite. Keep the crates sealed and don't read anything aloud, or you might summon a demon.",
+      "We must transport a barrel of live electric eels to the aquarium. The barrel leaks slightly. The heroes must carry it without getting shocked into a new hairstyle. Rubber gloves are recommended.",
+      "Transport a VIP (Very Important Penguin) to the South Pole conference. He is wearing a tuxedo and demands fresh sardine smoothies. Guard him with your life; he holds the key to the fish trade.",
+      "A giant bell for the new church needs moving. It weighs two tons. The heroes have to push it up a hill. If it rolls back, it will flatten the village. Pivot! Pivot!",
+      "We are transporting a captured necromancer to trial. He is gagged, but he keeps making threatening eyebrows at us. Don't let him untie his hands, and definitely don't let him start chanting.",
+      "Transport the 'Eternal Flame' torch to the Olympic shrine. If the fire goes out, we are disqualified. The heroes must shield the flame from the blizzard wind and their own sneezes."
+    ],
+    "success": [
+      "The ice block arrived! It had melted a bit, so now it's a medium block of ice, but the client is happy. They carved it into a swan. The heroes are wet but paid.",
+      "The Yeti arrived safely. He actually fell asleep halfway there. The zoo paid us a bonus for the 'pristine condition' of the beast. We are glad to be rid of the smell.",
+      "The gold is secure. The bandits saw the heroes' grim faces and decided to rob someone easier. We moved the wealth without drawing a sword. A perfect, boring, profitable mission.",
+      "The swan is intact! The Mayor was impressed. The heroes are stiff from acting as human shock absorbers, but the tip was generous. We didn't shatter the art!",
+      "The books are delivered. Only one crate tried to eat the wagon. The wizard tipped us with a scroll of 'Clean Room'. A magical success involving heavy lifting.",
+      "The eels are in the tank. The heroes have static hair and twitchy fingers, but the job is done. The aquarium owner paid us in pearls. A shocking success.",
+      "The Penguin is satisfied. He waddled into the conference to applause. We secured the trade deal! The guild will have cheap fish for a year. The tuxedo was returned unsoiled.",
+      "They made it to the top! The bell is hung. The priest rang it, and it sounds beautiful. The heroes are exhausted and their legs are jelly, but they didn't flatten the town.",
+      "The necromancer is in the dungeon. He tried to wiggle his fingers, but the heroes stared him down. Justice will be served, and we got the bounty. Good riddance to bad magic.",
+      "The flame is still burning! The heroes ran the last mile. The ceremony began, and we are the heroes of the hour. We got free tickets to the games. Victory!"
+    ],
+    "loses": [
+      "The sun came out. The ice block melted into a puddle on the wagon. We delivered a bucket of water. The client screamed at us. We offered to freeze it again, but they fired us.",
+      "The Yeti broke the cage. He threw the heroes into a snowbank and ran back to the mountains. We lost the cage, the wagon, and the Yeti. The zoo is furious.",
+      "Bandits! Arrows everywhere! The heroes panicked and the cart tipped over. We recovered the gold, but it took all night and we lost a wheel. The reputation of our security is damaged.",
+      "Hit a pothole. CRASH. The swan is now a pile of sharp glitter. The Mayor cried. The heroes swept up the glass and ran away. We have to pay for the sculpture. Expensive failure.",
+      "A hero read a book title aloud. It summoned a gravity-inversion field. The wagon floated away into the sky. The wizard is suing us for his lost library. We are looking up and waving goodbye.",
+      "They dropped the barrel. The eels slithered into the river. The heroes got shocked repeatedly trying to catch them. We lost the cargo and everyone needs a nap to recover from the voltage.",
+      "The Penguin escaped. He slid on his belly into the ocean. The trade deal is off. The Diplomat is angry. We are now blacklisted by the Penguin Kingdom. Fish prices are going up.",
+      "They slipped. The bell rolled back down the hill. It crushed a fence and landed in a pond. CLANG! The whole town woke up. We have to fish it out and pay for the fence.",
+      "The gag slipped. The necromancer spoke a word of power. The wagon wheels turned into cheese. The cart collapsed. The prisoner escaped while the heroes were confused by the dairy magic.",
+      "A gust of wind blew it out. The heroes tried to relight it with a match, but the judges saw them. We are disqualified for cheating. The shame is unbearable."
+    ],
+    "place": [
+      "Depot",
+      "Sea",
+      "Lake",
+      "FrozenLake",
+      "SnowValley",
+      "PineForest",
+      "PackagingHall",
+      "IceMine"
+    ]
+  },
+  "Retrieve": {
+    "name": ["Retrieve"],
+    "description": [
+      "The Guildmaster's favorite wig blew off in a gale. A bird has now used it as a nest in a high pine tree. Retrieve the hairpiece without hurting the eggs or the dignity of the Guildmaster.",
+      "A legendary sword is stuck in a stone nearby. We don't need to be King, we just want to sell the sword. The heroes must go there, use grease, magic, or brute force to retrieve the weapon.",
+      "The tavern keeper lost his cellar keys in a game of cards to a goblin. The goblin is now hiding in the caves. Retrieve the keys so we can access the good wine again. Critical mission.",
+      "A wealthy merchant dropped his wedding ring into the frozen lake. He is panic-stricken. The heroes must cut a hole in the ice and dive (or fish) to retrieve the shiny object before his wife finds out.",
+      "A rival guild stole our mascot's collar! It’s studded with fake diamonds. This is an insult to our honor. Infiltrate their base and retrieve the collar. Stealth is optional; revenge is mandatory.",
+      "Grandma Gertrude left her dentures on the picnic table before the snowstorm hit. Now they are buried under six feet of snow. Retrieve the teeth so she can eat steak again.",
+      "A scout left a map of a gold mine in a cave... which is now occupied by a bear. Retrieve the map. The bear is currently hibernating, so be very, very quiet. Sneeze and you die.",
+      "A magical mirror was sold by mistake. It insults anyone who looks at it. We need to retrieve it before the buyer realizes it's cursed and sues us. Buy it back or steal it, just get it.",
+      "One of our heroes got drunk and was left behind at a bar in the next town. He has the guild credit card. Retrieve the hero (and the card) before he buys a round for the whole village.",
+      "A sacred idol was stolen by mischievous snow monkeys. They are playing catch with it in the canopy. Retrieve the idol. Do not harm the monkeys, even if they throw frozen poop at you."
+    ],
+    "success": [
+      "The wig is back! We shook the tree gently. The bird had already moved out. The Guildmaster put it on immediately (it has a few twigs in it, but he looks great). Dignity restored.",
+      "They greased the stone with butter. The sword slid right out. We sold it to a pawn shop. It wasn't legendary, just rusty, but we made a profit. The legend is debunked.",
+      "Keys secured! The goblin gave them up for a piece of cheese. The cellar is open! The tavern keeper gave the heroes the first bottle. Cheers to successful negotiations.",
+      "They found it! A hero with good lungs dove in and grabbed it. The merchant wept with relief and gave us a bag of gold. The marriage is saved, and the hero is drying off by the fire.",
+      "Got it! The heroes snuck in, grabbed the collar, and tied the rival guild's shoelaces together. We have the collar back and the moral victory. Our cat looks majestic again.",
+      "Teeth found! They were frozen in a block of ice. We thawed them out. Grandma is happy and chewing vigorously. A weird mission, but the elderly support is good for our image.",
+      "The map is ours! The hero crawled in, grabbed the parchment from under the bear's nose, and crawled out. The bear snored the whole time. Nerves of steel were rewarded with gold coordinates.",
+      "Mirror retrieved. It told the hero he looked like a 'wet potato'. We smashed it and buried the shards. The buyer was refunded. Crisis management at its finest.",
+      "Hero found. He was asleep under a table. The card was safe in his boot. We dragged him home on a sled. He has a headache, but the treasury is safe from his generosity.",
+      "The monkeys traded the idol for a bag of peanuts. A fair exchange. The idol is back on the shelf, slightly sticky, but safe. We love doing business with primates."
+    ],
+    "loses": [
+      "The bird attacked. It pecked the heroes' eyes. The wig fell and was shredded by a fox. We returned with a handful of hair. The Guildmaster is bald and furious. We are all wearing hats in solidarity.",
+      "The sword is really stuck. The heroes pulled until their backs cracked. The handle broke off. Now we have a stone with a broken blade. We can't sell this. A complete waste of effort.",
+      "The goblin swallowed the keys. The heroes didn't want to perform surgery, so they left. The cellar remains locked. The tavern is serving water. The town is in a state of depression.",
+      "The water was too cold. The diver hero turned blue and had to be fished out. We didn't find the ring. The merchant's wife found out. We heard the screaming from here. Mission failed.",
+      "The rival guild was waiting. They beat us up and took our shoes. Now they have the collar and our footwear. We walked home in socks. The shame is unbearable.",
+      "They dug up the whole yard but couldn't find the teeth. They found a bone and an old boot. Grandma is eating soup for the rest of her life. She hit the heroes with her cane.",
+      "The bear woke up. It roared. The heroes dropped the map and ran. The map is now bedding for a bear. We know where the mine is, but we can't get the directions. So close, yet so far.",
+      "The buyer loved the insults. He refused to give it back. He used the mirror to roast the heroes. We failed to retrieve it, and our self-esteem has taken a critical hit.",
+      "He spent it all. The heroes arrived just as he bought a boat. We have a boat now, but we are broke. The hero is in the brig (the closet). A financial disaster.",
+      "The monkeys were too fast. They kept the idol and stole a hero's helmet. They are now worshipping the helmet. We returned empty-handed and humiliated by wildlife."
+    ],
+    "place": [
+      "Depot",
+      "IceMine",
+      "Library",
+      "ToyFactory",
+      "CrystalCavern",
+      "FrostPeak",
+      "WinterSanctum"
+    ]
+  },
+  "Escort": {
+    "name": ["Escort"],
+    "description": [
+      "We must escort the 'Oracle of the North' to the sacred shrine. The Oracle walks backwards and speaks only in riddles about soup. The heroes must guide her safely without letting her backflip off a cliff.",
+      "A famous Ice Sculptor needs an escort to the competition. He is carrying his masterpiece: a life-sized swan made of fragile ice. Do not let it melt, shatter, or get sneezed on during the journey.",
+      "Escort a reformed Goblin Diplomat to the peace treaty signing. He is very nervous and prone to biting people when stressed. Keep him calm and ensure nobody attacks him for his past crimes.",
+      "The Royal Tax Collector needs an escort through the slums. Everyone hates him. The heroes must protect him from flying tomatoes, angry mobs, and 'accidental' tripping. A thankless but well-paid job.",
+      "Escort the Guildmaster's mother-in-law to her winter chalet. She criticizes everything: the weather, the heroes' armor, the horses. Ensure she arrives safely so she doesn't move in with us permanently.",
+      "A barrel of 'Volatile Vintage' wine needs escorting to the palace. If it shakes too much, it explodes. The heroes must drive the wagon like they are carrying a sleeping baby over a bed of feathers.",
+      "Escort a group of baby penguins to the sea. They are cute, slow, and have zero survival instincts. Protect them from foxes, eagles, and their own tendency to wander off into danger.",
+      "A nervous wizard needs to walk to his tower to cast a ritual. He is sleepwalking. Escort him through the forest without waking him up, or the spell will turn everyone into potted plants.",
+      "Escort the 'Chosen One' (a farm boy with a destiny) to the training grounds. He is eager but incompetent. Keep him alive so he can fulfill the prophecy later. Right now, he is just a liability.",
+      "We need to escort a cart of fireworks to the New Year's celebration. Sparks are forbidden. Bandits with torches are the enemy. The heroes must be the ultimate safety officers on this trip."
+    ],
+    "success": [
+      "The Oracle arrived! She walked backwards into the shrine perfectly. She blessed the heroes with a riddle that might mean we will find gold or that we need to buy carrots. Success either way.",
+      "The swan made it! It was slightly drippy, but the judges loved it. The sculptor won first prize and gave the heroes a bag of ice-cold gold coins. A beautiful artistic victory.",
+      "The treaty is signed! The goblin didn't bite anyone (hard). Peace is restored between the species. The diplomat gave us a crate of weird goblin snacks as a thank you. We politely accepted.",
+      "The Collector survived. He was covered in rotten fruit, but no bones were broken. He paid the fee plus a 'hazard bonus'. We took the money and pretended we didn't see who threw the cabbage.",
+      "She arrived. She complained the whole way, but she is at the chalet and NOT at the guild hall. The Guildmaster is weeping with relief and gave the team a massive bonus. Worth every headache.",
+      "The wine arrived intact. The King drank it and didn't explode. He was very pleased with the 'explosive flavor'. The heroes were tipped handsomely for their smooth driving skills.",
+      "The penguins reached the water! They splashed in happily. The heroes watched with tears in their eyes. Nature is beautiful. We didn't get much gold, but the karma points are through the roof.",
+      "The wizard arrived and cast the spell in his sleep. The tower lit up, and he woke up confused but happy. He paid us for the 'dream escort'. No potted plants today!",
+      "The boy made it to training. He tripped five times and dropped his sword, but he is alive. The trainer took over, and we got paid. Good luck saving the world, kid. You'll need it.",
+      "The fireworks arrived safely! The show was spectacular. The heroes watched from the VIP section, knowing they prevented a massive crater. A loud and colorful success."
+    ],
+    "loses": [
+      "The Oracle walked off a log bridge. We fished her out, but she was wet and refused to continue. She cursed the guild with 'Bad Hair Days' for a month. We failed the mission and look ridiculous.",
+      "A hero sneezed. The swan shattered into a million pieces. The sculptor cried on the road for an hour. We had to carry a bucket of ice chips to the competition. We were disqualified immediately.",
+      "The goblin panicked and bit a guard. The peace talks collapsed into a brawl. We had to drag the diplomat away while dodging arrows. War has resumed, and it's kind of our fault.",
+      "The mob was too big. The Collector was chased out of town. He lost his ledger in the chaos. We didn't get paid, and the local tavern is giving us free drinks for 'accidentally' letting him fail.",
+      "The carriage hit a bump. She got a bruise. She demanded to return to the guild. Now she is staying in the guest room, criticizing our cleaning habits. The Guildmaster is looking for a new job.",
+      "They hit a pothole. BOOM. The wagon is gone. The wine is gone. The heroes are covered in purple stains and wood splinters. The King is thirsty and angry. We owe a lot of money.",
+      "A seagull swooped down. Chaos ensued. The penguins scattered. We spent hours looking for them but only found half. The rest probably joined a circus. We failed the cute parade.",
+      "A hero stepped on a twig. SNAP. The wizard woke up, panicked, and turned the team leader into a fern. The mission failed, and we have to water the leader until the spell wears off.",
+      "The boy tried to fight a squirrel and lost. He is currently in the infirmary with a scratched nose. The prophecy is on hold. The trainer yelled at us for bringing him a broken hero.",
+      "A bandit shot a fire arrow. The cart lit up like the sun. The heroes dove into the snow just in time. The fireworks went off early, in the middle of the woods. It was pretty, but a total financial loss."
+    ],
+    "place": [
+      "PineForest",
+      "SnowValley",
+      "FrozenLake",
+      "HumanCity",
+      "ElfVillage",
+      "Depot",
+      "Sea"
+    ]
+  },
+  "Protection": {
+    "name": ["Protection"],
+    "description": [
+      "Protect the Judge during the annual 'Snowman Building Contest'. Competitors are known to sabotage each other with icicles. The heroes must stand guard and ensure the judging remains fair and bloodless.",
+      "A rare 'Moon-Flower' is blooming tonight in the greenhouse. It is worth a fortune. Thieves and hungry bugs want it. The heroes must protect the flower for 12 hours until it releases its seeds.",
+      "Protect the Royal Bard while he composes his masterpiece in the town square. He demands absolute silence. The heroes must shush pedestrians, stop barking dogs, and silence the wind itself.",
+      "We are hosting a peace banquet. Protect the buffet table. Not from enemies, but from the gluttonous dwarf delegates who will eat everything before the elves arrive, causing a diplomatic incident.",
+      "Protect the construction crew repairing the dam. River monsters are attracted to the noise of hammers. The heroes must stand guard on the wet scaffolding and fight off wet, angry beasts.",
+      "The Mayor is giving a speech on a soapbox. Someone threatened to throw a pie. The heroes are the Secret Service. Protect the Mayor's suit from stains at all costs. Dive in front of pastries if necessary.",
+      "Protect the Guild's mascot (the fat cat) while it sleeps in the sun. Rival guilds want to shave it as a prank. The heroes must form a perimeter around the napping feline. Serious business.",
+      "A merchant is auctioning a cursed amulet. It attracts ghosts. Protect the auction house from the spectral intruders so the merchant can sell the item and make it someone else's problem.",
+      "Protect the village's only Healer while she gathers herbs in the Wolf Woods. She is elderly and walks very slowly. Keep the wolves away while she inspects every single leaf.",
+      "Protect the ice-fishing tournament participants. A giant kraken (or a very big squid) is rumored to be under the ice. Ensure the fishermen catch fish, not the other way around."
+    ],
+    "success": [
+      "The contest was safe! The winner was a snowman shaped like a dragon. The Judge was unharmed. We were paid in hot cocoa and gold. Justice was served, cold and firm.",
+      "The flower bloomed! It was beautiful and released glowing seeds. The botanist collected them all. We squashed a few bugs, but the plant is safe. A profitable night of gardening.",
+      "Silence was maintained. The Bard wrote 'Symphony of the Snow'. It's actually quite good. He paid us for our menacing shushing skills. The town is quiet, and the art is safe.",
+      "The buffet was saved! We held the dwarves back with shields until the elves got their salad. The banquet went smoothly. We were allowed to eat the leftovers. Delicious victory.",
+      "The dam is fixed! The workers finished the job without being eaten. The river monsters were whacked back into the water. The town is safe from flooding, and we got a nice paycheck.",
+      "The suit is clean! A pie was thrown, but a hero caught it in mid-air and ate it. The crowd cheered. The Mayor finished his boring speech. We are local heroes.",
+      "The cat woke up, stretched, and ate a treat. Not a single hair was shaved. The rival guild gave up seeing our heavy weapons. The mascot remains fluffy and arrogant.",
+      "The auction was a success! We fought off three ghosts and a poltergeist. The amulet was sold to a spooky-looking guy. The merchant is rich, and the ghosts followed the buyer. Perfect.",
+      "The Healer got her herbs. She didn't even notice the wolves because we killed them quietly in the bushes. She gave us a bag of healing salves and some hard candy. Sweet.",
+      "The tournament finished! Someone caught a prize trout. The kraken bumped the ice once, but we stomped on it until it left. No fishermen were eaten. A good day for the sport."
+    ],
+    "loses": [
+      "A riot broke out. Someone hid a rock in a snowball. The Judge was knocked out. The contest was cancelled. We failed to keep the peace and are now banned from the winter carnival.",
+      "A hero fell asleep. A thief stole the flower pot. Or maybe a bug ate it. Either way, the greenhouse is empty. The botanist is screaming. We are hiding in the tool shed.",
+      "A dog barked. The Bard lost his concentration and threw his lute at the hero. The masterpiece is ruined. He wrote a diss track about us instead. Our reputation is ruined musically.",
+      "The line broke. The dwarves swarmed the table. The roast beast was gone in seconds. The elves arrived to empty plates and declared war. We caused a famine and a political crisis.",
+      "The monsters swarmed the scaffold. The workers dropped their tools and ran. The dam is still leaking. We are wet, unpaid, and the town is probably going to flood. Bad day.",
+      "The hero missed the intercept. The pie hit the Mayor square in the face. It was blueberry. He looks ridiculous. He fired us on the spot while wiping jam from his eyes.",
+      "We looked away for one second. The cat is now bald. It looks like a raw chicken. The Guildmaster is horrified. We have to knit a sweater for the cat. Humiliation.",
+      "The ghosts scared the buyers away. The auction was cancelled. The merchant is stuck with the cursed amulet. He is blaming us for the lack of ghost-busting skills. No commission.",
+      "The Healer wandered off while we were fighting a wolf. We lost her for three hours. We found her having tea with a woodcutter. She scolded us for being slow. Zero pay.",
+      "Tentacles burst through the ice! The fishermen panicked and ran. The kraken stole the prize trout and a bucket of bait. The tournament is ruined, and we smell like fishy failure."
+    ],
+    "place": [
+      "WinterSanctum",
+      "ElfVillage",
+      "ToyFactory",
+      "Library",
+      "HumanCity",
+      "Workshop",
+      "Depot"
+    ]
+  },
+  "Defend": {
+    "name": ["Defend"],
+    "description": [
+      "Defend the Great Snow Fort! The neighborhood kids have hired mercenaries (older teenagers) to storm our walls. We must hold the line using snowballs and intimidation tactics.",
+      "Defend the Guild's pantry! A swarm of giant rats has tunneled into the cellar. They are after the cheese. Hold the chokepoint at the stairs and do not let them reach the cheddar!",
+      "Defend the Hot Springs! A troop of Snow Monkeys wants to take over our relaxing pool. They are aggressive and throw fruit. Keep the pool for the heroes only!",
+      "Defend the town gate! A horde of 'Sales-Goblins' is trying to enter to sell us extended warranties for our swords. Do not let them in, or we will never hear the end of it.",
+      "Defend the crashed airship! It's full of gold. Bandits are approaching from the treeline. Use the wreckage as cover and repel the looters until the recovery team arrives.",
+      "Defend the Christmas Tree! The 'Grinch Gang' wants to steal the decorations. Set up traps and guard the ornaments. The spirit of the holidays depends on this tree standing tall.",
+      "Defend the Wizard's ritual circle. He is casting a spell to stop the blizzard. Nightmare creatures are drawn to the magic. Keep the circle clear for 10 minutes. No pressure.",
+      "Defend the bridge! It's the only way into town. A giant Ice Golem is walking towards it. He doesn't want to fight, he's just heavy and will break it. Turn him around!",
+      "Defend the sleeping dragon. Poachers are coming to steal its scales. If the dragon wakes up, it eats everyone. Stop the poachers quietly without disturbing the beast.",
+      "Defend the lighthouse. The flame attracts ice-moths the size of eagles. If the light goes out, ships will crash. Smack the moths away with brooms and swords."
+    ],
+    "success": [
+      "The fort holds! The teenagers retreated after a barrage of ice-balls. The kids cheered. We are the kings of the snow castle. We feel a bit silly, but a win is a win.",
+      "The cheese is safe! The rats were driven back into the dark. We boarded up the tunnel. The cook made us a fondue to celebrate. A delicious victory for the guild.",
+      "The monkeys were repelled! We threw bananas into the woods to distract them. The hot spring is ours. The heroes soaked in the warm water, victorious and relaxed.",
+      "The gate is sealed! The goblins gave up and went to annoy the next town. We are safe from spam and scams. The town council thanked us for preserving the peace.",
+      "The gold is safe! The bandits took one look at our defense and ran. The recovery team arrived and loaded the loot. We got a nice cut of the treasure for standing guard.",
+      "The tree sparkles! The Grinch Gang fell into our tinsel traps. The decorations are safe. The town gathered around to sing carols. We felt a warm fuzzy feeling in our hearts.",
+      "The spell is complete! The blizzard stopped instantly. The sun is out. The wizard thanked us for keeping the nightmares at bay. We saved the weather!",
+      "The bridge stands! We convinced the Golem to walk across the frozen river instead. He waved goodbye. The town is connected, and we didn't have to fight a mountain of rock.",
+      "The dragon slept through it all. We tied up the poachers and left them for the guards. The dragon is safe, and we didn't get roasted. The perfect stealth defense.",
+      "The light burns bright! The moths are gone (or have a headache). The ships navigated safely to the harbor. The lighthouse keeper gave us a lantern as a souvenir."
+    ],
+    "loses": [
+      "We lost the fort. The teenagers had a catapult. We were buried in snow. The flag was captured. The neighborhood kids are crying. We have been shamed by children.",
+      "The rats won. They overran the cellar. We had to retreat and lock the door. We can hear them eating the cheese. The cook is weeping. We are eating hardtack for weeks.",
+      "The monkeys took over. They are currently soaking in the pool, wearing our towels. We are freezing on the edge. It's their guild now. We are too embarrassed to tell anyone.",
+      "They got in. The goblins are everywhere. Every hero now owns five warranties for a 'magic spoon'. We are broke and annoyed. The guild hall is full of pamphlets.",
+      "We were overrun. The bandits swarmed the wreckage. We had to flee. They took the gold. We are alive, but the guild is poorer, and the airship is just scrap metal now.",
+      "The tree is bare. They stole the star and the baubles. It's just a sad pine tree now. The town is disappointed. Christmas is cancelled. We are the Grinches by association.",
+      "A monster broke the circle. The spell backfired. It is now snowing frogs. The wizard is angry. We are covered in slime. The blizzard is worse. Complete magical failure.",
+      "The Golem stepped on the bridge. CRUNCH. The bridge is gone. The Golem fell in the water and is confused. We are cut off from the world. The Mayor is screaming at us.",
+      "The poachers made a noise. The dragon woke up. It burned the poachers. It singed our eyebrows. We ran away very fast. The dragon is awake and grumpy. Bad job.",
+      "The moths swarmed the light. It went out. A ship crashed into the dock (gently). The captain is yelling. We are in the dark, fighting giant bugs. A chaotic disaster."
+    ],
+    "place": [
+      "SouthPole",
+      "WinterSanctum",
+      "PackagingHall",
+      "Depot",
+      "ToyFactory",
+      "FrostPeak",
+      "IceMine"
+    ]
+  },
+  "Survive": {
+    "name": ["Survive"],
+    "description": [
+      "Survive the 'Great Whiteout'. A magical blizzard has hit. Visibility is zero. Temperature is -40. The heroes must huddle in a cave, ration their food, and not let the space-madness set in.",
+      "Survive dinner at the Guildmaster's house. His cooking is legendary... for being poisonous. You must eat it to be polite. Survive the indigestion and the awkward conversation.",
+      "Survive the 'Night of the Living Snowmen'. They have come to life and they are evil. Survive until sunrise without getting frozen or turned into a decoration.",
+      "The heroes are trapped in a collapsed ice mine. Oxygen is fine, but it's dark and scary. Survive the claustrophobia and the eerie sounds until the rescue team digs you out.",
+      "Survive the annual Guild Audit. The tax inspector is here. He is boring and ruthless. Survive the paperwork, the questions, and the urge to jump out the window.",
+      "Stranded on an ice floe! The ship sank. The heroes are floating on a piece of ice. Survive the cold, the hungry sharks, and the arguments about who is the heaviest.",
+      "Survive the fashion show. The heroes were tricked into modeling 'Winter Collection'. The clothes are itchy and ridiculous. Survive the runway without tripping or dying of embarrassment.",
+      "Survive the haunted cabin. We rented it for a retreat, but the furniture is flying around. Survive the night without fleeing in terror. It builds character!",
+      "Survive the 'flu season'. Everyone in the guild is sick except this team. You must survive the demands of 50 whiny, sneezing heroes without catching the plague yourselves.",
+      "Survive the trap room. You walked into a dungeon room and the door locked. The walls are closing in (slowly). Solve the puzzles to survive before you become a hero-sandwich."
+    ],
+    "success": [
+      "The storm broke! The sun is out. We survived with all fingers and toes intact. We bonded over the shared trauma of freezing. The team is stronger than ever.",
+      "We ate it all. We felt terrible, but we held it down. The Guildmaster was so happy. We were sick for two days, but we kept our jobs. A diplomatic victory of the stomach.",
+      "Sunrise! The snowmen melted back into slush. We are exhausted and covered in snow, but alive. We will never look at a carrot the same way again.",
+      "They dug us out! We emerged blinking into the light. We found a vein of gold while waiting, so it wasn't a total waste. We are just happy to see the sky.",
+      "The audit is over. We passed! The inspector left. We are mentally drained, but the guild is legal for another year. We celebrated by burning the tax forms.",
+      "Land ho! The current carried us to shore. We are wet and cold, but safe. The sharks went hungry. We kissed the ground. Never getting on a boat again.",
+      "The show is over. We didn't trip! The audience loved it. We are 'fashion icons' now. We burned the clothes immediately, but the fame remains.",
+      "Morning came. The ghosts went to sleep. We didn't sleep a wink, but we proved we are brave. The rental deposit was returned. We are leaving a bad review.",
+      "The plague has passed. The sick are recovering. We didn't get sick! We are exhausted from fetching soup and tissues, but the guild is back on its feet.",
+      "The door opened! We solved the puzzle with seconds to spare. The walls stopped. We are alive and feeling very smart. Let's never go in that room again."
+    ],
+    "loses": [
+      "We couldn't take it. We ran out into the storm to find help. We got lost immediately. Rescued by a St. Bernard dog who looked at us with pity. Frostbite and shame.",
+      "We couldn't do it. A hero vomited on the table. The dinner ended abruptly. The Guildmaster is offended. We are on latrine duty for a month as punishment.",
+      "They got us. We were buried in snow and turned into statues. The sun came up and thawed us out, but we spent the night as lawn ornaments. Humiliating.",
+      "Panic set in. We started screaming. The rescuers heard us crying. They pulled us out, but we left our dignity in the mine. Everyone knows we are afraid of the dark.",
+      "We failed. The inspector found an error. He fined us heavily. We spent the whole day doing math and still lost money. The most boring defeat in history.",
+      "The ice broke. We fell in. We swam to shore, freezing and miserable. We lost our boots in the ocean. We walked home barefoot in the snow. A survival failure.",
+      "A hero tripped. He fell off the runway into the front row. The audience laughed. The clothes ripped. We are the laughing stock of the fashion world. Career over.",
+      "We ran away. The first time a chair moved, we smashed a window and fled. We left our gear behind. The ghosts won. We are sleeping outside tonight.",
+      "We caught it. Now the whole team is sick too. The guild is a quarantine zone. Nobody is doing any missions. The soup has run out. Misery loves company.",
+      "We couldn't solve it. The walls squeezed us. Okay, they stopped before killing us, but we were trapped like sardines until the janitor let us out. We feel very flat."
+    ],
+    "place": [
+      "FrostPeak",
+      "SouthPole",
+      "Sea",
+      "FrozenLake",
+      "IceMine",
+      "CrystalCavern",
+      "PineForest",
+      "SnowValley"
+    ]
+  }
+
+
+
+}

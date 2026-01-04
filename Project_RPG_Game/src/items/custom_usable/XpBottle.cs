@@ -5,8 +5,8 @@ namespace Project_RPG_Game.items.custom_usable;
 public class XpBottle : Usable, IBonusItem {
     public int Xp;
     
-    public XpBottle(string name, string description, Rarity rarity, int xp) : base(name, description, rarity) {
-        Xp = xp;
+    public XpBottle(string name, Rarity rarity) : base(name, $"Give {(int)rarity} Xp", rarity,"Project_RPG_Game/assets/item/ItemXpBottle.png") {
+        Xp = (int)rarity;
     }
 
     public override string useOn(Hero hero) {

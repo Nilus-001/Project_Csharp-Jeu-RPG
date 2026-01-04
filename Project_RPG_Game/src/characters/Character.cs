@@ -6,7 +6,7 @@ namespace Project_RPG_Game.characters;
 
 
 
-public class Character {
+public abstract class Character {
     private static int _idIncrement = 0;
     public int Id;
     public string Name;

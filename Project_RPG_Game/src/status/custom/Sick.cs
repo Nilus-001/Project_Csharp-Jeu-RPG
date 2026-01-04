@@ -1,11 +1,12 @@
 ﻿using System;
 using Project_RPG_Game.characters;
+using Project_RPG_Game.status.@interface;
 
 namespace Project_RPG_Game.status.custom;
 
 public class Sick : Status , INegativeStatus {
     public Sick(int expirationIn, int modifier = 1) : base(expirationIn, modifier) {
-        
+        Name =  $"Sick";
     }
 
     public override void AppliedEffect(Hero hero) {

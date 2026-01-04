@@ -1,11 +1,12 @@
 ﻿using Project_RPG_Game.characters;
+using Project_RPG_Game.status.@interface;
 
 namespace Project_RPG_Game.status.custom;
 
 public class Luck : Status ,IPositiveStatus,IAppliedOnce {
     public bool IsApplied = false;
     public Luck(int expirationIn, int modifier = 1) : base(expirationIn, modifier) {
-        Name =  $"UnLuck lvl {Modifier}";
+        Name =  $"Luck lvl {Modifier}";
     }
 
     public override void AppliedEffect(Hero hero) {

@@ -1,0 +1,47 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Project_RPG_Game.GameWindow.Pages.EndPanel">
+    <Grid>
+        <Border Background="#CC000000" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch"
+                Padding="100"
+                CornerRadius="50">
+        
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Spacing="30">
+            
+                <TextBlock x:Name="TitleText"
+                           Text="FIN"
+                           FontSize="72"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Foreground="White"/>
+            
+                <TextBlock x:Name="MessageText"
+                           Text="Message"
+                           FontSize="24"
+                           HorizontalAlignment="Center"
+                           Foreground="White"
+                           TextWrapping="Wrap"
+                           MaxWidth="500"/>
+            
+                <Button x:Name="LeaveButton"
+                        Content="Quit"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        Padding="40,15"
+                        HorizontalAlignment="Center"
+                        Click="OnLeaveButtonClick"
+                        Background="#FF4444"
+                        Foreground="White"/>
+            
+            </StackPanel>
+        
+        </Border>
+    </Grid>
+</UserControl>

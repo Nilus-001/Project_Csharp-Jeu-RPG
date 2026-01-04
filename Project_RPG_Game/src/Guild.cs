@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -33,34 +34,24 @@ public class Guild {
     }
     //--------------------------------------- Life ---------------------------------------
     
-    public int Remove1Life() {
+    public void Remove1Life() {
         Life--;
-        if (Life < 0) {
-            //! GAMEOVER
-        }
-        return Life;
     }
     
     
     
     //--------------------------------------- Money ---------------------------------------
 
-    public int ModifyMoney(int money) {
+    public void ModifyMoney(int money) {
         Money += money;
-        if (Money < 0) {
-            Money = 0;
-            Remove1Life();
-        }
-        return Money;
     }
     //--------------------------------------- FoodStack ---------------------------------------
 
-    public int ModifyFoodStock(int foodStock) {
+    public void ModifyFoodStock(int foodStock) {
         FoodStock += foodStock;
         if (FoodStock < 0) {
             FoodStock = 0;
         }
-        return FoodStock;
     }
     
     
@@ -105,45 +96,36 @@ public class Guild {
     
     //? USELESS
     
-    public bool UseUsable(Usable usable, Hero hero) {
-        if (GuildInventory.Contains(usable) && GuildHeroes.Contains(hero)) {
-            //! ajout de l'utilisation (usable a faire) : usable.UsuOn(hero)
-            RemoveInventory(usable);
-            return true;
-        }
-        return false;
+    public void UseUsable(Usable usable, Hero hero) {
+        usable.useOn(hero);
+        RemoveInventory(usable);
+       
     }
     
-    public bool EquipEquipment(Equipment equip, Hero hero) {
-        if (GuildInventory.Contains(equip) && GuildHeroes.Contains(hero)) {
-            if (hero.Equip(equip)) {    // Check if a hero has available slot
-                RemoveInventory(equip);
-                return true;
-            }
+    public void EquipEquipment(Equipment equip, Hero hero) {
+        if (hero.Equip(equip)) {    // Check if a hero has available slot
+            RemoveInventory(equip);
         }
-        return false;
     }
 
-    public bool UnequipEqsuipment(Equipment equip, Hero hero) {
-        if (hero.EquipmentList.Contains(equip) && GuildHeroes.Contains(hero)) {
-            if (AddInventory(hero.Unequip(equip))) {
-                return true;
-            }
-        }
-        return false;
-
+    public void UnequipEqsuipment(Equipment equip, Hero hero) {
+        hero.Unequip(equip);
+        AddInventory(equip);
     }
     
     
     //--------------------------------------- Mission---------------------------------------
-    public void ExecuteMissions() {
+    public Dictionary<Mission,ArrayList> ExecuteMissions() {
+        Dictionary<Mission,ArrayList> infoDict = new Dictionary<Mission,ArrayList>();
         foreach (var mission in GuildActiveMissions.ToList()) {
             mission.ExecutionTimer--;
             if (mission.ExecutionTimer <= 0) {
-                mission.ExecuteResult();
+                infoDict.Add(mission,mission.ExecuteResult());
                 GuildActiveMissions.Remove(mission);
             }
         }
+
+        return infoDict;
     }
 
     public void AddMission(Mission mission) {
@@ -161,7 +143,7 @@ public class Guild {
                           " // FoodStock : " + FoodStock +
                           " // Life : " + Life +
                           " // Missions : " + GuildActiveMissions.Count +
-                          " // Inventory : "+GuildInventory.Count +
+                          " // Inventory : " + GuildInventory.Count+
                           " // Heroes : "+GuildHeroes.Count
                           
         );

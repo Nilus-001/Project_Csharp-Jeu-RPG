@@ -1,0 +1,61 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Project_RPG_Game.GameWindow.Pages.Resume">
+    
+    <Grid>
+        <ScrollViewer Height="450" VerticalScrollBarVisibility="Auto" VerticalAlignment="Top" >
+            
+            <StackPanel Name="ResumeContent">
+                <StackPanel Margin="20" Spacing="30" VerticalAlignment="Center">
+        
+                    <Border Background="#96282850"
+                            CornerRadius="15" 
+                            Padding="30,20" 
+                            BorderBrush="#6496FF" 
+                            BorderThickness="3"
+                            HorizontalAlignment="Center">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="20" Color="#646496FF" OffsetY="5"/>
+                        </Border.Effect>
+            
+                        <StackPanel Spacing="15">
+                            <TextBlock Text="🎮 Welcome to the Game 🎮" 
+                                       FontSize="32" 
+                                       FontWeight="Bold" 
+                                       Foreground="#96C8FF" 
+                                       HorizontalAlignment="Center"/>
+                
+                            <TextBlock Text="Embark on an epic adventure!" 
+                                       FontSize="16" 
+                                       Foreground="#C8C8C8" 
+                                       HorizontalAlignment="Center" 
+                                       FontStyle="Italic"/>
+                        </StackPanel>
+                    </Border>
+        
+                    <Border Background="#9600A070" 
+                            CornerRadius="12" 
+                            Padding="40,15" 
+                            BorderBrush="#00D090" 
+                            BorderThickness="3"
+                            HorizontalAlignment="Center"
+                            Cursor="Hand">
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="15" Color="#6400D090" OffsetY="3"/>
+                        </Border.Effect>
+            
+                        <TextBlock Text="▶ Press Start to Begin ▶" 
+                                   FontSize="28" 
+                                   FontWeight="Bold" 
+                                   Foreground="White" 
+                                   HorizontalAlignment="Center"/>
+                    </Border>
+        
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

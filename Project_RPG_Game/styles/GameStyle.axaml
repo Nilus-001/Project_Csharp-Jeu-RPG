@@ -46,11 +46,11 @@
     <Style Selector="Border.NbPrint">
         <Setter Property="Padding" Value="0"></Setter>
         <Setter Property="Margin" Value="5"></Setter>
-        <Setter Property="BorderBrush" Value="DarkSlateGray"></Setter>
-        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="BorderBrush" Value="rgb(0,100,50)"></Setter>
+        <Setter Property="Height" Value="40"></Setter>
 
         <Setter Property="BorderThickness" Value="10 0 0  0"></Setter>
-
+        
         
     </Style>
     <Style Selector="Border.NbPrint Grid">
@@ -60,11 +60,11 @@
         <Setter Property="Margin" Value="5 0 0 0 "></Setter>
         <Setter Property="VerticalAlignment" Value="Center"></Setter>
         <Setter Property="Foreground" Value="{StaticResource TextColor}"></Setter>
-        <Setter Property="FontSize" Value="18"></Setter>
+        <Setter Property="FontSize" Value="25"></Setter>
         
     </Style>
     <Style Selector="Border.NbPrint Image">
-        <Setter Property="Height" Value="20"></Setter>
+        <Setter Property="Height" Value="35"></Setter>
         <Setter Property="Margin" Value="0 -1 5 0 "></Setter>
     </Style>
     <!-- /_______________________________________/Titre et Text/_______________________________________/ -->
@@ -126,15 +126,15 @@
     <!-- /_______________________________________/RightPart/_______________________________________/ -->
     <Style Selector="Border.RightPart">
         
-        <Setter Property="Padding" Value=" 60 20 20 20 "></Setter>
-        <Setter Property="Background">
-            <Setter.Value>
-                <ImageBrush Source="avares://Project_RPG_Game/assets/gui/CharacterFontGui.png"
-                            Stretch="UniformToFill"
-                            AlignmentX="Left"
-                            />
-            </Setter.Value>
-        </Setter>
+        <Setter Property="Padding" Value=" 20 20 20 20 "></Setter>
+        <!-- <Setter Property="Background" Value="rgba(145, 91, 29, 0.5)"> -->
+        <!--     ~1~ <Setter.Value> @1@ -->
+        <!--     ~1~     <ImageBrush Source="avares://Project_RPG_Game/assets/gui/CharacterFontGui.png" @1@ -->
+        <!--     ~1~                 Stretch="UniformToFill" @1@ -->
+        <!--     ~1~                 AlignmentX="Left" @1@ -->
+        <!--     ~1~                 /> @1@ -->
+        <!--     ~1~ </Setter.Value> @1@ -->
+        <!-- </Setter> -->
     </Style>
     
     <Style Selector="Border.RightPart Grid">
@@ -146,22 +146,29 @@
     </Style>
     
     <Style Selector="Border.CharacterContainer">
-        <Setter Property="Background" Value="rgba(145, 91, 29, 0.8)"></Setter>
-        <Setter Property="BorderBrush" Value="rgba(171, 97, 0, 0.8)"></Setter>
+        <Setter Property="Background" Value="rgba(0, 91, 29, 0.8)"></Setter>
+        <!-- <Setter Property="BorderBrush" Value="rgba(171, 97, 0, 0.8)"></Setter> -->
         <Setter Property="BorderThickness" Value="10 10 10 10"></Setter>
-        <Setter Property="Padding" Value="10"></Setter>
+        <Setter Property="Padding" Value="0 15 0 15 "></Setter>
+        <Setter Property="CornerRadius" Value="10"></Setter>
     </Style>
     <Style Selector="Border.CharacterPart">
         <Setter Property="Background" Value="rgba(146, 83, 0, 1)"></Setter>
     </Style>
     
-    <Style Selector="Border.CharacterPart StackPanel.CharacterCard">
+    <Style Selector="Border.CharacterPart StackPanel.HeroCard">
         <Setter Property="Background" Value="rgba(103, 58, 0, 1)"></Setter>
     </Style>
     
     
     
     
+    <Style Selector="Button.ButtonStaticBack:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="DarkGreen"/> </Style>
+
+    <Style Selector="Button.ButtonStaticBack:pressed /template/ ContentPresenter">
+        <Setter Property="Background" Value="DarkGreen"/>
+    </Style>
    
     
     

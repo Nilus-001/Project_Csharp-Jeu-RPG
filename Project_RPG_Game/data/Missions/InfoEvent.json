@@ -1,0 +1,184 @@
+﻿{
+  "Events": [
+    {
+      "name": "The Migration of the Snowmen",
+      "description": "Hundreds of snowmen appeared overnight on the main street. They do nothing; they just stand there, staring at the tavern with judgmental expressions. Villagers are afraid to leave their homes for fear of getting 'the cold shoulder'.",
+      "success": "The heroes organized a free carrot contest outside the village. The snowmen followed the bait and cleared the streets. Trade has resumed, and we gathered enough snow to make sorbet for everyone.",
+      "loses": "The heroes tried to push them. Bad idea. The snowmen turned out to be very sensitive golems. The whole village ended up in a giant snowball fight, and the town hall lost its roof."
+    },
+    {
+      "name": "The Great Beer Freeze",
+      "description": "A magical cold snap hit the guild's cellar. The beer froze so hard it shattered the barrels and now looks like bars of amber. The guild's dwarves are in a state of emotional shock.",
+      "success": "The alchemist invented the 'Frozen Beer-on-a-Stick'. It’s become the winter's biggest trend! The heroes sold the shards as luxury popsicles, and the guild tripled its profits.",
+      "loses": "While trying to thaw the cellar with a fire spell, the heroes accidentally boiled the beer instantly. The cellar is now a sticky pool, and the smell of hops is attracting every bear in the county."
+    },
+    {
+      "name": "The Frosty Carrier Pigeon",
+      "description": "A messenger pigeon arrived completely frozen, looking like an ice cube with feathers. It carries an urgent message, but if handled too quickly, it might shatter into a thousand pieces.",
+      "success": "With infinite patience and a warm water bottle, the heroes thawed the bird. The message contained a check from an anonymous donor! The pigeon flew off after eating half the guild's breadcrumbs.",
+      "loses": "A hero sneezed too loudly. The pigeon-cube fell and shattered. The message is unreadable, and we now have a bird-shaped ice puzzle. It’s a very sad day for communication."
+    },
+    {
+      "name": "The Reindeer Strike",
+      "description": "The transport reindeer have decided that 'working in this cold is an insult to their dignity'. They are blocking the stable door and demanding cashmere scarves and organic apples.",
+      "success": "The heroes negotiated a union contract that includes ear scratches. The reindeer returned to work, proud of their new golden bells. Deliveries have resumed.",
+      "loses": "The heroes tried to intimidate them. The reindeer charged in military formation and evicted everyone from the village. The guild must now make deliveries on sheep, which is significantly slower."
+    },
+    {
+      "name": "The Giant Rooftop Icicle Contest",
+      "description": "A ten-foot icicle is hanging over the blacksmith's door. It has become a tourist attraction, but it is also a potential weapon of mass destruction.",
+      "success": "The heroes sculpted the icicle without detaching it! It is now a magnificent statue that attracts travelers. The blacksmith is delighted, even if he has to enter his shop through the window.",
+      "loses": "While trying to knock it down with an arrow, the icicle fell onto a glass delivery wagon. The crash woke up the entire neighborhood, and the blacksmith now refuses to repair our swords."
+    },
+    {
+      "name": "Soup of Oblivion",
+      "description": "The cook mistook aromatic herbs for hallucinogenic ice mushrooms. The entire village has started singing sea shanties in unison, despite being 500 miles away from the nearest ocean.",
+      "success": "The heroes quickly distributed lemon juice to counter the effect. The village woke up with a slight headache but with an incredible talent for polyphonic singing.",
+      "loses": "The heroes also tasted the soup. The guild remained closed for three days because everyone thought they were Emperor Penguins. We lost a significant number of contracts."
+    },
+    {
+      "name": "The Whispering Rumor Wind",
+      "description": "A magical wind is blowing down chimneys and repeating everyone's secrets. The village is on the brink of civil war because everyone now knows who stole the neighbor's pie.",
+      "success": "The heroes used magical earplugs for the whole village. The wind eventually got bored and left to whistle elsewhere. Peace (and secrets) have returned.",
+      "loses": "The wind revealed that the Guildmaster wears underwear with little duck patterns. Respect vanished instantly, and troop morale is at an all-time low."
+    },
+    {
+      "name": "The Slippery Slope Attack",
+      "description": "A patch of magical black ice has made the village floor slipperier than a bar of soap in a bathtub. No one can take two steps without performing an involuntary triple axel.",
+      "success": "The heroes attached brushes to their feet and turned the village into a giant curling rink. It’s become an official sport, and we won bets on passersby falling down.",
+      "loses": "Everyone ended up in a massive pile-up in the middle of the square. There are tangled arms and legs everywhere, and the village therapist is booked for the next six months."
+    },
+    {
+      "name": "The Ghost of the Old Stove",
+      "description": "The old wood stove in the guild hall is haunted. It refuses to burn wood and only wants to consume love poems. If refused, it spits black smoke all over the rugs.",
+      "success": "A poet hero read his memoirs. The stove purred with pleasure and now produces tropical heat. We can finally take off our mittens indoors.",
+      "loses": "The heroes tried to burn a dictionary. The stove got indigestion and exploded, covering everyone in soot. We had to sleep in the snow that night."
+    },
+    {
+      "name": "The Frosty Sandman",
+      "description": "A merchant claims to sell 'Polar Sleep Sand' that allows for 100 years of slumber. A village child spilled some into the well. Half the village is starting to yawn dangerously.",
+      "success": "The heroes infused tons of ultra-strong coffee into the well. The village is now hyperactive, but at least no one is sleeping. We repainted the entire guild hall in two hours.",
+      "loses": "Too late. Half the villagers fell asleep standing up. We now have to move them around like furniture so they don't freeze in place. It is exhausting work."
+    },
+    {
+      "name": "The Snotty Werewolf Chorus",
+      "description": "A pack of local wolves caught a massive cold. Instead of howling at the moon, they sneeze so hard the village windows rattle and roofs lose their tiles. It is terrifying and very damp.",
+      "success": "The heroes prepared a giant cauldron of honey and eucalyptus tea. The wolves, grateful, stopped sneezing and now stand guard around the village in exchange for giant tissues.",
+      "loses": "The heroes tried to blow the wolves' noses by force. The wolves panicked and repainted the guild's facade with a sticky, icy substance. The smell of wolf mucus lingered for weeks."
+    },
+    {
+      "name": "The Flying Sleigh Traffic Jam",
+      "description": "Due to unforeseen magical fog, several gift delivery drivers crashed into each other right above the village square. Packages are falling from the sky like hail, but they are all enchanted.",
+      "success": "The heroes used fishing nets to catch the parcels before impact. As a reward, the drivers let us keep the damaged packages: heated boots and reindeer cheese. A feast!",
+      "loses": "A package containing 'Goblins-in-a-Box' exploded on the ground. The village is now overrun by tiny, spiteful creatures that steal all the forks and hide house keys."
+    },
+    {
+      "name": "The Evil Ice Statue",
+      "description": "The village sculptor created a statue of the Guildmaster so realistic it came to life. Unfortunately, it thinks it's the real boss and has started giving absurd orders, like banning fireplace fires.",
+      "success": "The heroes challenged the statue to a staring contest. The statue eventually cracked (literally) under the social pressure. We used the shards to chill the tavern's drinks.",
+      "loses": "The statue convinced the guards it was the new boss. The heroes were evicted from their own guild and had to spend the night in a stable talking to a cynical ox."
+    },
+    {
+      "name": "Migration of the Explorer Penguins",
+      "description": "An expedition of penguins in hiking gear mistook the guild's cellar for the passage to the South Pole. They set up camp between the wine barrels and refuse to leave without a certified guide.",
+      "success": "The heroes drew a completely fake map leading to the grumpy neighbor's pond. The penguins left happily. We found rare ice pearls in their abandoned nests.",
+      "loses": "The penguins started fishing in the guild's dried fish reserves. They ate everything in one night and left bones everywhere. The guild is starving and smells like low tide."
+    },
+    {
+      "name": "The Frost-Beard Epidemic",
+      "description": "A local curse is making everyone's beard (men, women, and children) grow at a rate of 10 centimeters per hour. The worst part? The beards are sharp, jagged ice.",
+      "success": "The heroes used the forges to create heated razors. The village is clean-shaven, and we sold the 'ice hair' to a wizard glacier for a good price. Everyone has smooth chins again.",
+      "loses": "The beards ended up getting tangled between villagers, creating a giant human knot on the public square. It took three days to untangle everyone with hot water, wasting our wood supply."
+    },
+    {
+      "name": "The Powdered Sugar Cloud",
+      "description": "An accident in a giant's kitchen caused powdered sugar to fall instead of snow. The whole village is white, sticky, and attracting an army of giant snow ants that are very hungry.",
+      "success": "The heroes organized a giant waffle festival. The villagers ate the problem! The ants, disappointed at finding nothing left, moved on. We all gained three kilos, but the town is clean.",
+      "loses": "It started to rain. The sugar turned into hard caramel. The heroes' boots became sealed to the ground. We had to abandon our shoes and walk back to the guild in socks."
+    },
+    {
+      "name": "The Carnivorous Christmas Tree",
+      "description": "The large tree in the square mutated after absorbing a spilled growth potion. It no longer wants decorations; it wants to eat the presents (and potentially the people carrying them).",
+      "success": "The heroes 'fed' the tree expired turnips until it got indigestion. The tree became harmless again and even coughed up an old gold watch it had swallowed last year.",
+      "loses": "The tree managed to swallow the guild's safe. We now have to wait until spring for it to lose its needles to hope for our money back. The guild is officially broke for the winter."
+    },
+    {
+      "name": "The Onion Soup Duel",
+      "description": "Two village grandmothers are fighting over the title of best soup. The tension is so high that their boiling pots are creating a microclimate of scalding steam that melts the snow around their houses.",
+      "success": "The heroes agreed to be the judges (at the risk of their stomachs). They declared a tie, calming the tempers. The old ladies offered free supplies to the guild for the entire season.",
+      "loses": "The heroes criticized the lack of salt in one of the soups. A ladle battle broke out. The neighborhood is now flooded with onion broth, and everyone is crying because of the smell."
+    },
+    {
+      "name": "Frozen Laughter Syndrome",
+      "description": "A prankster spirit cast a 'Frost-Link' spell. Anyone who laughs has their lips instantly frozen shut. The village has become the most serious and saddest place in the world.",
+      "success": "The heroes told the worst jokes in history for three hours. The prankster spirit, bored to death, left. Laughter has returned, and lips are finally free!",
+      "loses": "A hero slipped on a banana peel. The general laughter froze the entire village in a collective grimace. We had to spend the evening pressing hot water bottles to our faces to speak again."
+    },
+    {
+      "name": "The Ancient Radiator Awakens",
+      "description": "The old cast-iron radiator in the dormitory woke up and claims to be the reincarnation of an ancient Fire King. It refuses to heat unless called 'Your Majesty' and offered luxury oil.",
+      "success": "The heroes played along with impeccable bows. 'King Cast-Iron' is delighted and now heats so well we can grow bananas in the dormitory in the middle of January.",
+      "loses": "A hero called the radiator an 'old hunk of junk'. Offended, the device switched to deep-freeze mode. We woke up to frozen blankets, and the Guildmaster has an icicle for a nose."
+    },
+    {
+      "name": "The Frozen Flute Concert",
+      "description": "The village bard tried to play a metal flute in -20°C weather. His tongue got stuck to the instrument. Since then, he produces sounds so shrill that all the village dogs howl in rhythm.",
+      "success": "The heroes used a flask of warmed schnapps to free the bard. Grateful, he composed an ode to the guild that attracted three wealthy new clients. The flute was melted down into spoons.",
+      "loses": "A hero tried to pull the flute off. The bard lost a piece of his tongue and can now only sing in vowels. The village is haunted by experimental music that scares off investors."
+    },
+    {
+      "name": "Revolt of the Orphan Socks",
+      "description": "Due to a domestic magic leak, all the left socks in the village have come to life. They have formed a woolen army and are blocking access to the laundry, demanding to find their right-hand partners.",
+      "success": "The heroes organized a speed-dating event for clothes. Calm has returned, pairs are reformed, and the guild received a bag of magical wool capable of knitting bulletproof scarves.",
+      "loses": "The woolen army launched a 'cheese-smell' offensive. The heroes had to retreat. The entire village is now walking barefoot in the snow, costing a fortune in frostbite treatments."
+    },
+    {
+      "name": "Arrival of the Colored Snow Merchant",
+      "description": "A strange merchant is selling 'Strawberry-Banana' flavored snow. Children are eating it everywhere, but it turns out the snow is actually made of tropical parasite eggs that hate the cold.",
+      "success": "The heroes identified the fraud and used the eggs to cook a giant (and weird) omelet. The merchant was chased away, and the village discovered a rich new protein source.",
+      "loses": "The eggs hatched in the villagers' stomachs. Everyone now has tropical butterflies flying out of their mouths whenever they speak. Serious conversations have become impossible."
+    },
+    {
+      "name": "The Fog of Nostalgia",
+      "description": "A thick mist has risen, and anyone who enters it starts crying while thinking about their first childhood toy. Village production is at a standstill because everyone is hugging while sobbing.",
+      "success": "The heroes crossed the fog wearing masks soaked in onion (to mask the sadness with real pain). They dissipated the mist with a giant fan. The village went back to work.",
+      "loses": "The heroes succumbed to the melancholy. They spent the day drawing ponies in the snow. We missed three important contracts, and the guild's tissue stock is completely exhausted."
+    },
+    {
+      "name": "The Pyromaniac Blacksmith's Strike",
+      "description": "The blacksmith refuses to light his forge until he is brought a flame 'with personality'. In the meantime, our swords are as sharp as cheese spatulas and morale is plummeting.",
+      "success": "The heroes captured a grumpy fire wisp in a lantern. The blacksmith is thrilled with this flame that insults everyone. He forged exceptional blades for us in return.",
+      "loses": "The heroes brought a cheap scented candle. Offended, the blacksmith put out his fire for good and left to become a tofu sculptor. We have no one left to repair our gear."
+    },
+    {
+      "name": "Invasion of the Ice Beavers",
+      "description": "Beavers with diamond teeth decided to build a dam... using the village houses. They have already dismantled three barns and are now attacking the tavern's foundations.",
+      "success": "The heroes negotiated a deal: free firewood in exchange for their help building a guild extension. We now have a brand-new hall and beavers as bouncers.",
+      "loses": "Trying to scare them off with hot water, the heroes created a giant ice rink. The beavers used the ice to slide the town hall into the river. The village has no administrative center."
+    },
+    {
+      "name": "The Cheese from Outer Space",
+      "description": "A wheel of cheese fell from the sky, creating a smoking crater. It gives off a smell so powerful it attracts giant crows from the distant mountains to claim it.",
+      "success": "The heroes fought off the crows and sliced the cheese. It’s the best thing the village has ever tasted! The guild is selling slices for gold, and the heroes feel strangely muscular.",
+      "loses": "The smell was a trap. The cheese exploded into a cloud of toxic mold. The entire village now smells like fermented old feet, significantly reducing our charisma during negotiations."
+    },
+    {
+      "name": "The Curse of the Chassé Step",
+      "description": "A prankster imp enchanted the guild hall floor. Anyone trying to walk is forced to do so while dancing the quadrille. Simple movements now take three times longer.",
+      "success": "The heroes invited the imp to a dance-off. They exhausted him with a 12-hour choreography. The imp lifted the spell before fainting. The guild has returned to a normal gait.",
+      "loses": "The Guildmaster slipped while trying a pirouette. He got his back stuck in an embarrassing position. The heroes are forced to carry him like a shelf for all official meetings."
+    },
+    {
+      "name": "The Thermometer of Truth",
+      "description": "The large thermometer in the square has come to life. It no longer measures temperature, but people's honesty. Whenever someone lies, the thermometer explodes with a ridiculous horn sound.",
+      "success": "The heroes used the device to unmask an undercover spy stealing our food rations. The village is purified, the culprit is in the dungeon, and we recovered all the sausages.",
+      "loses": "The thermometer honked when the hero said he had 'thoroughly cleaned his armor'. The noise caused an avalanche that blocked the guild entrance. We had to dig for two days."
+    },
+    {
+      "name": "The Pepper Cloud Attack",
+      "description": "A spice merchant's convoy exploded after colliding with a snowman. A cloud of black pepper is hovering over the village. Everyone is sneezing in perfect synchronization every ten seconds.",
+      "success": "The heroes used giant bellows to direct the cloud toward the nearby forest. The forest monsters left because of the sneezing, making the area safe for winter foraging.",
+      "loses": "The collective sneeze was so powerful it caused a local earthquake. The guild's wine cellar collapsed, breaking our best reserve bottles. It is a national tragedy."
+    }
+  ]
+}

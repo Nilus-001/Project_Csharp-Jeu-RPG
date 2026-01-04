@@ -1,5 +1,7 @@
 ﻿using Project_RPG_Game.characters;
 using Project_RPG_Game.classes;
+using Project_RPG_Game.races;
+using Project_RPG_Game.status.@interface;
 
 namespace Project_RPG_Game.status.custom;
 
@@ -16,8 +18,8 @@ public class Confusion : Status, IAppliedOnce , INegativeStatus{
         if (!IsApplied) {
             savedHeroClass = hero.GameClass;
             savedHeroRace = hero.Race;
-            hero.GameClass = null;
-            hero.Race = RaceTypes.Null;
+            hero.GameClass = GameClassList.Null;
+            hero.Race = RaceList.Null;
             IsApplied = true;
         }
     }

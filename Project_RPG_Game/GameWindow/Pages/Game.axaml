@@ -14,7 +14,7 @@
                 <StyleInclude Source="avares://Project_RPG_Game/styles/GameStyle.axaml"/>
         </UserControl.Styles>
         <UserControl.Background>
-                <ImageBrush Source="avares://Project_RPG_Game/assets/background/BackgroundDay.png" Stretch="UniformToFill"/>
+                <ImageBrush Source="avares://Project_RPG_Game/assets/background/BackgroundSunset.png" Stretch="UniformToFill"/>
         </UserControl.Background>
         
 <!-- ________________________________________________________________________________________________________________________ -->
@@ -22,30 +22,53 @@
         
         
          
-        <Grid ColumnDefinitions="100 * 320" RowDefinitions="100 *" Name="MainGrid" >
+        <Grid ColumnDefinitions="75 * 320" RowDefinitions="100 *" Name="MainGrid" >
                 
 
                 
                 
                 
-                <Border Grid.Column="1" Grid.Row="1" Padding="30 30 30 50 " Classes="AllCalender">
-                        <Grid ShowGridLines="True" ColumnDefinitions="175 800 *" RowDefinitions="100 *">
-                                <Border Grid.Row="0" Grid.Column="1" Background="red" Margin="0 20 0 0" Classes="TopCalender">
-                                        <Grid ColumnDefinitions="* * * * * *  " RowDefinitions="*" ShowGridLines="True">
-                                                <Border Grid.Column="0" Background="purple">
-                                                        <Label Classes="H2">Day 1</Label>
-                                                </Border>
-                                        </Grid>
+                <Border Grid.Column="1" Grid.Row="1" Padding="70 20 30 120 " Margin="0 0 40 0" Classes="AllCalender">
+                        <Border.Background>
+                                <ImageBrush Source="avares://Project_RPG_Game/assets/gui/GuiMainContent.png" 
+                                            Stretch="Uniform"/>
+                        </Border.Background>
+                        <Grid>
+                                <Grid ShowGridLines="False" ColumnDefinitions="175 800 *" RowDefinitions="100 *">
+                                        <Border Grid.Row="0" Grid.Column="1"  Margin="0 20 0 0" Classes="TopCalender">
+                                                <Grid ColumnDefinitions="* * * * * *  " RowDefinitions="*" ShowGridLines="False">
+                                                        <Border Grid.Column="0" Padding="-55 -15 0 0">
+                                                                <Label Classes="H2" Name="DayPrinter">Day 0</Label>
+                                                        </Border>
+                                                        
+                                                        
+                                                </Grid>
+                                                
+                                        </Border>
+                                        <Border Grid.Row="1" Grid.Column="1" Margin="75 50 60 20">
+                                                <Grid>
+                                                        <ContentControl Name="InteractivePart"></ContentControl>
+                                                </Grid>
+                                        </Border>
+                                        <Border Grid.Row="1" Grid.Column="0" Margin="35 75 0 50 " >
+                                                <StackPanel>
+                                                        <Border Background="rgba(78 ,41, 18 , 0.86)" BorderBrush="rgb(66, 34, 2)" BorderThickness="3" Padding="10 4 10 4" Height="30" MaxWidth="150" Width="150" CornerRadius="50">
+                                                                <TextBlock Text="Debut" TextAlignment="Center" Name="PartInfo"></TextBlock>
+                                                        </Border>
+                                                        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" MaxHeight = "350">
+                                                                <StackPanel Name="InfoGuildPhase" HorizontalAlignment="Center">
+                                                                
+                                                                </StackPanel>
+                                                        </ScrollViewer>
+                                                        
+                                                </StackPanel>
+                                        </Border>
                                         
-                                </Border>
-                                <Border Grid.Row="1" Grid.Column="1" Background="orange">
-                                        <TextBlock>Main content interaction</TextBlock>
-                                </Border>
-                                <Border Grid.Row="1" Grid.Column="0" Background="Yellow">
-                                        <TextBlock>deroulement day</TextBlock>
-                                </Border>
-                                
-                                
+                                        
+                                </Grid>
+                                <Border HorizontalAlignment="Right" VerticalAlignment="Bottom" >
+                                        <Button Background="DarkGreen" FontSize="30" Margin="0 0 20 0 " Name="ToNext" Click="ToNext_OnClick" Classes="ButtonStaticBack">Start</Button>
+                                </Border >
                         </Grid>
                         
                 </Border>
@@ -65,72 +88,13 @@
                 
                 
                 
-                <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Name="CharacterFastInfo" Classes="RightPart" >
-                        
-                                
-                                
-                        <Border Classes="CharacterContainer">
-                                <Grid  RowDefinitions="* * * *" ColumnDefinitions="* *">
-                        
-                        
-                                        <!-- Exemple of a character -->
-                                        <Border Classes="CharacterPart">
-                                                <StackPanel Name="CharacterMiniInfo1" Spacing="5" Classes="CharacterCard">
-                                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 5 0 0 ">
-                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
-                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
-                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
-                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
-                                                                <Image Source="avares://Project_RPG_Game/assets/IconStarLevel.png" Height="20"></Image>
-                                                        </StackPanel>
-                                                        <Image Source="avares://Project_RPG_Game/assets/characters/CharacterDeer.PNG" Height="90"></Image>
-                                                        <Border Background="DarkGray" Height="5" Width="75" >
-                                                                <Border Background="red" Height="5" Width="75" HorizontalAlignment="Left" Name="Health1"></Border>
-                                                        </Border>
-                                                        <Border Background="DarkGray" Height="5" Width="75">
-                                                                <Border Background="orange" Height="5" Width="42" HorizontalAlignment="Left" Name="Food1"></Border>
-                                                        </Border>
-                                                        <Border Background="DarkGray" Height="5" Width="75">
-                                                                <Border Background="#9fdb1d" Height="5" Width="60" HorizontalAlignment="Left" Name="Xp1"></Border>
-                                                        </Border>
-                                                        
-                                                </StackPanel>
-                                        </Border>
-                                                        <!-- Exemple of a character -->
-                                        <Border Grid.Row="0" Grid.Column="1" Classes="CharacterPart">
-                                               
-                                        </Border>
-                                                                                                          <!-- Exemple of a character -->
-                                        <Border Grid.Row="1" Grid.Column="0" Classes="CharacterPart">
-                                                
-                                        </Border>
-                                                                                                          <!-- Exemple of a character -->
-                                        <Border Grid.Row="1" Grid.Column="1" Classes="CharacterPart">
-                                               
-                                        </Border>
-                                                                                                          <!-- Exemple of a character -->
-                                        <Border Grid.Row="2" Grid.Column="0" Classes="CharacterPart">
-                                                
-                                        </Border>
-                                                                                                          <!-- Exemple of a character -->
-                                        <Border Grid.Row="2" Grid.Column="1" Classes="CharacterPart">
-                                               
-                                        </Border>
-                                                                                                          <!-- Exemple of a character -->
-                                        <Border Grid.Row="3" Grid.Column="0" Classes="CharacterPart">
-                                                
-                                        </Border>
-                                        
-                                        <Border Grid.Row="3" Grid.Column="1" Classes="CharacterPart">
-                                               
-                                        </Border>
-                                        
-                                        
-                                </Grid>
+                <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Classes="RightPart" >
+                        <Border  Padding="10" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                                <Button Height="65" Width="65"  Name="OpenInventory" Click="OpenInventory_OnClick" Classes="ButtNoBackground">
+                                        <Image Source="avares://Project_RPG_Game/assets/icon/IconInventory.png" Stretch="UniformToFill"></Image>
+
+                                </Button>
                         </Border>
-                                
-                                
-                      
                 </Border>
                 
                 
@@ -143,14 +107,14 @@
                                 <StackPanel Name="GuildInfo" Orientation="Horizontal" Spacing="10">
                                         <Border Classes="NbPrint" >
                                                 <Grid ColumnDefinitions="* 30">
-                                                        <TextBlock Text="100"  ></TextBlock>
+                                                        <TextBlock Text="100" Name="MoneyPrinter"  ></TextBlock>
                                                         <Image Grid.Column="1" Source="avares://Project_RPG_Game/assets/IconCoins.png"></Image>
                 
                                                 </Grid>
                                         </Border>
                                         <Border Classes="NbPrint">
                                                 <Grid ColumnDefinitions="* 30"  >
-                                                        <TextBlock  Text="860"/> 
+                                                        <TextBlock  Text="860" Name="FoodStockPrinter" /> 
                                                         <Image Grid.Column="1" Source="avares://Project_RPG_Game/assets/IconFood.png"></Image>
                 
                                                 </Grid>
@@ -163,14 +127,7 @@
                 
                 
                 <Grid Row="1" Column="0" ColumnDefinitions="100 *" >
-                        <Border  Padding="10">
-                                <StackPanel Grid.Column="0" Name="GuildTool" Orientation="Horizontal">
-                                        <Button Height="65" Width="65" VerticalAlignment="Bottom" Name="OpenInventory" Click="OpenInventory_OnClick" Classes="ButtNoBackground">
-                                                <Image Source="avares://Project_RPG_Game/assets/icon/IconInventory.png" Stretch="UniformToFill"></Image>
-        
-                                        </Button>
-                                </StackPanel>
-                        </Border>
+                        
                 </Grid>
                         
                 

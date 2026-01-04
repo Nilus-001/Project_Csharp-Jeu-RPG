@@ -6,6 +6,7 @@ using Project_RPG_Game.items;
 using Project_RPG_Game.missions;
 using Project_RPG_Game.status;
 using Project_RPG_Game.status.custom;
+using Project_RPG_Game.status.@interface;
 
 namespace Project_RPG_Game.characters;
 
@@ -105,20 +106,18 @@ public class Hero : Character {
     }
     //--------------------------------------- Equipment ---------------------------------------
 
-    public bool Equip(Equipment equiment) {
+    public bool Equip(Equipment equipment) {
         if (EquipmentList.Count < EquipmentSlot) {
-            EquipmentList.Add(equiment);
+            EquipmentList.Add(equipment);
+            equipment.AttachedTo = this;
             return true;
         }
         return false;
     }
 
-    public Equipment Unequip(Equipment equiment) {
-        if (EquipmentList.Contains(equiment)) {
-            EquipmentList.Remove(equiment);
-            return equiment;
-        }
-        return null;
+    public void Unequip(Equipment equipment) {
+        equipment.AttachedTo = null;
+        EquipmentList.Remove(equipment);
     }
 
 
@@ -154,7 +153,7 @@ public class Hero : Character {
     public void AddStatus(Status status,int modifier=1) {
         if (StatusIsActive(this, typeof(Blessed)) == null) {
             
-            Status? sameEffect = StatusIsActive(this, GetType());
+            Status? sameEffect = StatusIsActive(this, status.GetType());
             if (sameEffect != null) {
                 status.Modifier += modifier ;
                 StatusList.Remove(sameEffect);

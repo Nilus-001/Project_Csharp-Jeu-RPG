@@ -1,0 +1,27 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Project_RPG_Game.GameWindow.Pages.MissionSelection">
+<Grid>
+    <Border VerticalAlignment="Top" Margin="0 35 0 0 ">
+        <Grid ColumnDefinitions="* *" RowDefinitions="350" ShowGridLines="True">
+            <Border Grid.Column="0" Name="MissionInfo">
+                
+            </Border>
+            <Border Grid.Column="1" Name="MissionInteraction">
+                
+            </Border>
+        </Grid>
+    </Border>
+   
+    <Border HorizontalAlignment="Center" VerticalAlignment="Bottom">
+        <StackPanel Spacing="5">
+            <Button Name="Accept" HorizontalAlignment="Center" Background="ForestGreen" Click="Accept_OnClick">Accept</Button>
+            <Button Name="Back" HorizontalAlignment="Center" Background="Brown" Click="Back_OnClick">Back</Button>
+        </StackPanel>
+        
+    </Border>
+</Grid>
+</UserControl>

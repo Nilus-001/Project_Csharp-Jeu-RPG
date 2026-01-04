@@ -5,8 +5,8 @@ namespace Project_RPG_Game.items.custom_usable;
 public class Food : Usable , IHealItem{
     public int Nutrition;
     
-    public Food(string name, string description, int nutrition) : base(name, description, Rarity.Classic) {
-        Nutrition = nutrition;
+    public Food(string name,Rarity rarity) : base(name,$"Regen {(int)rarity} food", rarity,"Project_RPG_Game/assets/item/ItemSacOfCookies.png") {
+        Nutrition = (int)rarity;
     }
 
     public override string useOn(Hero hero) {

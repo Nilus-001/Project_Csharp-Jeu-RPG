@@ -1,4 +1,5 @@
 ﻿using Project_RPG_Game.characters;
+using Project_RPG_Game.status.@interface;
 
 namespace Project_RPG_Game.status.custom;
 

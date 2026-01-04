@@ -1,23 +1,42 @@
 ﻿using System;
+using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Controls.Documents;
 using Avalonia.Input;
-using Avalonia.Markup.Xaml;
+using Avalonia.Layout;
+using Avalonia.Media;
+using Avalonia.Media.Imaging;
+using Avalonia.Platform;
+using Project_RPG_Game.characters;
+using Project_RPG_Game.items;
+using Project_RPG_Game.items.custom_usable;
+using Project_RPG_Game.status.@interface;
+using Color = System.Drawing.Color;
+
 
 namespace Project_RPG_Game.GameWindow.Pages;
 
 public partial class Inventory : UserControl {
-    public UserControl GamePage;
+    public Game GamePage;
     private GameWindow Main;
+    public Guild Guild;
 
 
     public Inventory() {
         InitializeComponent();
     }
-    public Inventory(UserControl game) {
+    public Inventory(Guild guild,Game game) {
         InitializeComponent();
         GamePage = game;
+        Guild = guild;
+        UpdateCharacterInfo();
+        UpdateInventoryInfo();
+        
 
+        
+        
+        
 
 
         AttachedToVisualTree += (sender, visualTreeAttachmentEventArgs) => {
@@ -44,4 +63,269 @@ public partial class Inventory : UserControl {
 
        
     }
+    
+    
+    
+    
+    
+    public void UpdateInventoryInfo() {
+        for (int i = 0; i < 12; i++) {
+            int row = i / 4;
+            int col = i % 4; 
+            
+            var itemBlock = InventoryZone.Children
+                            .OfType<Border>()
+                            .FirstOrDefault(b => Grid.GetRow(b) == row && Grid.GetColumn(b) == col);
+
+            itemBlock.Child = null;
+            if (i < Guild.GuildInventory.Count) {
+                itemBlock.Child = CreateItemCard(Guild.GuildInventory[i]);
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public void UpdateCharacterInfo() {
+        for (int i = 0; i < 8; i++) {
+            int row = i / 2;
+            int col = i % 2;
+            
+            var heroBlock = HeroInfo.Children
+                .OfType<Border>()
+                .FirstOrDefault(b => Grid.GetRow(b) == row && Grid.GetColumn(b) == col);
+            
+            heroBlock.Child = null;
+            if (i < Guild.GuildHeroes.Count) {
+                heroBlock.Child = CreateHeroCard(Guild.GuildHeroes[i]);
+            }
+        }
+        
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    private Border CreateItemCard(Item item) {
+  
+        var border = new Border {
+            Margin = new Thickness(4),
+            CornerRadius = new CornerRadius(8),
+            BorderThickness = new Thickness(2),
+            
+        };
+        
+        var btn = new Border {
+            HorizontalAlignment = HorizontalAlignment.Stretch,
+            VerticalAlignment = VerticalAlignment.Stretch,
+            CornerRadius = new CornerRadius(6),
+            Cursor = new Cursor(StandardCursorType.Hand),
+            Background = Brushes.Transparent, 
+            
+            Child = new Image {
+               
+                Source = new Bitmap(AssetLoader.Open(new Uri($"avares://{item.Img}"))), 
+                Stretch = Stretch.Uniform,
+                Margin = new Thickness(4) 
+            
+            }
+            
+        };
+        ToolTip.SetTip(btn, $"{item.Name}\nNiveau: {item.Rarity}\nDesc: {item.Description}");
+        
+        btn.PointerReleased += (s, e) => {
+        
+            if (e.InitialPressMouseButton == MouseButton.Left) {
+                if (item is Equipment equipment) {
+                    OnEquipmentClick(equipment);
+                } else {
+                    OnConsumableClick(item);
+                }
+            } 
+        };
+    
+        border.Child = btn;
+        return border;
+    }
+    
+    
+    private void OnEquipmentClick(Equipment equipment) {   //! here
+        
+        // TODO: Ton code pour équiper l'objet ici
+        Console.WriteLine($"Equipement cliqué : {equipment.Name} - Durabilité : {equipment.Durability}");
+        
+        // UpdateInventoryInfo();
+        // UpdateCharacterInfo();
+    }
+    
+    private void OnConsumableClick(Item item) {   //! here
+        // TODO: Ton code pour consommer l'objet ici
+        Console.WriteLine($"Consommable cliqué : {item.Name}");
+        
+        // UpdateInventoryInfo();
+    }
+
+
+
+
+
+    private StackPanel CreateHeroCard(Hero hero) {
+        var panel = new StackPanel {
+            Orientation = Orientation.Horizontal,
+            Background = new SolidColorBrush(0xFF2b2b2b),
+            Margin = new Thickness(5)
+        };
+        
+        // Partie gauche : Image du personnage
+        var imageBorder = new Border {
+            Width = 80,
+            Height = 120,
+            CornerRadius = new CornerRadius(4),
+            Margin = new Thickness(0, 0, 10, 0)
+        };
+        
+        var image = new Image {
+            Source = new Bitmap(AssetLoader.Open(new Uri($"avares://{hero.Race.Img}"))),
+            Stretch = Stretch.Uniform
+        };
+        imageBorder.Child = image;
+        panel.Children.Add(imageBorder);
+        
+        // Partie droite : Informations
+        var infoPanel = new StackPanel {
+            Orientation = Orientation.Vertical,
+            Spacing = 4,
+            Width = 200
+        };
+        
+        // Nom
+        var nameText = new TextBlock {
+            Text = hero.Name,
+            FontSize = 16,
+            FontWeight = FontWeight.Bold,
+            Foreground = Brushes.White
+        };
+        infoPanel.Children.Add(nameText);
+        
+        var classRaceText = new TextBlock {
+            FontSize = 12,
+            Foreground = new SolidColorBrush(0xFFaaaaaa)
+        };
+        classRaceText.Inlines.Add(new Run(hero.GameClass.Name) { 
+            Foreground = new SolidColorBrush(0xFF4a9eff) 
+        });
+        classRaceText.Inlines.Add(new Run(" - "));
+        classRaceText.Inlines.Add(new Run(hero.Race.Name) { 
+            Foreground = new SolidColorBrush(0xFF90ee90) 
+        });
+        infoPanel.Children.Add(classRaceText);
+        
+        // Level / XP
+        var levelXpText = new TextBlock {
+            FontSize = 11,
+            Foreground = new SolidColorBrush(0xFFffd700)
+        };
+        levelXpText.Inlines.Add(new Run("Niveau "));
+        levelXpText.Inlines.Add(new Run(hero.Level.ToString()) { FontWeight = FontWeight.Bold });
+        levelXpText.Inlines.Add(new Run(" - XP: "));
+        levelXpText.Inlines.Add(new Run($"{hero.Xp}/{hero.XpMax}"));
+        infoPanel.Children.Add(levelXpText);
+        
+        // PV 
+        var hpPanel = CreateStatBar("PV", hero.Hp, hero.HpMax, 0xFFff6b6b);
+        infoPanel.Children.Add(hpPanel);
+        
+        var foodPanel = CreateStatBar("Nourriture", hero.Food, hero.FoodMax, 0xFFffa500);
+        infoPanel.Children.Add(foodPanel);
+        
+        var salaryText = new TextBlock {
+            FontSize = 11,
+            Foreground = new SolidColorBrush(0xFFffeb3b)
+        };
+        salaryText.Inlines.Add(new Run("💰 Salaire: "));
+        salaryText.Inlines.Add(new Run(hero.Salary.ToString()) { FontWeight = FontWeight.Bold });
+        salaryText.Inlines.Add(new Run(" gold/jour"));
+        infoPanel.Children.Add(salaryText);
+        
+        // Status
+        
+            var effectsContainer = new StackPanel { Spacing = 2 , Orientation = Orientation.Horizontal , VerticalAlignment = VerticalAlignment.Center};
+            effectsContainer.Children.Add(new TextBlock {
+                Text = "Effets:",
+                FontSize = 10,
+                Foreground = new SolidColorBrush(0xFFbbbbbb)
+            });
+            if (hero.StatusList.Count > 0) {
+                var effectsPanel = new StackPanel {
+                    Orientation = Orientation.Horizontal,
+                    Spacing = 3
+                };
+                
+                foreach (var status in hero.StatusList) {
+                    SolidColorBrush colorBrush = new SolidColorBrush(0xFF4caf50);
+                    if (status is INegativeStatus) {
+                        colorBrush = new SolidColorBrush(0xFF800000);
+                    }
+                    var effectBadge = new Border {
+                        Background = colorBrush,
+                        Padding = new Thickness(4, 2),
+                        CornerRadius = new CornerRadius(3)
+                    };
+                    effectBadge.Child = new TextBlock {
+                        Text = status.Name,
+                        FontSize = 9,
+                        Foreground = Brushes.White
+                    };
+                    effectsPanel.Children.Add(effectBadge);
+                }
+            effectsContainer.Children.Add(effectsPanel);
+           
+            }
+            infoPanel.Children.Add(effectsContainer);
+        
+        
+        panel.Children.Add(infoPanel);
+        return panel;
+    }
+
+    private StackPanel CreateStatBar(string label, int current, int max, uint color) {
+        var container = new StackPanel { Spacing = 2 };
+        
+        var labelText = new TextBlock {
+            Text = $"{label}: {current}/{max}",
+            FontSize = 11,
+            Foreground = new SolidColorBrush(color)
+        };
+        container.Children.Add(labelText);
+        
+        var barBackground = new Border {
+            Height = 6,
+            Background = new SolidColorBrush(0xFF333333),
+            CornerRadius = new CornerRadius(3)
+        };
+        
+        double percentage = max > 0 ? (double)current / max : 0;
+        var barFill = new Border {
+            Width = 200 * percentage,
+            HorizontalAlignment = HorizontalAlignment.Left,
+            Background = new SolidColorBrush(color),
+            CornerRadius = new CornerRadius(3)
+        };
+        
+        barBackground.Child = barFill;
+        container.Children.Add(barBackground);
+        
+        return container;
+}
+    
 }

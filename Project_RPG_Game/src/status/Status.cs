@@ -31,5 +31,10 @@ public abstract class Status {
     }
     
 
+    public override string ToString() {
+        return Name;
+    }
+    
+
     
 }

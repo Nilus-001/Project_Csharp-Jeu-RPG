@@ -9,10 +9,14 @@ public class Race {
     private static int _idincrement = 0;
     public int Id;
     public Dictionary<TerrainType,int> TerrainModifier;
+    public string Img;
+    public string Name;
 
-    public Race(Dictionary<TerrainType, int> typesModifier) {
+    public Race(string name,Dictionary<TerrainType, int> typesModifier,string img) {
         TerrainModifier = typesModifier;
-        
+        Img = img;
+        Name = name;
+
         _idincrement++;
         Id = _idincrement;
     }

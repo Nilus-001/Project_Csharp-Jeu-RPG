@@ -12,7 +12,7 @@ public partial class GameWindow : Window {
         InitializeComponent();
 
         WindowState = WindowState.FullScreen;
-        MainContent.Content = new Game();
+        MainContent.Content = new Game(new Guild(100,300));
         KeyDown += OnKeyDown;
     }
     
@@ -37,14 +37,14 @@ public partial class GameWindow : Window {
             
         }
 
-        if (e.Key == Key.F11) {
-            if (WindowState == WindowState.FullScreen) {
-                WindowState = WindowState.Maximized;
-            }
-            else {
-                WindowState = WindowState.FullScreen;
-            }
-        }
+        // if (e.Key == Key.F11) {
+        //     if (WindowState == WindowState.FullScreen) {
+        //         WindowState = WindowState.Maximized;
+        //     }
+        //     else {
+        //         WindowState = WindowState.FullScreen;
+        //     }
+        // }
     }
     
    

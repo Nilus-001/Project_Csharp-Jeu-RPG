@@ -4,15 +4,14 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Documents;
 using Avalonia.Input;
+using Avalonia.Interactivity;
 using Avalonia.Layout;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Project_RPG_Game.characters;
 using Project_RPG_Game.items;
-using Project_RPG_Game.items.custom_usable;
 using Project_RPG_Game.status.@interface;
-using Color = System.Drawing.Color;
 
 
 namespace Project_RPG_Game.GameWindow.Pages;
@@ -21,6 +20,9 @@ public partial class Inventory : UserControl {
     public Game GamePage;
     private GameWindow Main;
     public Guild Guild;
+
+    private Hero HeroSelectedForItem;
+    private Item ItemSelected;
 
 
     public Inventory() {
@@ -32,12 +34,6 @@ public partial class Inventory : UserControl {
         Guild = guild;
         UpdateCharacterInfo();
         UpdateInventoryInfo();
-        
-
-        
-        
-        
-
 
         AttachedToVisualTree += (sender, visualTreeAttachmentEventArgs) => {
             Main = VisualRoot as GameWindow;
@@ -65,9 +61,6 @@ public partial class Inventory : UserControl {
     }
     
     
-    
-    
-    
     public void UpdateInventoryInfo() {
         for (int i = 0; i < 12; i++) {
             int row = i / 4;
@@ -83,14 +76,6 @@ public partial class Inventory : UserControl {
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
     
     public void UpdateCharacterInfo() {
         for (int i = 0; i < 8; i++) {
@@ -110,12 +95,6 @@ public partial class Inventory : UserControl {
     }
 
     
-    
-    
-    
-    
-    
-    
     private Border CreateItemCard(Item item) {
   
         var border = new Border {
@@ -131,6 +110,7 @@ public partial class Inventory : UserControl {
             CornerRadius = new CornerRadius(6),
             Cursor = new Cursor(StandardCursorType.Hand),
             Background = Brushes.Transparent, 
+            BorderBrush = new SolidColorBrush(Colors.Green),
             
             Child = new Image {
                
@@ -144,38 +124,113 @@ public partial class Inventory : UserControl {
         ToolTip.SetTip(btn, $"{item.Name}\nNiveau: {item.Rarity}\nDesc: {item.Description}");
         
         btn.PointerReleased += (s, e) => {
-        
             if (e.InitialPressMouseButton == MouseButton.Left) {
-                if (item is Equipment equipment) {
-                    OnEquipmentClick(equipment);
-                } else {
-                    OnConsumableClick(item);
-                }
+                OnItemClick(item,btn);
             } 
         };
-    
         border.Child = btn;
         return border;
     }
-    
-    
-    private void OnEquipmentClick(Equipment equipment) {   //! here
+
+
+    private Border _selectedItemBorder = new Border();
+    private void OnItemClick(Item item, Border btn) {
+        ItemSelected = item;
         
-        // TODO: Ton code pour équiper l'objet ici
-        Console.WriteLine($"Equipement cliqué : {equipment.Name} - Durabilité : {equipment.Durability}");
+        _selectedItemBorder.BorderThickness = new Thickness(0);
+        btn.BorderThickness = new Thickness(2);
+        _selectedItemBorder = btn;
         
-        // UpdateInventoryInfo();
-        // UpdateCharacterInfo();
-    }
-    
-    private void OnConsumableClick(Item item) {   //! here
-        // TODO: Ton code pour consommer l'objet ici
-        Console.WriteLine($"Consommable cliqué : {item.Name}");
-        
-        // UpdateInventoryInfo();
-        // UpdateCharacterInfo();
+        for (int i = 0; i < 8; i++) {
+            int row = i / 4;
+            int col = i % 4;
+            
+            var heroSelect = HeroItemSelection.Children
+                .OfType<Border>()
+                .FirstOrDefault(b => Grid.GetRow(b) == row && Grid.GetColumn(b) == col);
+            heroSelect.Child = null;
+
+            if (i < Guild.GuildHeroes.Count) {
+                heroSelect.Child = CreateHeroSelectCube(Guild.GuildHeroes[i]);
+            }
+        }
+
+        if (item is Usable) {
+            EquipUse.Content = "Use";
+        }else{
+            EquipUse.Content = "Equip";
+        }
+
+        EquipUse.IsVisible = true;
+
     }
 
+    private Button _heroSelectButton = new Button();
+
+    private Border CreateHeroSelectCube(Hero hero) {
+        bool hasSpace = hero.EquipmentSlot > hero.EquipmentList.Count;
+    
+        var button = new Button {
+            Width = 70,
+            Height = 70,
+            Padding = new Thickness(0),
+            Background = Brushes.Transparent,
+            BorderBrush = new SolidColorBrush(0xFF444444),
+            BorderThickness = new Thickness(2),
+            CornerRadius = new CornerRadius(4),
+            Cursor = hasSpace ? new Cursor(StandardCursorType.Hand) : new Cursor(StandardCursorType.No),
+            IsEnabled = hasSpace
+        };
+    
+        var image = new Image {
+            Source = new Bitmap(AssetLoader.Open(new Uri($"avares://{hero.Race.Img}"))),
+            Stretch = Stretch.Uniform,
+            Opacity = hasSpace ? 1.0 : 0.3
+        };
+    
+        button.Content = image;
+        ToolTip.SetTip(button, hero.Name);
+    
+        if (hasSpace) {
+            button.Click += (sender, e) => {
+                HeroSelectedForItem = hero;
+            
+                _heroSelectButton.BorderBrush = new SolidColorBrush(0xFF444444);
+                _heroSelectButton.BorderThickness = new Thickness(2);
+                _heroSelectButton = button;
+            
+                button.BorderBrush = Brushes.Green;
+                button.BorderThickness = new Thickness(2);
+            };
+        }
+        var border = new Border {
+            Child = button,
+            Background = hasSpace ? Brushes.Transparent : new SolidColorBrush(0x66000000)
+        };
+    
+        return border;
+    }
+    
+     private void EquipUse_OnClick(object? sender, RoutedEventArgs e) {
+         if (ItemSelected is not null && HeroSelectedForItem is not null) {
+             if (ItemSelected is Usable usable) {
+                 Guild.UseUsable(usable, HeroSelectedForItem);
+             }else if (ItemSelected is Equipment equip) {
+                 Guild.EquipEquipment(equip,HeroSelectedForItem);
+             }
+
+             ItemSelected = null;
+             HeroSelectedForItem = null;
+         }
+         
+         EquipUse.IsVisible = false;
+         UpdateInventoryInfo(); 
+         UpdateCharacterInfo();
+
+         foreach (var border in HeroItemSelection.Children.OfType<Border>()) {
+             border.Child = null;
+         }
+     }
 
 
 
@@ -228,7 +283,6 @@ public partial class Inventory : UserControl {
         });
         infoPanel.Children.Add(classRaceText);
         
-        // Level / XP
         var levelXpText = new TextBlock {
             FontSize = 11,
             Foreground = new SolidColorBrush(0xFFffd700)
@@ -239,8 +293,7 @@ public partial class Inventory : UserControl {
         levelXpText.Inlines.Add(new Run($"{hero.Xp}/{hero.XpMax}"));
         infoPanel.Children.Add(levelXpText);
         
-        // PV 
-        var hpPanel = CreateStatBar("PV", hero.Hp, hero.HpMax, 0xFFff6b6b);
+        var hpPanel = CreateStatBar("HP", hero.Hp, hero.HpMax, 0xFFff6b6b);
         infoPanel.Children.Add(hpPanel);
         
         var foodPanel = CreateStatBar("Food", hero.Food, hero.FoodMax, 0xFFffa500);
@@ -255,7 +308,6 @@ public partial class Inventory : UserControl {
         salaryText.Inlines.Add(new Run(" gold/day"));
         infoPanel.Children.Add(salaryText);
         
-        // Status
         
             var effectsContainer = new StackPanel { Spacing = 2 , Orientation = Orientation.Horizontal , VerticalAlignment = VerticalAlignment.Center};
             effectsContainer.Children.Add(new TextBlock {
@@ -320,7 +372,14 @@ public partial class Inventory : UserControl {
         };
         panel.Children.Add(deleteButton);
 
-        string contentTip = $"";
+
+        string heroEquipementsTip = "";
+        foreach (var equip in hero.EquipmentList) {
+            heroEquipementsTip += $"\n[{equip.Name} ; Durability : {equip.Durability}/{equip.DurabilityMax} ; Description : {equip.Description[Range.EndAt(25)]}...]";
+        }
+
+        string contentTip = $"Slot : {hero.EquipmentList.Count}/{hero.EquipmentSlot}\n" +
+                            $"Equipment : {heroEquipementsTip}";
         
         
         ToolTip.SetTip(infoPanel,contentTip);
@@ -356,5 +415,6 @@ public partial class Inventory : UserControl {
         
         return container;
 }
-    
+
+   
 }

@@ -94,7 +94,6 @@ public class Guild {
     
     //--------------------------------------- Item---------------------------------------
     
-    //? USELESS
     
     public void UseUsable(Usable usable, Hero hero) {
         usable.useOn(hero);
@@ -103,7 +102,7 @@ public class Guild {
     }
     
     public void EquipEquipment(Equipment equip, Hero hero) {
-        if (hero.Equip(equip)) {    // Check if a hero has available slot
+        if (hero.Equip(equip)) { 
             RemoveInventory(equip);
         }
     }

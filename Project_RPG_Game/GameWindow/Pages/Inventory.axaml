@@ -16,104 +16,50 @@
         <Border Grid.Column="0" Grid.Row="0" Classes="InventoryTitlePart">
             <TextBlock Text="Inventory"></TextBlock>
         </Border>
-        <Border Grid.Column="0" Grid.Row="1" Classes="InventoryGrid" >
-            <Grid ColumnDefinitions="70 70 70 70" RowDefinitions="70 70 70" Name="InventoryZone">
-               <Border Grid.Row="0" Grid.Column="0"></Border>
-               <Border Grid.Row="0" Grid.Column="1"></Border>
-               <Border Grid.Row="0" Grid.Column="2"></Border>
-               <Border Grid.Row="0" Grid.Column="3"></Border>
-               <Border Grid.Row="1" Grid.Column="0"></Border>
-               <Border Grid.Row="1" Grid.Column="1"></Border>
-               <Border Grid.Row="1" Grid.Column="2"></Border>
-               <Border Grid.Row="1" Grid.Column="3"></Border>
-               <Border Grid.Row="2" Grid.Column="0"></Border>
-               <Border Grid.Row="2" Grid.Column="1"></Border>
-               <Border Grid.Row="2" Grid.Column="2"></Border>
-               <Border Grid.Row="2" Grid.Column="3"></Border>
-               
-               
-                
-                
-            </Grid>
+        <Border Grid.Column="0" Grid.Row="1" Classes="InventoryGrid">
+            <StackPanel>
+                <Grid ColumnDefinitions="70 70 70 70" RowDefinitions="70 70 70" Name="InventoryZone">
+                   <Border Grid.Row="0" Grid.Column="0"></Border>
+                   <Border Grid.Row="0" Grid.Column="1"></Border>
+                   <Border Grid.Row="0" Grid.Column="2"></Border>
+                   <Border Grid.Row="0" Grid.Column="3"></Border>
+                   <Border Grid.Row="1" Grid.Column="0"></Border>
+                   <Border Grid.Row="1" Grid.Column="1"></Border>
+                   <Border Grid.Row="1" Grid.Column="2"></Border>
+                   <Border Grid.Row="1" Grid.Column="3"></Border>
+                   <Border Grid.Row="2" Grid.Column="0"></Border>
+                   <Border Grid.Row="2" Grid.Column="1"></Border>
+                   <Border Grid.Row="2" Grid.Column="2"></Border>
+                   <Border Grid.Row="2" Grid.Column="3"></Border>
+                   
+                   
+                    
+                    
+                </Grid>
+                <Border Margin="0 50 0 0 " Height="210">
+                    <Grid>
+                        <Grid ColumnDefinitions="70 70 70 70" RowDefinitions="70 70" Name="HeroItemSelection">
+                            <Border Grid.Row="0" Grid.Column="0"></Border>
+                            <Border Grid.Row="0" Grid.Column="1"></Border>
+                            <Border Grid.Row="0" Grid.Column="2"></Border>
+                            <Border Grid.Row="0" Grid.Column="3"></Border>
+                            <Border Grid.Row="0" Grid.Column="3"></Border>
+                            <Border Grid.Row="1" Grid.Column="0"></Border>
+                            <Border Grid.Row="1" Grid.Column="1"></Border>
+                            <Border Grid.Row="1" Grid.Column="2"></Border>
+                            <Border Grid.Row="1" Grid.Column="3"></Border>
+                    
+                        
+                        </Grid>
+                        <Button Background="green" HorizontalAlignment="Center" VerticalAlignment="Bottom" Name="EquipUse" Click="EquipUse_OnClick" IsVisible="False">Equip</Button>
+                    </Grid>
+                    
+                </Border>
+            </StackPanel>
         </Border>
         <Border Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2" >
             <Grid ColumnDefinitions="* *"  RowDefinitions="* * * * " ColumnSpacing="10" RowSpacing="10" Margin="25" Name="HeroInfo">
-                <Border Background="rgb(43, 43, 43)" CornerRadius="50">
-                    
-                    <StackPanel Orientation="Horizontal" Background="#2b2b2b" Margin="5">
-    
-                        <!-- Partie gauche : Image du personnage -->
-                        <Border Width="80" Height="120" 
-                                CornerRadius="4"
-                                Margin="0,0,10,0">
-                            <Image Source="avares://Project_RPG_Game/assets/characters/CharacterSantaClaus.PNG" 
-                                   Stretch="Uniform"/>
-                        </Border>
-                        
-                        <!-- Partie droite : Informations -->
-                        <StackPanel Orientation="Vertical" Spacing="4" Width="200">
-                            
-                            <!-- Nom -->
-                            <TextBlock Text="Nom du Personnage" 
-                                       FontSize="16" 
-                                       FontWeight="Bold" 
-                                       Foreground="White"/>
-                            
-                            <!-- Classe / Race -->
-                            <TextBlock FontSize="12" Foreground="#aaa">
-                                <Run Text="Guerrier" Foreground="#4a9eff"/>
-                                <Run Text=" - "/>
-                                <Run Text="Elfe" Foreground="#90ee90"/>
-                            </TextBlock>
-                            
-                            <!-- Level / XP -->
-                            <TextBlock FontSize="11" Foreground="#ffd700">
-                                <Run Text="Niveau "/>
-                                <Run Text="15" FontWeight="Bold"/>
-                                <Run Text=" - XP: "/>
-                                <Run Text="2450/3000"/>
-                            </TextBlock>
-                            
-                            <!-- PV avec barre -->
-                            <StackPanel Spacing="2">
-                                <TextBlock Text="PV: 85/100" FontSize="11" Foreground="#ff6b6b"/>
-                            </StackPanel>
-                            
-                            <!-- Food avec barre -->
-                            <StackPanel Spacing="2">
-                                <TextBlock Text="Nourriture: 60/100" FontSize="11" Foreground="#ffa500"/>
-                            </StackPanel>
-                            
-                            <!-- Salaire -->
-                            <TextBlock FontSize="11" Foreground="#ffeb3b">
-                                <Run Text="💰 Salaire: "/>
-                                <Run Text="250" FontWeight="Bold"/>
-                                <Run Text=" gold/jour"/>
-                            </TextBlock>
-                            
-                            <!-- Effets actifs -->
-                            <StackPanel Spacing="2" Orientation="Horizontal">
-                                     <TextBlock Text="Effets:" FontSize="10" Foreground="#bbb" VerticalAlignment="Center"/>
-                                     <StackPanel Orientation="Horizontal" Spacing="3">
-                                         <Border Background="#4caf50" 
-                                                 Padding="4,2" 
-                                                 CornerRadius="3">
-                                             <TextBlock Text="🛡️ +10 Def" FontSize="9" Foreground="White"/>
-                                         </Border>
-                                         <Border Background="#f44336" 
-                                                 Padding="4,2" 
-                                                 CornerRadius="3">
-                                             <TextBlock Text="🔥 Brûlure" FontSize="9" Foreground="White"/>
-                                         </Border>
-                                     </StackPanel>
-                            </StackPanel>
-        
-        
-                        </StackPanel>
-    
-                </StackPanel>
-                    
-                </Border>
+                <Border Background="rgb(43, 43, 43)" CornerRadius="50"></Border>
                 <Border Grid.Column="0" Grid.Row="1" Background="rgb(43, 43, 43)" CornerRadius="50"></Border>
                 <Border Grid.Column="1" Grid.Row="1" Background="rgb(43, 43, 43)" CornerRadius="50"></Border>
                 <Border Grid.Column="1" Grid.Row="0" Background="rgb(43, 43, 43)" CornerRadius="50"></Border>

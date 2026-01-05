@@ -13,7 +13,7 @@ public class Hammer : Equipment,IResultBonusOnGuild,IBonusItem {
     }
     
     public Dictionary<ResultType, object> AppliedBonusOnGuild(Dictionary<ResultType, object> data, Guild guild) {
-        if (data[ResultType.GuildGainItem] is List<Item> itemList) {
+        if (data.ContainsKey(ResultType.GuildGainItem) && data[ResultType.GuildGainItem] is List<Item> itemList) {
             foreach (var item in itemList.ToList()) {
                 if (item is Equipment equipment) {
                     equipment.DurabilityMax +=  AdditionalDurability;

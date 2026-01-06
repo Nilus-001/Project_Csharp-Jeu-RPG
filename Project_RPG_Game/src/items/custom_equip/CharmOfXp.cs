@@ -9,7 +9,7 @@ public class CharmOfXp : Equipment , IBonusItem , IResultBonus{
     
     
     public CharmOfXp(string name, Rarity rarity) : base(name, $"Grant +{(int)rarity}% of Bonus Xp During Missions", rarity,"Project_RPG_Game/assets/item/ItemCharmOfXp.png") {
-        PercentOfBonus = (int)rarity;
+        PercentOfBonus = (int)rarity/100;
     }
 
 

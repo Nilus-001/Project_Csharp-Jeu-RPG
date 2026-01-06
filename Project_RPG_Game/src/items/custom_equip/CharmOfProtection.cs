@@ -8,7 +8,7 @@ public class CharmOfProtection : Equipment , IBonusItem , IResultBonus {
     public int PercentOfReduction;
 
     public CharmOfProtection(string name, Rarity rarity) : base(name, $"Grant +{(int)rarity}% of Damage Reduction During Missions", rarity,"Project_RPG_Game/assets/item/ItemCharmOfProtection.png") {
-        PercentOfReduction =(int)rarity;
+        PercentOfReduction =(int)rarity/100;
     }
     
     public Dictionary<ResultType, object> AppliedBonus(Dictionary<ResultType, object> data, Hero hero) {

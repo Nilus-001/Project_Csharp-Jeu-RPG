@@ -264,7 +264,6 @@ private void SelectMission(Mission mission, Border card) {
     missionSelection.PrintMissionSelection();
     GamePage.ToNext.IsVisible = false;
     
-    //! here
 }
     
     

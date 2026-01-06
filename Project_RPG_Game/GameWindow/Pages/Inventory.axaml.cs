@@ -151,7 +151,7 @@ public partial class Inventory : UserControl {
             heroSelect.Child = null;
 
             if (i < Guild.GuildHeroes.Count) {
-                heroSelect.Child = CreateHeroSelectCube(Guild.GuildHeroes[i]);
+                heroSelect.Child = CreateHeroSelectCube(Guild.GuildHeroes[i],item);
             }
         }
 
@@ -167,9 +167,12 @@ public partial class Inventory : UserControl {
 
     private Button _heroSelectButton = new Button();
 
-    private Border CreateHeroSelectCube(Hero hero) {
+    private Border CreateHeroSelectCube(Hero hero, Item item) {
         bool hasSpace = hero.EquipmentSlot > hero.EquipmentList.Count;
-    
+        if (item is Usable) {
+            hasSpace = true;
+        }
+        
         var button = new Button {
             Width = 70,
             Height = 70,

@@ -77,9 +77,7 @@ public class Mission {
                 hero.GameClass.BonusResult(this,hero);
             }
 
-            foreach (var equip in hero.EquipmentList.ToList()) {
-                equip.LoseDurability();
-            }
+           
         }
         
         bool success = Global.DiceRoll((int)Difficulty + heroBonusLuck);
@@ -95,6 +93,12 @@ public class Mission {
              var data = LoseResult.ReturnResult(this);
              resume.Add(data);
              ResultExecutor(data);
+        }
+
+        foreach (var hero in ActiveHeroes.ToList()) {
+            foreach (var equip in hero.EquipmentList.ToList()) {
+                equip.LoseDurability();
+            }
         }
         
         

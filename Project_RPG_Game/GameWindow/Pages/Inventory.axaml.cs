@@ -385,7 +385,7 @@ public partial class Inventory : UserControl {
                             $"Equipment : {heroEquipementsTip}";
         
         
-        ToolTip.SetTip(infoPanel,contentTip);
+        ToolTip.SetTip(imageBorder,contentTip);
         return panel;
     }
 

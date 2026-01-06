@@ -116,7 +116,7 @@ public class MissionGenerator {
     //**-------------------------------------------------------- RESULT ------------------------------------------------------------------
 
     public Result ResultGenerator(int win = 1) { // win = 1 --> bonus   & win = -1 -->  malus
-        int nbBonusResult = Global.Random(1, NbHeroGenerator() + 1);
+        int nbBonusResult = Global.Random(NbHeroGenerator() - 1, NbHeroGenerator() + 2);
         
         Dictionary<ResultType,object> resultsData = new Dictionary<ResultType,object>
         {

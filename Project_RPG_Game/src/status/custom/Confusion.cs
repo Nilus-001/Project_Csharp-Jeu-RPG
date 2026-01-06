@@ -18,7 +18,7 @@ public class Confusion : Status, IAppliedOnce , INegativeStatus{
         if (!IsApplied) {
             savedHeroClass = hero.GameClass;
             savedHeroRace = hero.Race;
-            hero.GameClass = GameClassList.Null;
+            hero.GameClass = GameClassOther.Null;
             hero.Race = RaceList.Null;
             IsApplied = true;
         }

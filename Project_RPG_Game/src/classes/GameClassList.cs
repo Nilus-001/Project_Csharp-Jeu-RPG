@@ -5,9 +5,15 @@ using Project_RPG_Game.missions;
 
 namespace Project_RPG_Game.classes;
 
+public static class GameClassOther {
+    public static BasicGameClass Null = new BasicGameClass("???", 0, new List<MissionType> { MissionType.Event });
+
+}
+
+
+
 public static class GameClassList {
 
-    public static BasicGameClass Null = new BasicGameClass("???", 0, new List<MissionType> { MissionType.Event });
     
     public static BasicGameClass Courier = new BasicGameClass(
         "Courier", 

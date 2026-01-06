@@ -8,13 +8,14 @@ public class Magnet : Equipment , IBonusItem ,IResultBonusOnGuild {
     public int MoneyBonusPercentage;
     
     public Magnet(string name , Rarity rarity) : base(name, $"Grant +{(int)rarity}% of Bonus Money for the Guild During Missions", rarity,"Project_RPG_Game/assets/item/ItemMagnet.png") {
-        MoneyBonusPercentage = (int)rarity/100;
+        MoneyBonusPercentage = (int)rarity;
     }
 
     public Dictionary<ResultType, object> AppliedBonusOnGuild(Dictionary<ResultType, object> data, Guild guild) {
         if ((int)data[ResultType.GuildMoney] > 0) {
-            data[ResultType.GuildMoney] =  (int) data[ResultType.GuildMoney] * (1 + MoneyBonusPercentage);
-            data.Add(ResultType.BonusMoney, MoneyBonusPercentage);
+            int bonus = (int)data[ResultType.GuildMoney] * (1 + MoneyBonusPercentage / 100);
+            data[ResultType.GuildMoney] = bonus ;
+            data.Add(ResultType.BonusMoney, bonus);
         }
 
         return data;

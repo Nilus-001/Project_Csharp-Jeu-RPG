@@ -9,7 +9,9 @@ public class ToolBelt : Equipment,IResultBonus, IBonusItem{
     }
 
     public Dictionary<ResultType, object> AppliedBonus(Dictionary<ResultType, object> data, Hero hero) {
-        data[ResultType.HeroUnequip] = "Cancel";
+        if (data.ContainsKey(ResultType.HeroUnequip)) {
+            data[ResultType.HeroUnequip] = "Cancel";
+        }
         return data;
     }
 }

@@ -8,7 +8,9 @@ public class Padlock : Equipment , IBonusItem , IResultBonusOnGuild{
     }
 
     public Dictionary<ResultType, object> AppliedBonusOnGuild(Dictionary<ResultType, object> data, Guild guild) {
-        data[ResultType.GuildLoseItem] = "Cancel";
+        if (data.ContainsKey(ResultType.GuildLoseItem)) {
+            data[ResultType.GuildLoseItem] = "Cancel";
+        }
         return data;
     }
 }

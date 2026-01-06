@@ -12,10 +12,11 @@ public class Coin : Equipment,IBonusItem,IResultBonus {
     public Dictionary<ResultType, object> AppliedBonus(Dictionary<ResultType, object> data, Hero hero) {
         if (data.ContainsKey(ResultType.HeroSalary)) {
             data[ResultType.HeroSalary] = (int)data[ResultType.HeroSalary] - 1;
-            data.Add(ResultType.BonusSalary, -1);
+            data.Add(ResultType.BonusSalary,(int)data[ResultType.HeroSalary] -1);
         }
         else {
             data[ResultType.HeroSalary] = -1;
+            data.Add(ResultType.BonusSalary, -1);
         }
         return data;
     }

@@ -24,7 +24,7 @@ public class RarityGenerator {
     //**-------------------------------------------------------- HERO ------------------------------------------------------------------
     
     private static Dictionary<string, List<string>>? GetHeroData() {
-        string filepath = "C:\\Users\\Nils\\Documents\\1 - Cours\\2025-2026\\C# -- Benoit ESTIVAL\\code\\Project_RPG_Game\\Project_RPG_Game\\data\\Character\\InfoHero.json";
+        string filepath = ".\\Project_RPG_Game\\data\\Character\\InfoHero.json";
         string jsonContent = File.ReadAllText(filepath);
         return JsonSerializer.Deserialize<Dictionary<string, List<string>>>(jsonContent);
     }

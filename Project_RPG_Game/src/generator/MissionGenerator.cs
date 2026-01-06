@@ -33,7 +33,7 @@ public class MissionGenerator {
     
     //**-------------------------------------------------------- MISSION ------------------------------------------------------------------
     private static Dictionary<MissionType, Dictionary<string, List<string>>>? GetMissionData() {
-        string filepath = "C:\\Users\\Nils\\Documents\\1 - Cours\\2025-2026\\C# -- Benoit ESTIVAL\\code\\Project_RPG_Game\\Project_RPG_Game\\data\\Missions\\InfoMission.json";
+        string filepath = ".\\Project_RPG_Game\\data\\Missions\\InfoMission.json";
         string jsonContent = File.ReadAllText(filepath);
         return JsonSerializer.Deserialize<Dictionary<MissionType, Dictionary<string, List<string>>>>(jsonContent);
     }
@@ -90,7 +90,7 @@ public class MissionGenerator {
     
     //**-------------------------------------------------------- EVENTS ------------------------------------------------------------------
     private static Dictionary<string, List<Dictionary<string,string>>>? GetEventData() {
-        string filepath = "C:\\Users\\Nils\\Documents\\1 - Cours\\2025-2026\\C# -- Benoit ESTIVAL\\code\\Project_RPG_Game\\Project_RPG_Game\\data\\Missions\\InfoEvent.json";
+        string filepath = ".\\Project_RPG_Game\\data\\Missions\\InfoEvent.json";
         string jsonContent = File.ReadAllText(filepath);
         return JsonSerializer.Deserialize<Dictionary<string, List<Dictionary<string,string>>>>(jsonContent);
     }

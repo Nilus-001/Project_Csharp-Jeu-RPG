@@ -134,10 +134,8 @@ public class Result {
                     guildModif = tool.AppliedBonusOnGuild(guildModif, guild);
                 }
             }
-            
-            DataModified.Add(hero,new Dictionary<ResultType, object>(IndividualModif));
             DataModified[guild] =  new Dictionary<ResultType, object>(guildModif);
-            
+            DataModified.Add(hero,new Dictionary<ResultType, object>(IndividualModif));
             
             IndividualModif.Clear();
         }

@@ -151,7 +151,7 @@ public partial class Game : UserControl {
                 Resume.ResumeMission();
                 break;
             case 4 :
-                Resume.Distribution(); //TODO : modif
+                Resume.Distribution();
                 UpdateMoney();
                 UpdateFoodStock();
                 PartInfo.Text = "Distribution";

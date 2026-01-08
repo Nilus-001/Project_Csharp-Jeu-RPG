@@ -133,6 +133,9 @@ public partial class Game : UserControl {
                 OpenPart(Shop); 
                 Shop.RefreshShop(0); // hero
                 PartInfo.Text = "Recruitment";
+                
+                if (Day == 0) { ToNext.IsEnabled = false; } 
+                
                 break;
             case 2 :
                 Shop.RefreshShop(1); // items

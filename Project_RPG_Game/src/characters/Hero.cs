@@ -66,7 +66,7 @@ public class Hero : Character {
             XpMax += 50;
             //-------Modify Stat-------
             HpMax = (int) (HpMax*1.1);
-            ModifyFood(HpMax);
+            ModifyHp(HpMax);
             FoodMax =  (int) (FoodMax*1.1);
             ModifyFood(FoodMax);
             EquipmentSlot++;

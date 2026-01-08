@@ -498,6 +498,8 @@ private void SelectMission(Mission mission, Border card) {
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center
             };
+            if (GamePage.Day == 0) { GamePage.ToNext.IsEnabled = true; } 
+
 
         }
     }

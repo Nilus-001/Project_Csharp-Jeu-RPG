@@ -340,6 +340,8 @@ public partial class Inventory : UserControl {
                         Foreground = Brushes.White
                     };
                     effectsPanel.Children.Add(effectBadge);
+                    
+                    ToolTip.SetTip(effectBadge, $"Expire in: {status.ExpirationIn} tours");
                 }
             effectsContainer.Children.Add(effectsPanel);
            

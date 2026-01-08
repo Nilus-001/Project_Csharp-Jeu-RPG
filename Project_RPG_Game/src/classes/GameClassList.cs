@@ -84,6 +84,6 @@ public static class GameClassList {
     public static Thief Thief = new Thief(
         50,
         new List<MissionType>((MissionType[])Enum.GetValues(typeof(MissionType))),
-        40
+        50
     );
 }

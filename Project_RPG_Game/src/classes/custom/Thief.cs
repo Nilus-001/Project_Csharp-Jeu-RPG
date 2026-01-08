@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Project_RPG_Game.characters;
 using Project_RPG_Game.classes.@interface;
 using Project_RPG_Game.missions;
@@ -16,13 +17,23 @@ public class Thief : GameClass , IPostResultClassBonus {
 
     protected override string Bonus(Mission mission, Hero thisHero) {
         int theft = 0;
+
+        
         foreach (var heroContent in Data) {
             if (heroContent.Key is Hero hero) {
+                
+                if (heroContent.Value.ContainsKey(ResultType.GameClassTheft)) {
+                    return "An other thief has already stolen Xp during this mission."; 
+                }
+                
                 if (hero != thisHero) {
                     int heroXp = (int)heroContent.Value[ResultType.HeroXp];
-                    int th = (int)( heroXp * (TheftPercentage/100));
+                    Console.WriteLine(heroXp);
+                    int th = (int)( heroXp * (double)TheftPercentage/100);
                     theft += th;
-                    
+                    Console.WriteLine((int)(heroXp*(double)TheftPercentage/100));
+                    Console.WriteLine(th);
+
                     heroContent.Value[ResultType.HeroXp] = heroXp - th;
                     heroContent.Value.Add(ResultType.GameClassTheft,$"Xp Stolen by {thisHero.Name}");
                 }
@@ -40,6 +51,7 @@ public class Thief : GameClass , IPostResultClassBonus {
     public Dictionary<object, Dictionary<ResultType, object>> ModifyResult(Mission mission, Hero thisHero, Dictionary<object, Dictionary<ResultType, object>> data) {
         Data = data;
         BonusResult(mission, thisHero);
+        
         return Data;
     }
 }

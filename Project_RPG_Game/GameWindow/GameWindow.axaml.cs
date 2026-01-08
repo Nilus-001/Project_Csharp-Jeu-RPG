@@ -37,14 +37,14 @@ public partial class GameWindow : Window {
             
         }
 
-        // if (e.Key == Key.F11) {
-        //     if (WindowState == WindowState.FullScreen) {
-        //         WindowState = WindowState.Maximized;
-        //     }
-        //     else {
-        //         WindowState = WindowState.FullScreen;
-        //     }
-        // }
+        if (e.Key == Key.F11) {
+            if (WindowState == WindowState.FullScreen) {
+                WindowState = WindowState.Maximized;
+            }
+            else {
+                WindowState = WindowState.FullScreen;
+            }
+        }
     }
     
    

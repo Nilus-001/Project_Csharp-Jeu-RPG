@@ -97,6 +97,8 @@ public class MissionGenerator {
     
     
     public Event EventGenerator() {
+        
+        
         var dataDescription = GetEventData()["Events"][Global.Random(0,GetEventData()["Events"].Count)];
         
         return new Event(

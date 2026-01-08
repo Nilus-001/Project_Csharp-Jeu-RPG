@@ -7,6 +7,10 @@
         MinHeight="850" MinWidth="1500"
         
         Icon="avares://Project_RPG_Game/assets/IconGame.png"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaChromeHints="NoChrome"
+        ExtendClientAreaTitleBarHeightHint="0"
+        WindowStartupLocation="CenterScreen"
         
         x:Class="Project_RPG_Game.GameWindow.GameWindow"
         Title="Game">

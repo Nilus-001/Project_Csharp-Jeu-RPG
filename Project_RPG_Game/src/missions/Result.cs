@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Project_RPG_Game.classes.@interface;
 using Project_RPG_Game.items;
 using Project_RPG_Game.status;
 using Project_RPG_Game.status.@interface;
@@ -19,13 +20,7 @@ public enum ResultType { // "> 100" = peut ou est negatif | "< 100" = est toujou
     GuildLoseItem = 109,
     GuildGainItem = 002,
     
-    BonusXp,
-    BonusProtection,
-    BonusMoney,
-    BonusFoodStock,
-    BonusSalary,
-    BonusAmplification,
-    BonusAdditionalDurability,
+
     
     GameClassTheft,
 }
@@ -134,11 +129,21 @@ public class Result {
                     guildModif = tool.AppliedBonusOnGuild(guildModif, guild);
                 }
             }
+            
+            
             DataModified[guild] =  new Dictionary<ResultType, object>(guildModif);
             DataModified.Add(hero,new Dictionary<ResultType, object>(IndividualModif));
             
             IndividualModif.Clear();
         }
+        
+        //---------------------------- Class Effect --------------------------------
+        foreach (var hero in mission.ActiveHeroes) {
+            if (hero.GameClass is IPostResultClassBonus classBonus) {
+                DataModified = classBonus.ModifyResult(mission,hero,DataModified);
+            }
+        }
+        
 
         
         

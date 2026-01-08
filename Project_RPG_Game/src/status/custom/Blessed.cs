@@ -6,6 +6,7 @@ namespace Project_RPG_Game.status.custom;
 
 public class Blessed : Status , IAppliedOnce , IPositiveStatus {
     public bool IsApplied= false;
+    public int Hpgive;
     public Blessed(int expirationIn, int modifier = 1) : base(expirationIn, modifier) {
         Name = $"Blessed";
     }
@@ -13,7 +14,10 @@ public class Blessed : Status , IAppliedOnce , IPositiveStatus {
     public override void AppliedEffect(Hero hero) {
         base.AppliedEffect(hero);
         if (!IsApplied) {
-            hero.HpMax += hero.HpMax*2;
+            Hpgive = hero.HpMax;
+            float percent = hero.Hp / hero.XpMax;
+            hero.HpMax *= 2;
+            hero.ModifyFood((int)(hero.Hp * percent));
             IsApplied = true;
             foreach (var status in hero.StatusList.ToList()) {
                 if (status != this) {
@@ -27,6 +31,6 @@ public class Blessed : Status , IAppliedOnce , IPositiveStatus {
         
     }
     public void ClearEffect(Hero hero) {
-        hero.HpMax += hero.HpMax/2;
+        hero.HpMax -= Hpgive;
     }
 }

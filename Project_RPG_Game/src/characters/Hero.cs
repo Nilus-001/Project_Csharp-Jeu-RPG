@@ -137,7 +137,7 @@ public class Hero : Character {
                 if (status.ExpirationIn <= 0) {
                     if (status is IAppliedOnce statusOnce){
                         statusOnce.ClearEffect(this);
-                        
+                        Console.WriteLine($"effect clear for {status.Name}");
                     }
                     StatusList.Remove(status);
                 }
@@ -153,15 +153,17 @@ public class Hero : Character {
 
     
     public void AddStatus(Status status,int modifier=1) {
-        if (StatusIsActive(this, typeof(Blessed)) == null) {
-            
-            Status? sameEffect = StatusIsActive(this, status.GetType());
-            if (sameEffect != null) {
-                status.Modifier += modifier ;
-                StatusList.Remove(sameEffect);
-            }
-            StatusList.Add(status);
+        if (StatusIsActive(this, typeof(Blessed)) is Blessed && status is INegativeStatus) {
+            return;
         }
+
+        Status? sameEffect = StatusIsActive(this, status.GetType());
+        if (sameEffect != null) {
+            status.Modifier += modifier ;
+            StatusList.Remove(sameEffect);
+        }
+        StatusList.Add(status);
+        
         
     }
 

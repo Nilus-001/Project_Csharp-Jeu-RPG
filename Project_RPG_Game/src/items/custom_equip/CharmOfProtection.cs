@@ -15,7 +15,6 @@ public class CharmOfProtection : Equipment , IBonusItem , IResultBonus {
         if (data.ContainsKey(ResultType.HeroHp) && (int)data[ResultType.HeroHp] < 0) {
             int bonus = (int)data[ResultType.HeroHp] * (1 - PercentOfReduction/100);
             data[ResultType.HeroHp] = bonus;
-            data.Add(ResultType.BonusProtection, bonus);
         }
         return data;
     }

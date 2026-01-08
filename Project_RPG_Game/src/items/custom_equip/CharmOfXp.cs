@@ -16,7 +16,6 @@ public class CharmOfXp : Equipment , IBonusItem , IResultBonus{
     public Dictionary<ResultType,object> AppliedBonus(Dictionary<ResultType,object> data , Hero hero) {
         int bonus = (int)data[ResultType.HeroXp] * (1 + PercentOfBonus/100);
         data[ResultType.HeroXp] = bonus;
-        data.Add(ResultType.BonusXp, bonus);
         return data;
     }
 }

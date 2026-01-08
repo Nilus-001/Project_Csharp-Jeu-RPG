@@ -13,11 +13,9 @@ public class Coin : Equipment,IBonusItem,IResultBonus {
         if (data.ContainsKey(ResultType.HeroSalary)) {
             int bonus = (int)data[ResultType.HeroSalary] - 1;
             data[ResultType.HeroSalary] = bonus ;
-            data.Add(ResultType.BonusSalary,bonus);
         }
         else {
             data[ResultType.HeroSalary] = -1;
-            data.Add(ResultType.BonusSalary, -1);
         }
         return data;
     }

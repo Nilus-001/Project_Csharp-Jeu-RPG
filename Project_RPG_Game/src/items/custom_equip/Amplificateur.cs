@@ -14,7 +14,6 @@ public class Amplificateur : Equipment ,IBonusItem , IResultBonus {
     public Dictionary<ResultType, object> AppliedBonus(Dictionary<ResultType, object> data, Hero hero) {
         if (data.ContainsKey(ResultType.HeroStatus) && data[ResultType.HeroStatus] is Status status) {
             data[ResultType.HeroStatus] = status.Modifier += AmplificationValue;
-            data.Add(ResultType.BonusAmplification, $"+{AmplificationValue}");
         }
         return data;
     }

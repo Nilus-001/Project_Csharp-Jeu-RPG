@@ -20,7 +20,6 @@ public class Hammer : Equipment,IResultBonusOnGuild,IBonusItem {
                     equipment.Durability = DurabilityMax;
                 }
             }
-            data.Add(ResultType.BonusAdditionalDurability,$"+{AdditionalDurability} durability");
         }
         return data;
     }

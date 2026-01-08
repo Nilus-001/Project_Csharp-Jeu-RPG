@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="700"
+        mc:Ignorable="d" d:DesignWidth="1300" d:DesignHeight="850"
         Height="850" Width="1500"
         MinHeight="850" MinWidth="1500"
         
@@ -14,31 +14,32 @@
         
         x:Class="Project_RPG_Game.GameWindow.GameWindow"
         Title="Game">
+    <Border BorderBrush="red" BorderThickness="-5">
         <Grid>
                 
-                <ContentControl Name="MainContent"  />
-                <Grid Name= "OverlayContainer" IsVisible="False">
-                    <Border Name="BlurredBackground" >
-                        <Border.Background>
-                            <VisualBrush Visual="{Binding #MainContent}"/>
-                        </Border.Background>
-                        <Border.Effect>
-                            <BlurEffect Radius="15"/>
-                        </Border.Effect>
-                    </Border>
-                    <Border Background="rgba(0,0,0,0.8)"></Border>
-                    
-                    
-                    <ContentControl Name="Overlay"
-                                    
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                    />
-                </Grid>
+            <ContentControl Name="MainContent"  />
+            <Grid Name= "OverlayContainer" IsVisible="False">
+                <Border Name="BlurredBackground" >
+                    <Border.Background>
+                        <VisualBrush Visual="{Binding #MainContent}"/>
+                    </Border.Background>
+                    <Border.Effect>
+                        <BlurEffect Radius="15"/>
+                    </Border.Effect>
+                </Border>
+                <Border Background="rgba(0,0,0,0.8)"></Border>
+                
+                
+                <ContentControl Name="Overlay"
+                                
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                />
+            </Grid>
                 
                 
                 
         </Grid>
         
-        
+    </Border>
 </Window>

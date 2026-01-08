@@ -16,7 +16,6 @@ public class Backpack : Equipment , IBonusItem , IResultBonusOnGuild {
         if (data.ContainsKey(ResultType.GuildFoodStock) && (int)data[ResultType.GuildFoodStock] > 0) {
             int bonus = (int) data[ResultType.GuildFoodStock] * (1 + CapacityPercentageBonus/100);
             data[ResultType.GuildFoodStock] = bonus;
-            data.Add(ResultType.BonusFoodStock, bonus);
         }
         return data;
     }

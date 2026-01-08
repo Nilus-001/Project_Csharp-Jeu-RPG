@@ -15,7 +15,6 @@ public class Magnet : Equipment , IBonusItem ,IResultBonusOnGuild {
         if ((int)data[ResultType.GuildMoney] > 0) {
             int bonus = (int)data[ResultType.GuildMoney] * (1 + MoneyBonusPercentage / 100);
             data[ResultType.GuildMoney] = bonus ;
-            data.Add(ResultType.BonusMoney, bonus);
         }
 
         return data;

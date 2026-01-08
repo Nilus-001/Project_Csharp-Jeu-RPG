@@ -92,7 +92,8 @@ public partial class Game : UserControl {
             PhaseNum = 0;
         }
         Background = new ImageBrush {
-            Source = new Bitmap(AssetLoader.Open(new Uri($"avares://Project_RPG_Game/assets/background/Background{phases[PhaseNum]}.png")))
+            Source = new Bitmap(AssetLoader.Open(new Uri($"avares://Project_RPG_Game/assets/background/Background{phases[PhaseNum]}.png"))),
+            Stretch = Stretch.UniformToFill
         }; 
         
 

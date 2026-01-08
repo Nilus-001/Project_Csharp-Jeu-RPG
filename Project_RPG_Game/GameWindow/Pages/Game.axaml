@@ -3,6 +3,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="1500" d:DesignHeight="850"
+             Height="850" Width="1500"
+             MinHeight="850" MinWidth="1500"
              
              x:Class="Project_RPG_Game.GameWindow.Pages.Game"
              >

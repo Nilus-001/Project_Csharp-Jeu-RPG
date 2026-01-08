@@ -324,7 +324,7 @@ public partial class Resume : UserControl {
         };
 
         TextBlock resultTitle = new TextBlock {
-            Text = "═══ Résultat ═══",
+            Text = "═══ Result ═══",
             FontSize = 24,
             FontWeight = FontWeight.Bold,
             Foreground = new SolidColorBrush(Color.FromRgb(255, 200, 100)),
@@ -362,7 +362,7 @@ public partial class Resume : UserControl {
                 };
 
                 TextBlock guildTitle = new TextBlock {
-                    Text = "─── Guilde ───",
+                    Text = "─── Guild ───",
                     FontSize = 18,
                     FontWeight = FontWeight.Bold,
                     Foreground = new SolidColorBrush(Color.FromRgb(255, 215, 0)),
@@ -377,7 +377,7 @@ public partial class Resume : UserControl {
                         HorizontalAlignment = HorizontalAlignment.Center,
                         Spacing = 10
                     };
-
+                    
                     TextBlock keyText = new TextBlock {
                         Text = result.Key.ToString() + ":",
                         FontSize = 14,
@@ -385,8 +385,13 @@ public partial class Resume : UserControl {
                         FontWeight = FontWeight.Bold
                     };
 
+                    var textValue = result.Value.ToString();
+                    if (result.Key is ResultType.GuildLoseItem) {
+                        textValue = "You lost some item : check your inventory.";
+                    }
+                    
                     TextBlock valueText = new TextBlock {
-                        Text = result.Value.ToString(),
+                        Text = textValue,
                         FontSize = 14,
                         Foreground = Brushes.White,
                         FontWeight = FontWeight.Bold
